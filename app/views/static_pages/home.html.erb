@@ -1,0 +1,162 @@
+<h1>Survey</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: "/analyze") do |f| %>
+<table>
+     <tr> <td> <%= f.label "Time of The Trip" %> </td>
+      <td><%= f.time_field :timeTrip %> </td>
+	</tr>
+	    <tr> <td> <%= f.label "Earliest Time of Departure from Home" %> </td>
+      <td><%= f.time_field :earlyTime %> </td>
+	</tr>
+	    <tr> <td> <%= f.label "Latest Time of Arrival at Work" %> </td>
+      <td><%= f.time_field :lateTime %> </td>
+	</tr>
+	<tr>
+	    <td> <%= f.label "Origin" %> </td>
+      <td><%= select_tag(:origin,  options_for_select(['Home','Work','Other']) ,:onChange=>"showOther(this)") %></td>
+	</tr>
+	<tr id="otherorigin">
+	   <td> <%= f.label "Place Name" %> </td>
+      <td><%= f.text_field :otherOrigin %></td>
+	</tr>
+	<tr> <td> <%= f.label "Origin Address/postals" %> </td>
+      <td><%= text_area :origin, :address, cols: 30, rows: 4 %> <br />
+      		<p><a href="#">Use Google Map<a></p>
+      </td>
+	</tr>
+	<tr>
+		 <td> <%= f.label "Destination" %> </td>
+        <td><%= select_tag(:destination,  options_for_select(['Home','Work','Other']),:onChange=>"showOther(this)") %></td>
+	</tr>
+	<tr id="otherdestination">
+	   <td> <%= f.label "Place Name" %> </td>
+      <td><%= f.text_field :otherDestin %></td>
+	</tr>
+	
+	<tr> <td> <%= f.label "Destination Address/postal" %> </td>
+      <td><%= text_area :destination, :address, cols: 30, rows: 4 %>
+      	 <br />
+      		<p><a href="#">Use Google Map<a></p>
+      </td>
+	</tr>
+	    <tr> <td> <%= f.label "Purpose" %> </td>
+      <td><%= select_tag(:purpose,  options_for_select(['Home','Work', 'School','Shopping', 'Recreation', 'Facility Passenger','Other']),:onChange=>"showOther(this)") %> </td>
+	</tr>
+	<tr id="otherpurpose">
+	   <td> <%= f.label "Purpose?" %> </td>
+      <td><%= f.text_field :otherPurpose %></td>
+	</tr>
+	<tr> <td> <%= f.label "Main (Primary) Mode" %> </td>
+      <td><%= select_tag(:main, options_for_select(['Auto Driver','Auto Passenger/Carpool','Local Transit','Regional Transit']), :onChange=>"showOther(this);showMain()") %> </td>
+	</tr>
+	<tr id="othermain">
+	   <td> <%= f.label "Regional Transit Name" %> </td>
+      <td><%= f.text_field :otherMain %></td>
+	</tr>
+	<tr id="maintransit">
+	 <td> <%= f.label "Which Local Transit?" %> </td>
+      <td><%= select_tag(:mainTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
+      ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
+      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]))  %> </td>
+	</tr>
+	<tr class="primaryOpt"> 
+		<td> <%= f.label "Access Station/Stop" %> </td>
+      <td><%= f.datetime_field :accessStation %> </td>
+	</tr>
+	<tr class="primaryOpt"> 
+		<td> <%= f.label "Access Mode" %> </td>
+      <td><%= select_tag(:accessMode,  options_for_select([['Walk', 1],['Auto Driver(P&R)', 2], ['Auto Passenger(K&R)', 3],['Auto Passenger(Car Pool)',4],['Bike', 5],['local Transit', 6],['Other', 7]]),
+       :onChange=>"showOption()") %></td>
+	</tr>
+	<tr id="otheraccess">
+	   <td> <%= f.label "Access Mode Name" %> </td>
+      <td><%= f.text_field :otherAccess %></td>
+	</tr>
+	<tr id="accesstransit">
+	 <td> <%= f.label "Which Local Transit?" %> </td>
+      <td><%= select_tag(:accessTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
+      ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
+      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]))  %> </td>
+	</tr>
+
+	<tr id="parkcost"> <td> <%= f.label "Parking Cost at Local Transit P&R Station ($)/day" %> </td>
+      <td><%= f.number_field :parkCost %></td>
+	</tr>
+	<tr class="primaryOpt"> 
+		 <td> <%= f.label "Access Time " %> </td>
+      <td><%= f.number_field :accessTime %> </td>
+	</tr>
+	<tr id="accesscost"> <td> <%= f.label "Access Cost ($CAD)" %> </td>
+      <td><%= f.number_field :accessCost %></td>
+	</tr>
+	<tr class="primaryOpt"> 
+		 <td> <%= f.label "Waiting Time at the first transit stop/station (Minutes)" %> </td>
+      <td><%= f.number_field :waitTime %></td>
+      </tr>
+    <tr class="primaryOpt"> 
+    	 <td> <%= f.label "Number of Transfers" %> </td>
+      <td><%= f.number_field :numTrans %> </td>
+      </tr>
+     <tr class="primaryOpt"> 
+     	 <td> <%= f.label "Transfer Time between modes (Minutes)" %> </td>
+      <td><%= f.number_field :transWait %> </td>
+      </tr>
+     <tr class="primaryOpt"> 
+     	 <td> <%= f.label "In-Vehicle Travel Time (Minutes)" %> </td>
+      	<td><%= f.number_field :travelTime %> </td>
+      </tr>
+      <tr class="primaryOpt"> 
+      	 <td> <%= f.label "Egress Station/Stop " %> </td>
+      	<td><%= f.datetime_field :egressStop %> </td>
+      </tr>
+      <tr class="primaryOpt"> 
+      	 <td> <%= f.label "Egress Mode" %> </td>
+      	<td><%= select_tag( :egressMode, options_for_select([['Walk', 1], ['Bike', 2],['Local Transit',3],['Other', 4]]),:onChange=>"showOption()") %> </td>
+      </tr>
+     <tr id="otheregress">
+	   <td> <%= f.label "Egress Mode Name" %> </td>
+      <td><%= f.text_field :otherEgress %></td>
+	</tr>
+     <tr id="egresstransit">
+	 <td> <%= f.label "Which Local Transit?" %> </td>
+      <td><%= select_tag(:egressTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
+      ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
+      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]))  %> </td>
+	</tr>
+      <tr class="primaryOpt"> 
+      	 <td> <%= f.label "Egress Time (Minutes)" %> </td>
+      <td><%= f.number_field :egressTime %> </td>
+      </tr>
+      <tr id="egresscost"> <td> <%= f.label "Egress Cost ($CAD)" %> </td>
+      <td><%= f.number_field :egressCost %> </td>
+      </tr>
+      <tr> <td> <%= f.label "Estimated One-way Travel Time (Minutes)" %> </td>
+      <td><%= f.number_field :oneTime %> </td>
+      </tr>
+      <tr> <td> <%= f.label "Estimated One-way Travel Cost ($CAD)" %>  </td>
+      <td><%= f.number_field :oneCost %> </td>
+      </tr>
+      <tr class="primaryOpt"> 
+      	 <td> <%= f.label "How do you typically pay your Public Transit fare?" %> </td>
+      <td><%= select_tag(:transitPay,  options_for_select([['Cash', 1], ['Ticket or Tokens', 2],['Transit Pass',3],['PRESTO card', 4]])) %></td>
+      </tr>
+            <tr> <td> <%= f.label "Parking Cost At Work ($CAD)" %> </td>
+      <td><%= f.number_field :parkCost %> </td>
+      </tr>
+	  <tr id="monthcom"> <td> <%= f.label "During which months do you typically walk/bike to transit when commuting to work?" %> </td>
+      <td><%= select_tag :monthCom , options_for_select([ "JANRUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ]), multiple: true %> </td>
+      </tr>
+      </tr>
+            <tr> <td> <%= f.label "Does your employer pay for your trip expenses?" %> </td>
+      <td><%= select_tag(:bossPay,  options_for_select([['No', 'no'], ['Yes', 'yes']])) %> </td>
+      </tr>
+</table>
+
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    
+    <% end %>
+
+  </div>
+</div>
