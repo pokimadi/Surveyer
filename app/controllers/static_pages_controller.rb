@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
 
   def index
   end
+  
+  def socio
+    
+  end
 end

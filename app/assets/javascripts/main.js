@@ -28,6 +28,17 @@ hideOption = function(){
 	$("#maintransit").hide();
 	$("#accesstransit").hide();
 	$("#egresstransit").hide();
+	$(".carInfo").hide();
+};
+
+carInfo = function(that){
+	console.log(that.value);
+	if(that.value > 0){
+		$(".carInfo").show();
+	}
+	else{
+		$(".carInfo").hide();
+	}
 };
 
 showOther =  function(that){
