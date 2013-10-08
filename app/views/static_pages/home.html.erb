@@ -1,5 +1,72 @@
 <h1>Survey</h1>
 
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Drag Pointer To Location</h3>
+  </div>
+  <div class="modal-body">
+    <div id="map_canvas"></div>
+     <script>
+     var map;
+     var NewlatLng;
+     var fid 
+     
+	 function startUp() {
+	 	console.log("Initialization");
+	  var myLatlng = new google.maps.LatLng(43.7000,-79.4000);
+	
+	  var myOptions = {
+	     zoom: 10,
+	     center: myLatlng,
+	     mapTypeId: google.maps.MapTypeId.ROADMAP
+	     }
+	  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+	
+	  var marker = new google.maps.Marker({
+	  draggable: true,
+	  position: myLatlng, 
+	  map: map,
+	  title: "Your location"
+	  });
+	 
+	 google.maps.event.addListener(marker, 'dragend', function (event) {
+		  
+          NewlatLng =  {lat:this.getPosition().lat(), lng:this.getPosition().lng()};
+		  console.log(NewlatLng);
+	});
+	};
+	$('#myModal').on('shown', function () {
+		console.log("Starting Up");
+	    startUp();
+	}); 
+    </script>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary" id="find">Confirm</button>
+  </div>
+  <script>
+  	     $("#find").click(function(){
+            geocoder = new google.maps.Geocoder();
+            console.log("LAT LNG", NewlatLng.lat,NewlatLng.lng);
+            var latlng = new google.maps.LatLng(NewlatLng.lat, NewlatLng.lng);
+            geocoder.geocode({'latLng': latlng}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                  if (results[1]) {
+                    $("#"+fid)[0].value = results[1].formatted_address;
+                    $('#myModal').modal('hide');
+                  } else {
+                    alert('No results found');
+                  }
+                } else {
+                  alert('Geocoder failed due to: ' + status);
+                }
+            });
+    	});
+  </script>
+</div>
+
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(:session, url: "/analyze") do |f| %>
@@ -23,7 +90,7 @@
 	</tr>
 	<tr> <td> <%= f.label "Origin Address/postals" %> </td>
       <td><%= text_area :origin, :address, cols: 30, rows: 4 %> <br />
-      		<p><a href="#">Use Google Map<a></p>
+      		<%= link_to_function 'Use Google Map', 'addfind("origin_address")' %>
       </td>
 	</tr>
 	<tr>
@@ -38,7 +105,7 @@
 	<tr> <td> <%= f.label "Destination Address/postal" %> </td>
       <td><%= text_area :destination, :address, cols: 30, rows: 4 %>
       	 <br />
-      		<p><a href="#">Use Google Map<a></p>
+			<%= link_to_function 'Use Google Map', 'addfind("destination_address")' %>
       </td>
 	</tr>
 	    <tr> <td> <%= f.label "Purpose" %> </td>

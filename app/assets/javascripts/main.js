@@ -1,6 +1,7 @@
 console.log("we Have Lift off");
 
 showMain = function(){
+	consol.log("show Main");
 	var mainVal =  $("#main")[0].value;
 	if (mainVal == "Local Transit" || mainVal == "Regional Transit"){
 		$(".primaryOpt").show();
@@ -42,6 +43,7 @@ carInfo = function(that){
 };
 
 showOther =  function(that){
+	consol.log("show Other");
 	var id = "#other"+that.id;
 	console.log("done", id);
 	if (that.value == "Other" || that.value == "Regional Transit"){
@@ -53,6 +55,7 @@ showOther =  function(that){
 };
 
 hideOther = function(){
+	console.log("hide Other");
 	$("#otherorigin").hide();
 	$("#otherdestination").hide();	
 	$("#otherpurpose").hide();
@@ -117,7 +120,19 @@ showOption = function(){
 		$("#monthcom").hide();	
 	}
 };
+	function addfind(findFor){
+     	fid = findFor;
+    	console.log(fid);
+    	$('#myModal').modal('show');
+     }; 
 $( document ).ready(function(){
+	console.log("Ready");
 	hideOption();
 	hideOther();
+
+     
 });
+
+/// Geo MAp
+
+
