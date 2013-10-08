@@ -15,7 +15,7 @@
 	 function startUp() {
 	 	console.log("Initialization");
 	  var myLatlng = new google.maps.LatLng(43.7000,-79.4000);
-	
+	  NewlatLng= {lat:43.7000,lng:-79.4000 };
 	  var myOptions = {
 	     zoom: 10,
 	     center: myLatlng,
@@ -118,6 +118,10 @@
 	<tr> <td> <%= f.label "Main (Primary) Mode" %> </td>
       <td><%= select_tag(:main, options_for_select(['Auto Driver','Auto Passenger/Carpool','Local Transit','Regional Transit']), :onChange=>"showOther(this);showMain()") %> </td>
 	</tr>
+	<tr id="nummain">
+	   <td> <%= f.label "How Many Passengers are using veichle" %> </td>
+      <td><%= f.number_field :numMain %></td>
+	</tr>
 	<tr id="othermain">
 	   <td> <%= f.label "Regional Transit Name" %> </td>
       <td><%= f.text_field :otherMain %></td>
@@ -149,30 +153,30 @@
 	</tr>
 
 	<tr id="parkcost"> <td> <%= f.label "Parking Cost at Local Transit P&R Station ($)/day" %> </td>
-      <td><%= f.number_field :parkCost %></td>
+      <td><%= f.number_field :parkCost, :class=>"positive"%></td>
 	</tr>
 	<tr class="primaryOpt"> 
 		 <td> <%= f.label "Access Time " %> </td>
-      <td><%= f.number_field :accessTime %> </td>
+      <td><%= f.number_field :accessTime, :class=>"positive" %> </td>
 	</tr>
 	<tr id="accesscost"> <td> <%= f.label "Access Cost ($CAD)" %> </td>
-      <td><%= f.number_field :accessCost %></td>
+      <td><%= f.number_field :accessCost ,:pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive"%></td>
 	</tr>
 	<tr class="primaryOpt"> 
 		 <td> <%= f.label "Waiting Time at the first transit stop/station (Minutes)" %> </td>
-      <td><%= f.number_field :waitTime %></td>
+      <td><%= f.number_field :waitTime, :class=>"positive" %></td>
       </tr>
     <tr class="primaryOpt"> 
     	 <td> <%= f.label "Number of Transfers" %> </td>
-      <td><%= f.number_field :numTrans %> </td>
+      <td><%= f.number_field :numTrans, :class=>"positive" %> </td>
       </tr>
      <tr class="primaryOpt"> 
      	 <td> <%= f.label "Transfer Time between modes (Minutes)" %> </td>
-      <td><%= f.number_field :transWait %> </td>
+      <td><%= f.number_field :transWait, :class=>"positive" %> </td>
       </tr>
      <tr class="primaryOpt"> 
      	 <td> <%= f.label "In-Vehicle Travel Time (Minutes)" %> </td>
-      	<td><%= f.number_field :travelTime %> </td>
+      	<td><%= f.number_field :travelTime, :class=>"positive" %> </td>
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Station/Stop " %> </td>
@@ -194,23 +198,23 @@
 	</tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Time (Minutes)" %> </td>
-      <td><%= f.number_field :egressTime %> </td>
+      <td><%= f.number_field :egressTime, :class=>"positive" %> </td>
       </tr>
       <tr id="egresscost"> <td> <%= f.label "Egress Cost ($CAD)" %> </td>
-      <td><%= f.number_field :egressCost %> </td>
+      <td><%= f.number_field :egressCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive" %> </td>
       </tr>
       <tr> <td> <%= f.label "Estimated One-way Travel Time (Minutes)" %> </td>
-      <td><%= f.number_field :oneTime %> </td>
+      <td><%= f.number_field :oneTime, :class=>"positive" %> </td>
       </tr>
       <tr> <td> <%= f.label "Estimated One-way Travel Cost ($CAD)" %>  </td>
-      <td><%= f.number_field :oneCost %> </td>
+      <td><%= f.number_field :oneCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive" %> </td>
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "How do you typically pay your Public Transit fare?" %> </td>
       <td><%= select_tag(:transitPay,  options_for_select([['Cash', 1], ['Ticket or Tokens', 2],['Transit Pass',3],['PRESTO card', 4]])) %></td>
       </tr>
             <tr> <td> <%= f.label "Parking Cost At Work ($CAD)" %> </td>
-      <td><%= f.number_field :parkCost %> </td>
+      <td><%= f.number_field :parkCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive" %> </td>
       </tr>
 	  <tr id="monthcom"> <td> <%= f.label "During which months do you typically walk/bike to transit when commuting to work?" %> </td>
       <td><%= select_tag :monthCom , options_for_select([ "JANRUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ]), multiple: true %> </td>

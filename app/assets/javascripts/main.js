@@ -1,8 +1,14 @@
 console.log("we Have Lift off");
 
 showMain = function(){
-	consol.log("show Main");
+	console.log("show Main");
 	var mainVal =  $("#main")[0].value;
+	if (mainVal == "Auto Passenger/Carpool"){
+		$("#nummain").show();
+	}
+	else {
+		$("#nummain").hide();
+	}
 	if (mainVal == "Local Transit" || mainVal == "Regional Transit"){
 		$(".primaryOpt").show();
 		showOption();
@@ -43,7 +49,7 @@ carInfo = function(that){
 };
 
 showOther =  function(that){
-	consol.log("show Other");
+	console.log("show Other");
 	var id = "#other"+that.id;
 	console.log("done", id);
 	if (that.value == "Other" || that.value == "Regional Transit"){
@@ -61,7 +67,8 @@ hideOther = function(){
 	$("#otherpurpose").hide();
 	$("#otheraccess").hide();	
 	$("#othermain").hide();	
-	$("#otheregress").hide();			
+	$("#otheregress").hide();
+	$("#nummain").hide();			
 };
 
 showOption = function(){
@@ -129,9 +136,14 @@ $( document ).ready(function(){
 	console.log("Ready");
 	hideOption();
 	hideOther();
-
-     
+	$(".positive").change(function(){
+		if(this.value < 0){
+			this.value = 0;
+		}
+	}); 
 });
+
+
 
 /// Geo MAp
 
