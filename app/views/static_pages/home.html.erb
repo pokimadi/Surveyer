@@ -69,165 +69,186 @@
 
 <div class="row">
   <div class="span6 offset3">
+  	<ul class="pager">
+	  <li class="previous">
+	    <a>&larr; Older</a>
+	  </li>
+	  <li class="next">
+	    <a>Newer &rarr;</a>
+	  </li>
+	</ul>
     <%= form_for(:session, url: "/analyze") do |f| %>
 <table>
+	<tr><p class="lead" style="text-align:center" id="tripId" >Trip ID 1</p>
+		</tr>
      <tr> <td> <%= f.label "Time of The Trip" %> </td>
-      <td><%= f.time_field :timeTrip %> </td>
+      <td><%= f.time_field :timeTrip, :class=>"input"%> </td>
 	</tr>
 	    <tr> <td> <%= f.label "Earliest Time of Departure from Home" %> </td>
-      <td><%= f.time_field :earlyTime %> </td>
+      <td><%= f.time_field :earlyTime, :class=>"input" %> </td>
 	</tr>
 	    <tr> <td> <%= f.label "Latest Time of Arrival at Work" %> </td>
-      <td><%= f.time_field :lateTime %> </td>
+      <td><%= f.time_field :lateTime, :class=>"input" %> </td>
 	</tr>
 	<tr>
 	    <td> <%= f.label "Origin" %> </td>
-      <td><%= select_tag(:origin,  options_for_select(['Home','Work','Other']) ,:onChange=>"showOther(this)") %></td>
+      <td><%= select_tag(:origin,  options_for_select(['Home','Work','Other']) ,:onChange=>"showOther(this)", :class=>"input") %></td>
 	</tr>
 	<tr id="otherorigin">
 	   <td> <%= f.label "Place Name" %> </td>
-      <td><%= f.text_field :otherOrigin %></td>
+      <td><%= f.text_field :otherOrigin , :class=>"input"%></td>
 	</tr>
 	<tr> <td> <%= f.label "Origin Address/postals" %> </td>
-      <td><%= text_area :origin, :address, cols: 30, rows: 4 %> <br />
+      <td><%= text_area :origin, :address, cols: 30, rows: 4, :class=>"input" %> <br />
       		<%= link_to_function 'Use Google Map', 'addfind("origin_address")' %>
       </td>
 	</tr>
 	<tr>
 		 <td> <%= f.label "Destination" %> </td>
-        <td><%= select_tag(:destination,  options_for_select(['Home','Work','Other']),:onChange=>"showOther(this)") %></td>
+        <td><%= select_tag(:destination,  options_for_select(['Home','Work','Other']),:onChange=>"showOther(this)", :class=>"input")%></td>
 	</tr>
 	<tr id="otherdestination">
 	   <td> <%= f.label "Place Name" %> </td>
-      <td><%= f.text_field :otherDestin %></td>
+      <td><%= f.text_field :otherDestin, :class=>"input" %></td>
 	</tr>
 	
 	<tr> <td> <%= f.label "Destination Address/postal" %> </td>
-      <td><%= text_area :destination, :address, cols: 30, rows: 4 %>
+      <td><%= text_area :destination, :address, cols: 30, rows: 4 , :class=>"input"%>
       	 <br />
 			<%= link_to_function 'Use Google Map', 'addfind("destination_address")' %>
       </td>
 	</tr>
 	    <tr> <td> <%= f.label "Purpose" %> </td>
-      <td><%= select_tag(:purpose,  options_for_select(['Home','Work', 'School','Shopping', 'Recreation', 'Facility Passenger','Other']),:onChange=>"showOther(this)") %> </td>
+      <td><%= select_tag(:purpose,  options_for_select(['Home','Work', 'School','Shopping', 'Recreation', 'Facility Passenger','Other']),:onChange=>"showOther(this)", :class=>"input") %> </td>
 	</tr>
 	<tr id="otherpurpose">
 	   <td> <%= f.label "Purpose?" %> </td>
-      <td><%= f.text_field :otherPurpose %></td>
+      <td><%= f.text_field :otherPurpose, :class=>"input" %></td>
 	</tr>
 	<tr> <td> <%= f.label "Main (Primary) Mode" %> </td>
-      <td><%= select_tag(:main, options_for_select(['Auto Driver','Auto Passenger/Carpool','Local Transit','Regional Transit']), :onChange=>"showOther(this);showMain()") %> </td>
+      <td><%= select_tag(:main, options_for_select(['Auto Driver','Auto Passenger/Carpool','Local Transit','Regional Transit']), :onChange=>"showOther(this);showMain()", :class=>"input") %> </td>
 	</tr>
 	<tr id="nummain">
 	   <td> <%= f.label "How Many Passengers are using veichle" %> </td>
-      <td><%= f.number_field :numMain %></td>
+      <td><%= f.number_field :numMain, :class=>"input positive" %></td>
 	</tr>
 	<tr id="othermain">
 	   <td> <%= f.label "Regional Transit Name" %> </td>
-      <td><%= f.text_field :otherMain %></td>
+      <td><%= f.text_field :otherMain, :class=>"input" %></td>
 	</tr>
 	<tr id="maintransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
       <td><%= select_tag(:mainTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
       ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
-      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]))  %> </td>
+      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]), :class=>"input") %> </td>
 	</tr>
 	<tr class="primaryOpt"> 
 		<td> <%= f.label "Access Station/Stop" %> </td>
-      <td><%= f.datetime_field :accessStation %> </td>
+      <td><%= f.datetime_field :accessStation, :class=>"input" %> </td>
 	</tr>
 	<tr class="primaryOpt"> 
 		<td> <%= f.label "Access Mode" %> </td>
       <td><%= select_tag(:accessMode,  options_for_select([['Walk', 1],['Auto Driver(P&R)', 2], ['Auto Passenger(K&R)', 3],['Auto Passenger(Car Pool)',4],['Bike', 5],['local Transit', 6],['Other', 7]]),
-       :onChange=>"showOption()") %></td>
+       :onChange=>"showOption()", :class=>"input") %></td>
 	</tr>
 	<tr id="otheraccess">
 	   <td> <%= f.label "Access Mode Name" %> </td>
-      <td><%= f.text_field :otherAccess %></td>
+      <td><%= f.text_field :otherAccess, :class=>"input" %></td>
 	</tr>
 	<tr id="accesstransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
       <td><%= select_tag(:accessTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
       ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
-      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]))  %> </td>
+      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]), :class=>"input")  %> </td>
 	</tr>
 
 	<tr id="parkcost"> <td> <%= f.label "Parking Cost at Local Transit P&R Station ($)/day" %> </td>
-      <td><%= f.number_field :parkCost, :class=>"positive"%></td>
+      <td><%= f.number_field :parkCost, :class=>"positive input" %></td>
 	</tr>
 	<tr class="primaryOpt"> 
 		 <td> <%= f.label "Access Time " %> </td>
-      <td><%= f.number_field :accessTime, :class=>"positive" %> </td>
+      <td><%= f.number_field :accessTime, :class=>"positive input" %> </td>
 	</tr>
 	<tr id="accesscost"> <td> <%= f.label "Access Cost ($CAD)" %> </td>
-      <td><%= f.number_field :accessCost ,:pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive"%></td>
+      <td><%= f.number_field :accessCost ,:pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input"%></td>
 	</tr>
 	<tr class="primaryOpt"> 
 		 <td> <%= f.label "Waiting Time at the first transit stop/station (Minutes)" %> </td>
-      <td><%= f.number_field :waitTime, :class=>"positive" %></td>
+      <td><%= f.number_field :waitTime, :class=>"positive input" %></td>
       </tr>
     <tr class="primaryOpt"> 
     	 <td> <%= f.label "Number of Transfers" %> </td>
-      <td><%= f.number_field :numTrans, :class=>"positive" %> </td>
+      <td><%= f.number_field :numTrans, :class=>"positive input" %> </td>
       </tr>
      <tr class="primaryOpt"> 
      	 <td> <%= f.label "Transfer Time between modes (Minutes)" %> </td>
-      <td><%= f.number_field :transWait, :class=>"positive" %> </td>
+      <td><%= f.number_field :transWait, :class=>"positive input" %> </td>
       </tr>
      <tr class="primaryOpt"> 
      	 <td> <%= f.label "In-Vehicle Travel Time (Minutes)" %> </td>
-      	<td><%= f.number_field :travelTime, :class=>"positive" %> </td>
+      	<td><%= f.number_field :travelTime, :class=>"positive input" %> </td>
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Station/Stop " %> </td>
-      	<td><%= f.datetime_field :egressStop %> </td>
+      	<td><%= f.datetime_field :egressStop, :class=>"input" %> </td>
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Mode" %> </td>
-      	<td><%= select_tag( :egressMode, options_for_select([['Walk', 1], ['Bike', 2],['Local Transit',3],['Other', 4]]),:onChange=>"showOption()") %> </td>
+      	<td><%= select_tag( :egressMode, options_for_select([['Walk', 1], ['Bike', 2],['Local Transit',3],['Other', 4]]),:onChange=>"showOption()", :class=>"input") %> </td>
       </tr>
      <tr id="otheregress">
 	   <td> <%= f.label "Egress Mode Name" %> </td>
-      <td><%= f.text_field :otherEgress %></td>
+      <td><%= f.text_field :otherEgress, :class=>"input" %></td>
 	</tr>
      <tr id="egresstransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
       <td><%= select_tag(:egressTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
       ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
-      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]))  %> </td>
+      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]), :class=>"input")  %> </td>
 	</tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Time (Minutes)" %> </td>
-      <td><%= f.number_field :egressTime, :class=>"positive" %> </td>
+      <td><%= f.number_field :egressTime, :class=>"positive input" %> </td>
       </tr>
       <tr id="egresscost"> <td> <%= f.label "Egress Cost ($CAD)" %> </td>
-      <td><%= f.number_field :egressCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive" %> </td>
+      <td><%= f.number_field :egressCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
       <tr> <td> <%= f.label "Estimated One-way Travel Time (Minutes)" %> </td>
-      <td><%= f.number_field :oneTime, :class=>"positive" %> </td>
+      <td><%= f.number_field :oneTime, :class=>"positive input" %> </td>
       </tr>
       <tr> <td> <%= f.label "Estimated One-way Travel Cost ($CAD)" %>  </td>
-      <td><%= f.number_field :oneCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive" %> </td>
+      <td><%= f.number_field :oneCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "How do you typically pay your Public Transit fare?" %> </td>
-      <td><%= select_tag(:transitPay,  options_for_select([['Cash', 1], ['Ticket or Tokens', 2],['Transit Pass',3],['PRESTO card', 4]])) %></td>
+      <td><%= select_tag(:transitPay,  options_for_select([['Cash', 1], ['Ticket or Tokens', 2],['Transit Pass',3],['PRESTO card', 4]]), :class=>"input") %></td>
       </tr>
             <tr> <td> <%= f.label "Parking Cost At Work ($CAD)" %> </td>
-      <td><%= f.number_field :parkCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive" %> </td>
+      <td><%= f.number_field :parkCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
 	  <tr id="monthcom"> <td> <%= f.label "During which months do you typically walk/bike to transit when commuting to work?" %> </td>
-      <td><%= select_tag :monthCom , options_for_select([ "JANRUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ]), multiple: true %> </td>
+      <td><%= select_tag :monthCom , options_for_select([ "JANRUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ]), multiple: true, :class=>"input"  %> </td>
       </tr>
       </tr>
             <tr> <td> <%= f.label "Does your employer pay for your trip expenses?" %> </td>
-      <td><%= select_tag(:bossPay,  options_for_select([['No', 'no'], ['Yes', 'yes']])) %> </td>
+      <td><%= select_tag(:bossPay,  options_for_select([['No', 'no'], ['Yes', 'yes']]), :class=>"input") %> </td>
       </tr>
 </table>
-
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    
+		
+		<ul class="pager">
+		  <li><a id="newTrip">Add New Ride Trip</a></li>
+		  <li><a id="continue" href="/socio">Submit Form</a></li>
+		</ul>
     <% end %>
+      	<ul class="pager">
+	  <li class="previous">
+	    <a>&larr; Older</a>
+	  </li>
+	  <li class="next">
+	    <a>Newer &rarr;</a>
+	  </li>
+	</ul>
 
   </div>
+  
 </div>

@@ -1,5 +1,6 @@
 console.log("we Have Lift off");
-
+var trips =[{}];  
+var curTrip = 1;
 showMain = function(){
 	console.log("show Main");
 	var mainVal =  $("#main")[0].value;
@@ -71,6 +72,10 @@ hideOther = function(){
 	$("#nummain").hide();			
 };
 
+setTripTitle = function(){
+	$("#tripId").html("Trip ID "+ curTrip);
+};
+
 showOption = function(){
 	console.log("showing Option");
 	var val =  $("#accessMode")[0].value;
@@ -127,20 +132,106 @@ showOption = function(){
 		$("#monthcom").hide();	
 	}
 };
-	function addfind(findFor){
-     	fid = findFor;
-    	console.log(fid);
-    	$('#myModal').modal('show');
-     }; 
+function addfind(findFor){
+ 	fid = findFor;
+	console.log(fid);
+	$('#myModal').modal('show');
+ }; 
+     
+function loadForm(num){
+	for (key in trips[num-1]){
+		$("#"+key).val(trips[num-1][key]);
+	}
+	setTripTitle();
+	$("html, body").animate({ scrollTop: 0 }, "slow");	
+};
+function storeForm(num){
+ 	var val = {};
+	$(".input")
+	.filter(function(){
+		return this.value != "";
+	})
+	.each(function(){
+		val[this.id] = $(this).val();
+		this.value = "";
+	});
+	console.log(val);
+	trips[num]= val;
+}
+
 $( document ).ready(function(){
 	console.log("Ready");
+	$(".previous").hide();
+	$(".next").hide();
+	setTripTitle();
 	hideOption();
 	hideOther();
 	$(".positive").change(function(){
 		if(this.value < 0){
 			this.value = 0;
 		}
-	}); 
+	});
+	$(".previous").click(function(){
+		$(".next").show();
+		storeForm(curTrip-1);
+		if (curTrip < 1){
+			$(".previous").hide();
+			curTrip = 1;
+		}
+		else if( (curTrip-1) == 1){
+			$(".previous").hide();
+			curTrip = 1;
+			loadForm(curTrip);
+		}
+		else{
+			curTrip--;
+			loadForm(curTrip);
+		}
+	});
+	$(".next").click(function(){
+		$(".previous").show();
+		storeForm(curTrip-1);
+		var count = trips.length;
+		if (curTrip >= count){
+			curTrip = count;
+			$(".next").hide();
+		}
+		else if( (curTrip + 1) == count){
+			$(".next").hide();
+			curTrip = count;
+			loadForm(count);
+		}
+		else{
+			curTrip++;
+			loadForm(curTrip);
+		}
+	});
+	 
+	$("#continue").click(function(){
+		console.log("Continue");
+		return false;
+	});
+	$("#newTrip").click(function(){
+		storeForm(curTrip-1);
+		$(".previous").show();
+		if (curTrip == trips.length){
+			curTrip++;
+			trips[curTrip -1] = null;
+		}
+		else {
+			curTrip++;
+			loadForm(curTrip);
+			if (curTrip == trips.length){
+				$(".next").hide();
+			}
+			else{
+				$(".next").show();
+			}
+			
+		}
+		setTripTitle();
+		$("html, body").animate({ scrollTop: 0 }, "fast");
+	});
 });
 
 
