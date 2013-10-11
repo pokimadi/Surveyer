@@ -126,7 +126,11 @@
       <td><%= f.text_field :otherPurpose, :class=>"input" %></td>
 	</tr>
 	<tr> <td> <%= f.label "Main (Primary) Mode" %> </td>
-      <td><%= select_tag(:main, options_for_select(['Auto Driver','Auto Passenger/Carpool','Local Transit','Regional Transit']), :onChange=>"showOther(this);showMain()", :class=>"input") %> </td>
+      <td><%= select_tag(:main, options_for_select(['Auto Driver','Auto Passenger/Carpool','Local Transit','Regional Transit', 'Other']), :onChange=>"showOther(this);showMain()", :class=>"input") %> </td>
+	</tr>
+	<tr id="mainOther">
+	   <td> <%= f.label "Please Specify" %> </td>
+      <td><%= f.text_field :mainOther,:class=>"input" %></td>
 	</tr>
 	<tr id="nummain">
 	   <td> <%= f.label "How Many Passengers are using veichle" %> </td>
@@ -134,13 +138,13 @@
 	</tr>
 	<tr id="othermain">
 	   <td> <%= f.label "Regional Transit Name" %> </td>
-      <td><%= f.text_field :otherMain, :class=>"input" %></td>
+      <td><%= select_tag :otherMain, options_for_select(['Go Transit Bus', 'Go Transit Train'] ) ,:class=>"input" %></td>
 	</tr>
 	<tr id="maintransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
       <td><%= select_tag(:mainTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
       ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
-      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]), :class=>"input") %> </td>
+      ['Durham Region Street',11]]), :class=>"input") %> </td>
 	</tr>
 	<tr class="primaryOpt"> 
 		<td> <%= f.label "Access Station/Stop" %> </td>

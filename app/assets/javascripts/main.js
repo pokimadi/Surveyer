@@ -10,6 +10,12 @@ showMain = function(){
 	else {
 		$("#nummain").hide();
 	}
+	if (mainVal =='Other'){
+		$("#mainOther").show();
+	}
+	else{
+		$("#mainOther").hide();
+	}
 	if (mainVal == "Local Transit" || mainVal == "Regional Transit"){
 		$(".primaryOpt").show();
 		showOption();
@@ -63,6 +69,7 @@ showOther =  function(that){
 
 hideOther = function(){
 	console.log("hide Other");
+	$("#mainOther").hide();
 	$("#otherorigin").hide();
 	$("#otherdestination").hide();	
 	$("#otherpurpose").hide();
@@ -73,7 +80,7 @@ hideOther = function(){
 };
 
 setTripTitle = function(){
-	$("#tripId").html("Trip ID "+ curTrip);
+	$("#tripId").html("Trip #/ID "+ curTrip);
 };
 
 showOption = function(){
