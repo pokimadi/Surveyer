@@ -1,6 +1,7 @@
 console.log("we Have Lift off");
 var trips =[{}];  
 var curTrip = 1;
+var error = false;
 showMain = function(){
 	console.log("show Main");
 	var mainVal =  $("#main")[0].value;
@@ -55,6 +56,20 @@ carInfo = function(that){
 	}
 };
 
+function getWorkHome(){
+	var ret;
+	trips.forEach(function(trip){
+		console.log(trip.origin);
+		console.log(trip.destination);
+		if (trip.origin ==  "Home" && trip.destination ==  "Work"){
+			ret = {
+				start: trip.origin_address,
+				end: trip.destination_address
+			};
+		}	
+	});
+	return ret;
+}
 showOther =  function(that){
 	console.log("show Other");
 	var id = "#other"+that.id;
@@ -77,16 +92,28 @@ hideOther = function(){
 	$("#othermain").hide();	
 	$("#otheregress").hide();
 	$("#nummain").hide();			
+	$('#accessregion').hide();
 };
 
 setTripTitle = function(){
-	$("#tripId").html("Trip #/ID "+ curTrip);
+	if (error){
+		$("#tripId").html("Trip #/ID "+ curTrip+ " Fill all the Fields to Proceed.");
+	}
+	else{
+		$("#tripId").html("Trip #/ID "+ curTrip);
+	}
 };
 
 showOption = function(){
 	console.log("showing Option");
 	var val =  $("#accessMode")[0].value;
 	var val1 = $("#egressMode")[0].value;
+	if (val == 8){
+		$('#accessregion').show();
+	}
+	else{
+		$('#accessregion').hide();
+	}
 	if(val == 2 || val == 4){ //10 bd
 		$("#parkcost").show();
 	}
@@ -153,17 +180,32 @@ function loadForm(num){
 	$("html, body").animate({ scrollTop: 0 }, "slow");	
 };
 function storeForm(num){
- 	var val = {};
+ 	var val = {} ,err = [];
 	$(".input")
 	.filter(function(){
-		return this.value != "";
+		//return this.value != "";
+		return $(this).is(':visible');
 	})
 	.each(function(){
-		val[this.id] = $(this).val();
-		this.value = "";
+		if (this.value != ""){
+			val[this.id] = $(this).val();
+		}
+		else{
+			err.push(this.id); 
+		}
+		//this.value = "";
 	});
-	console.log(val);
 	trips[num]= val;
+	if(err.length == 0)
+	{
+		$(".input").val("");
+		error = false;
+		return err;
+	}
+	else {
+		error = true;
+		return err;
+	}
 }
 
 $( document ).ready(function(){
@@ -179,65 +221,99 @@ $( document ).ready(function(){
 		}
 	});
 	$(".previous").click(function(){
-		$(".next").show();
-		storeForm(curTrip-1);
-		if (curTrip < 1){
-			$(".previous").hide();
-			curTrip = 1;
-		}
-		else if( (curTrip-1) == 1){
-			$(".previous").hide();
-			curTrip = 1;
-			loadForm(curTrip);
+		var valid = storeForm(curTrip-1);
+		if(valid.length == 0){
+			$(".next").show();
+			if (curTrip < 1){
+				$(".previous").hide();
+				curTrip = 1;
+			}
+			else if( (curTrip-1) == 1){
+				$(".previous").hide();
+				curTrip = 1;
+				loadForm(curTrip);
+			}
+			else{
+				curTrip--;
+				loadForm(curTrip);
+			}
 		}
 		else{
-			curTrip--;
-			loadForm(curTrip);
+			$("#"+valid[0]).focus();
+			setTripTitle();	
 		}
 	});
-	$(".next").click(function(){
-		$(".previous").show();
-		storeForm(curTrip-1);
-		var count = trips.length;
-		if (curTrip >= count){
-			curTrip = count;
-			$(".next").hide();
+	$(".next").click(function(){	
+		var valid = storeForm(curTrip-1);
+		if(valid.length == 0){
+			$(".previous").show();
+			var count = trips.length;
+			if (curTrip >= count){
+				curTrip = count;
+				$(".next").hide();
+			}
+			else if( (curTrip + 1) == count){
+				$(".next").hide();
+				curTrip = count;
+				loadForm(count);
+			}
+			else{
+				curTrip++;
+				loadForm(curTrip);
+			}
 		}
-		else if( (curTrip + 1) == count){
-			$(".next").hide();
-			curTrip = count;
-			loadForm(count);
-		}
-		else{
-			curTrip++;
-			loadForm(curTrip);
+		else {
+			$("#"+valid[0]).focus();
+			setTripTitle();	
 		}
 	});
 	 
 	$("#continue").click(function(){
 		console.log("Continue");
+		var valid = storeForm(curTrip-1);
+		if(valid.length == 0){
+			var route = getWorkHome();
+			//console.log("ROUTE:" ,route);
+			if (route){
+				calcRoute(route);
+			}
+			else{
+				
+			}
+		}
+		else {
+			$("#"+valid[0]).focus();
+			setTripTitle();	
+		}
 		return false;
 	});
 	$("#newTrip").click(function(){
-		storeForm(curTrip-1);
-		$(".previous").show();
-		if (curTrip == trips.length){
-			curTrip++;
-			trips[curTrip -1] = null;
-		}
-		else {
-			curTrip++;
-			loadForm(curTrip);
+		var valid = storeForm(curTrip-1);
+		if(valid.length == 0){
+			$(".previous").show();
 			if (curTrip == trips.length){
-				$(".next").hide();
+				curTrip++;
+				trips[curTrip -1] = null;
 			}
-			else{
-				$(".next").show();
+			else {
+				curTrip++;
+				loadForm(curTrip);
+				if (curTrip == trips.length){
+					$(".next").hide();
+				}
+				else{
+					$(".next").show();
+				}
+				
 			}
+		}
+		else{
+			$("#"+valid[0]).focus();
 			
 		}
+		
 		setTripTitle();
-		$("html, body").animate({ scrollTop: 0 }, "fast");
+		//$("html, body").animate({ scrollTop: 0 }, "fast");
 	});
 });
 

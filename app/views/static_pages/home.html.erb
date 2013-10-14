@@ -40,6 +40,8 @@
 		console.log("Starting Up");
 	    startUp();
 	}); 
+
+	var test = '<%= "works" %>';
     </script>
   </div>
   <div class="modal-footer">
@@ -105,7 +107,7 @@
 	</tr>
 	<tr>
 		 <td> <%= f.label "Destination" %> </td>
-        <td><%= select_tag(:destination,  options_for_select(['Home','Work','Other']),:onChange=>"showOther(this)", :class=>"input")%></td>
+        <td><%= select_tag(:destination,  options_for_select(['Work','Home','Other']),:onChange=>"showOther(this)", :class=>"input")%></td>
 	</tr>
 	<tr id="otherdestination">
 	   <td> <%= f.label "Place Name" %> </td>
@@ -142,9 +144,9 @@
 	</tr>
 	<tr id="maintransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
-      <td><%= select_tag(:mainTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
-      ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
-      ['Durham Region Street',11]]), :class=>"input") %> </td>
+      <td><%= select_tag(:mainTransit, options_for_select([['TTC Subway','TTC Bus', 'TTC Streetcar','York Region Transit (VIVA)', 
+      'Mississauga Transit (MIWAY)', 'Brampton Transit', 'Oakville Transit', 'Bulington Transit','Milton Transit', 'Hamilton Street Railway',
+      'Durham Region Street']), :class=>"input") %> </td>
 	</tr>
 	<tr class="primaryOpt"> 
 		<td> <%= f.label "Access Station/Stop" %> </td>
@@ -152,18 +154,23 @@
 	</tr>
 	<tr class="primaryOpt"> 
 		<td> <%= f.label "Access Mode" %> </td>
-      <td><%= select_tag(:accessMode,  options_for_select([['Walk', 1],['Auto Driver(P&R)', 2], ['Auto Passenger(K&R)', 3],['Auto Passenger(Car Pool)',4],['Bike', 5],['local Transit', 6],['Other', 7]]),
+      <td><%= select_tag(:accessMode,  options_for_select([['Walk', 1],['Auto Driver(P&R)', 2], ['Auto Passenger(K&R)', 3],['Auto Passenger(Car Pool)',4],['Bike', 5],['local Transit', 6],['Regional Transit', 8 ],['Other', 7]]),
        :onChange=>"showOption()", :class=>"input") %></td>
 	</tr>
 	<tr id="otheraccess">
-	   <td> <%= f.label "Access Mode Name" %> </td>
+	   <td> <%= f.label "Pleas Specify Access Mode Name" %> </td>
       <td><%= f.text_field :otherAccess, :class=>"input" %></td>
 	</tr>
+	<tr id="accessregion">
+	 <td> <%= f.label "Which Local Transit?" %> </td>
+      <td><%= select_tag(:accessRegion, options_for_select(['Go Transit Bus', 'Go Transit Train']), :class=>"input")  %> </td>
+	</tr>
+
 	<tr id="accesstransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
-      <td><%= select_tag(:accessTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
-      ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
-      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]), :class=>"input")  %> </td>
+      <td><%= select_tag(:accessTransit, options_for_select(['TTC Subway', 'TTC Bus', 'TTC Streetcar','York Region Transit (VIVA)', 
+      'Mississauga Transit (MIWAY)','Brampton Transit','Oakville Transit','Bulington Transit','Milton Transit', 'Hamilton Street Railway', 
+      'Durham Region Street']), :class=>"input")  %> </td>
 	</tr>
 
 	<tr id="parkcost"> <td> <%= f.label "Parking Cost at Local Transit P&R Station ($)/day" %> </td>
@@ -189,8 +196,12 @@
       <td><%= f.number_field :transWait, :class=>"positive input" %> </td>
       </tr>
      <tr class="primaryOpt"> 
-     	 <td> <%= f.label "In-Vehicle Travel Time (Minutes)" %> </td>
+     	 <td> <%= f.label "Main Mode In-vehicle Travel Time (Minutes)" %> </td>
       	<td><%= f.number_field :travelTime, :class=>"positive input" %> </td>
+      </tr>
+     <tr class="primaryOpt"> 
+     	 <td> <%= f.label "Main Mode In-vehicle Travel Cost (CAD)" %> </td>
+      	<td><%= f.number_field :travelCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Station/Stop " %> </td>
@@ -206,9 +217,9 @@
 	</tr>
      <tr id="egresstransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
-      <td><%= select_tag(:egressTransit, options_for_select([['TTC Subway', 1], ['TTC Bus', 2],['TTC Streetcar',3],['York Region Transit (VIVA)', 4],
-      ['Mississauga Transit (MIWAY)', 5], ['Brampton Transit', 6],['Oakville Transit', 7],['Bulington Transit', 8],['Milton Transit', 9], ['Hamilton Street Railway', 10],
-      ['Durham Region Street',11],['Go Transit Bus', 12],['Go Transit Train', 13]]), :class=>"input")  %> </td>
+      <td><%= select_tag(:egressTransit, options_for_select([ 'TTC Subway', 'TTC Bus', 'TTC Streetcar','York Region Transit (VIVA)', 
+      'Mississauga Transit (MIWAY)','Brampton Transit', 'Oakville Transit','Bulington Transit', 'Milton Transit', 'Hamilton Street Railway', 
+      'Durham Region Street','Go Transit Bus', 'Go Transit Train']), :class=>"input")  %> </td>
 	</tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Time (Minutes)" %> </td>
@@ -225,7 +236,7 @@
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "How do you typically pay your Public Transit fare?" %> </td>
-      <td><%= select_tag(:transitPay,  options_for_select([['Cash', 1], ['Ticket or Tokens', 2],['Transit Pass',3],['PRESTO card', 4]]), :class=>"input") %></td>
+      <td><%= select_tag(:transitPay,  options_for_select(['Cash','Ticket or Tokens','Transit Pass','PRESTO card']), :class=>"input") %></td>
       </tr>
             <tr> <td> <%= f.label "Parking Cost At Work ($CAD)" %> </td>
       <td><%= f.number_field :parkCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>

@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require bootstrap
 //= require jquery.geocomplete.js
+//= require geocalc.js
 //= require main
 //= require turbolinks
 //= require_tree .
