@@ -144,7 +144,7 @@
 	</tr>
 	<tr id="maintransit">
 	 <td> <%= f.label "Which Local Transit?" %> </td>
-      <td><%= select_tag(:mainTransit, options_for_select([['TTC Subway','TTC Bus', 'TTC Streetcar','York Region Transit (VIVA)', 
+      <td><%= select_tag(:mainTransit, options_for_select(['TTC Subway','TTC Bus', 'TTC Streetcar','York Region Transit (VIVA)', 
       'Mississauga Transit (MIWAY)', 'Brampton Transit', 'Oakville Transit', 'Bulington Transit','Milton Transit', 'Hamilton Street Railway',
       'Durham Region Street']), :class=>"input") %> </td>
 	</tr>
@@ -154,7 +154,7 @@
 	</tr>
 	<tr class="primaryOpt"> 
 		<td> <%= f.label "Access Mode" %> </td>
-      <td><%= select_tag(:accessMode,  options_for_select([['Walk', 1],['Auto Driver(P&R)', 2], ['Auto Passenger(K&R)', 3],['Auto Passenger(Car Pool)',4],['Bike', 5],['local Transit', 6],['Regional Transit', 8 ],['Other', 7]]),
+      <td><%= select_tag(:accessMode,  options_for_select(['Walk','Auto Driver(P&R)', 'Auto Passenger(K&R)','Auto Passenger(Car Pool)','Bike', 'local Transit','Regional Transit', 'Other']),
        :onChange=>"showOption()", :class=>"input") %></td>
 	</tr>
 	<tr id="otheraccess">
@@ -209,7 +209,7 @@
       </tr>
       <tr class="primaryOpt"> 
       	 <td> <%= f.label "Egress Mode" %> </td>
-      	<td><%= select_tag( :egressMode, options_for_select([['Walk', 1], ['Bike', 2],['Local Transit',3],['Other', 4]]),:onChange=>"showOption()", :class=>"input") %> </td>
+      	<td><%= select_tag( :egressMode, options_for_select(['Walk','Bike','Local Transit','Other' ]),:onChange=>"showOption()", :class=>"input") %> </td>
       </tr>
      <tr id="otheregress">
 	   <td> <%= f.label "Egress Mode Name" %> </td>

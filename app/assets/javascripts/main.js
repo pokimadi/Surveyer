@@ -108,28 +108,28 @@ showOption = function(){
 	console.log("showing Option");
 	var val =  $("#accessMode")[0].value;
 	var val1 = $("#egressMode")[0].value;
-	if (val == 8){
+	if (val == 'Regional Transit'){
 		$('#accessregion').show();
 	}
 	else{
 		$('#accessregion').hide();
 	}
-	if(val == 2 || val == 4){ //10 bd
+	if(val == 'Auto Driver(P&R)' || val == 'Auto Passenger(Car Pool)'){ //10 bd
 		$("#parkcost").show();
 	}
 	else{
 		$("#parkcost").hide();
 	}
-	if(val == 2 || val == 3 || val == 4 || val == 5 || val == 6 || val == 7){ //10 b c d e f g
+	if(val == 'Auto Driver(P&R)' || val == 'Auto Passenger(K&R)' || val == 'Auto Passenger(Car Pool)' || val == 'Bike' || val == 'local Transit' || val == 'Other'){ //10 b c d e f g
 		$("#accesscost").show();
 		console.log("accesstransit", val);
-		if(val == 6){
+		if(val == 'local Transit'){
 			$("#accesstransit").show();
 		}
 		else{
 			$("#accesstransit").hide();
 		}
-		if(val == 7){
+		if(val == 'Other'){
 			$("#otheraccess").show();
 		}
 		else{
@@ -139,15 +139,15 @@ showOption = function(){
 	else{
 		$("#accesscost").hide();
 	}
-	if (val1 == 2 || val1 == 3 || val1 == 4){ //19 b, c ,d
+	if (val1 == 'Bike' || val1 == 'Local Transit' || val1 == 'Other'){ //19 b, c ,d
 		$("#egresscost").show();
-		if(val1 == 3){
+		if(val1 == 'Local Transit'){
 			$("#egresstransit").show();
 		}
 		else{
 			$("#egresstransit").hide();
 		}
-		if(val1 == 4){
+		if(val1 == 'Other'){
 			$("#otheregress").show();
 		}
 		else{
@@ -157,7 +157,7 @@ showOption = function(){
 	else{
 		$("#egresscost").hide();
 	}
-	if (val == 1 || val == 5 || val1 == 1 || val == 2){ //19 a b or 10 a e
+	if (val == 'Walk' || val1 == 'Walk' || val1 == 'Bike' || val == 'Bike'){ //19 a b or 10 a e
 		console.log("show Month", val, val1);
 		$("#monthcom").show();		
 	}
