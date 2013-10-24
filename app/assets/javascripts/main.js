@@ -82,6 +82,7 @@ showOther =  function(that){
 	}
 };
 
+
 hideOther = function(){
 	console.log("hide Other");
 	$("#mainOther").hide();
@@ -171,6 +172,15 @@ function addfind(findFor){
 	console.log(fid);
 	$('#myModal').modal('show');
  }; 
+
+function showStation(){
+	if(this.value == 10 || this.value == 3){
+		$("#session_regName").show();
+	}
+	else{
+		$("#session_regName").hide();
+	}
+}
      
 function loadForm(num){
 	for (key in trips[num-1]){

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  origin: 1
+  dest: 1
+  price: 1.5
+
+two:
+  origin: 1
+  dest: 1
+  price: 1.5

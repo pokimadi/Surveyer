@@ -1,0 +1,1521 @@
+Newmarket Bus Terminal At Eagle St	64
+Hillcrest Mall At Yonge St	61
+Yonge St At Langstaff Rd	60
+Yonge St At Hendon Ave	5
+Yonge St At Sheppard Ave	5
+York Mills Terminal At Yonge St	5
+Finch Bus Terminal At Yonge St	5
+Yonge St At Langstaff Rd	60
+Yonge St At 9325 Yonge St	61
+Yorkdale GO Bus Terminal At Yorkdale Rd	5
+Hwy 401 At Keele St	5
+Hwy 400 At Hwy 9	64
+Keele St At Hwy 401	5
+Barrie St At Holland St	65
+Barrie St At Holland St	65
+Keele St At Station Rd	62
+Rutherford GO At Rutherford Rd	61
+York University GO Bus Terminal At York B	19
+Keele St At Burton Grove	62
+Whitby GO Station At Brock St	93
+Brock St At Dundas St	93
+Winchester Rd At Watford St	51
+Baldwin St At Myrtle Rd	51
+Curts St At Water St	52
+Reach St At Old Simcoe Rd	52
+Hwy 12 At Cragg Rd	53
+Albert St At River St	54
+Simcoe St At Mara Rd	55
+Cameron St At Ann St	54
+Albert St At River St	54
+Hwy 12 At Cragg Rd	53
+Reach St At Old Simcoe Rd	52
+Baldwin St At Myrtle Rd	51
+Winchester Rd At Anderson St	51
+Brock St At Dundas St	93
+Union Station Bus Terminal At Bay St	2
+Canadas Wonderland At Wonderland Parking	61
+Bramalea GO Station At Steeles Ave	32
+Langstaff GO Station South At Langstaff R	60
+Langstaff GO Station South At Langstaff R	60
+Richmond Hill GO Station At Newkirk	61
+Yonge St At Savage Rd	64
+Yonge St At Savage Rd	64
+Yonge St At Orchard Heights Blvd	63
+Yonge St At Batson Dr	63
+Yonge St At Wellington St	63
+Yonge St At Wellington St	63
+Yonge St At Steeles Ave	60
+Yonge St At Steeles Ave	5
+Yonge St At Finch Ave	5
+Yonge St At 5150 Yonge St	5
+Aurora GO Station At Wellington St East	63
+Yonge St At Mount Albert Rd	65
+Yonge St At Queen St	65
+Hwy 11 At Killarney	67
+Hwy 11 At 4th Line	67
+Hwy 11 At Victoria St	68
+Hwy 11 At Victoria St	68
+Hwy 11 At Mapleview Dr	68
+Hwy 11 At Mapleview Dr	68
+Barrie GO Bus Terminal At Maple Ave	69
+Newmarket GO Station At Davis Dr	64
+Hwy 47 At Front St	75
+Hwy 47 At Front St	75
+Main St At Edward St	74
+Main St At Albert St	74
+Mount Joy GO Station At Bur Oak Ave	73
+Markham GO Station At Main St	72
+Markham GO Station At Main St	72
+Centennial GO Station At Bullock Dr	72
+Centennial GO Station At Bullock Dr	72
+Bullock Dr At Austin Dr	71
+Bullock Dr At Austin Dr	71
+Unionville GO Station At Station Roadway	71
+Meadowvale GO Station At Aquitaine Ave	22
+Langstaff Rd At Yonge St	60
+Langstaff Rd At Yonge St	60
+Square One GO Bus Terminal At Station	20
+Square One GO Bus Terminal At Station	20
+Trafalgar Rd At Upper Middle Rd	13
+Oakville GO Station At Cross Ave	13
+Hwy 407 At Bronte Rd	14
+Hwy 407 At Dundas St	16
+Hamilton GO Centre At Hunter St	18
+Scarborough Town Centre At Borough Dr	7
+University of Toronto Scarborough	89
+Pickering GO Station Bus Loop At Bayly	91
+Streetsville GO Station At Thomas St	21
+Hwy 407 At Brock Rd	86
+Hwy 7 At Westney Rd	87
+Hwy 7 At Westney Rd	87
+Durham College/UOIT At Commencement Dr	88
+Oshawa Bus Terminal At Bond St	94
+Waverly Rd At Baseline Rd W	96
+Waverly Rd At Baseline Rd W	96
+King St At Liberty St	96
+King St At Liberty St	96
+Oshawa GO Station At Bloor St W	94
+Ajax GO Station At Westney Rd	92
+Stevenson Rd At Cartier Ave	94
+Stevenson Rd At Cartier Ave	94
+King St At Centre St	94
+Bond St At Centre St	94
+King St At Courtice Rd	95
+King St At Courtice Rd	95
+Kingston Rd At Port Union Rd	90
+Kingston Rd At Port Union Rd	90
+Dundas St At Brock St	93
+Dundas St At Brock St	93
+Burlington GO Station At Fairview St	16
+King St At Dundurn St N	18
+Main St At Longwood Rd S	18
+Aldershot GO Station At Waterdown Rd	17
+Clarkson GO Station At Southdown Rd	12
+Port Credit GO Station At Park St	11
+Eglinton Ave At Metcalfe Ave	21
+Eglinton Ave At Metcalfe Ave	21
+Dixie Go Station At Dixie Rd	11
+Cooksville GO Station At Hillcrest Ave	11
+Erindale GO Station At Rathburn Rd	12
+Aquitaine Ave At Formentera Ave	22
+Aquitaine Ave At Formentera Ave	22
+Milton GO Station At Main St E	24
+Martin St At Main St	24
+Erin Mills Pkwy At Turner Valley Rd	22
+Erin Mills Pkwy At Mississauga Rd	22
+Syntex Crt At Financial Dr	22
+University Of Guelph At South Ring	39
+Alma St At Inkerman St	38
+Alma St At Inkerman St	38
+Hwy 7 At Mill St	37
+Main St At St.Alban Dr	37
+Main St At Cross St	35
+Main At James St	35
+Georgetown GO Station At Queen St	35
+Georgetown Market At Guelph St	35
+Guelph St At Alcott Dr	35
+Hwy 7 At King St	35
+Hwy 7 At King St	35
+Bovaird Dr At Mississauga Rd	34
+Bovaird Dr At Mississauga Rd	34
+Bovaird Dr At Chinguacousy Rd	33
+Bovaird Dr At Chinguacousy Rd	33
+Bovaird Dr At Gillingham Dr	33
+Bovaird Dr At Hurontario St	33
+Brampton Bus Terminal At Queen St	33
+Shoppers World At Main St	33
+Shoppers World At Main St	33
+Bramalea Transit Terminal	32
+Steeles Ave At Rutherford Rd	33
+Malton GO Station At Derry Rd	31
+Trinity Common Mall At Great Lakes Dr	32
+Trinity Common Mall At Great Lakes Dr	32
+Airport Rd At Hull St	31
+Airport Rd At Hull St	31
+Queen St At Dixie Rd	32
+Queen St At Dixie Rd	32
+Dixon Rd At Martin Grove Rd	4
+Dixon Rd At Martin Grove Rd	4
+Finch Ave At Longo Circle	31
+Finch Ave At Darcel Ave	31
+Humber College At Pine Ln	4
+Humber College At Pine Ln	4
+Hwy 27 At Humber College Blvd	4
+Hwy 27 At Humber College Blvd	4
+Hwy 27 At Rexdale Blvd	4
+Hwy 27 At Rexdale Blvd	4
+Hurontario St At Mayfield Rd	33
+Hurontario St At Mayfield Rd	33
+Hwy 10 At King St	41
+Hwy 10 At King St	41
+Hwy 10 At Charleston Side Rd	42
+Hwy 10 At Charleston Side Rd	42
+Broadway At Hwy 10	43
+Etobicoke North Station At Belfield Rd	4
+Orangeville Mall At Hansen Blvd	43
+Broadway At Blind Line	43
+Broadway At Hwy 10	43
+Rutherford Rd At Vaughan Mills Rd	56
+Rutherford Rd At Vaughan Mills Rd	56
+Islington Ave At Nashville Rd	56
+Appleby GO Station At Fairview St	15
+Bronte GO Station At Wyecroft Rd	14
+Islington Ave At Nashville Rd	56
+King Rd At Hwy 27	57
+King St At Hwy 27	57
+King St At Humber Lea Rd	58
+King St At Humber Lea Rd	58
+Queensgate Blvd At Queen St	58
+Queensgate Blvd At Queen St	58
+Albion Vaughan Rd At Commercial Rd	58
+Albion Vaughan Rd At Commercial Rd	58
+East Gwillimbury GO At Green Ln	44
+Bovaird Dr At Main St	33
+Bovaird Dr At Main St	33
+Mount Pleasant GO Station At Bovaird Dr	34
+Wellington St At Bayview Ave	63
+Yonge St At Elmhurst Ave	5
+Yonge St At North York Blvd	5
+Railway St At Albert St	76
+Wellington St At Bayview Ave	63
+Bowmanville P&R At Martin Rd	96
+Aurora Rd At Hwy 404 Carpool Lot	63
+McMaster U At Scholars Rd	18
+Pearson Airport Terminal 1	31
+Kingston Rd At Fairport Rd	91
+Kingston Rd At Glenanna Rd	91
+Kingston Rd At Glenanna Rd	91
+Kingston Rd At Harwood Ave	92
+Kingston Rd At Harwood Ave	92
+Dundas St At McQuay Blvd	93
+Dundas St At Garden St	93
+Dundas St At Lupin Dr	93
+Dundas St At Anderson St	93
+Dundas St At Hopkins St	93
+Dundas St At Thickson Rd	93
+Bond St At Stevenson Rd	94
+King St At Stevenson Rd	94
+Major MacKenzie Dr At Hwy 400	61
+Aberfoyle GO Park & Ride	39
+Hwy 50 At Columbia Way	58
+Hwy 50 At Nashville Rd	56
+Hwy 50 At Hwy 7	56
+Lisgar GO Station At Tenth Line	23
+Dundas St At White Oaks Crt	93
+Kingston Rd At Church St	92
+Kingston Rd At Church St	92
+Barrie South GO Station At Yonge St	68
+Queen St At Wilton Dr	58
+Queen St At Allan Dr	58
+Orangeville GO Park & Ride At Mill St	43
+Richmond Hill Centre At Yonge St	60
+Nash Rd At Barton St	80
+Lincolnville GO At Bethesda Rd	74
+407 Park & Ride/Carpool At Hurontario St	22
+Trafalgar Rd At Upper Middle Rd	13
+Centennial College At Progress Ave	89
+Allandale Waterfront GO At Essa Rd	69
+Hwy 27 At Innovation Dr	61
+Kingston Rd At Fairport Rd	91
+Kingston Rd At Brock Rd	91
+Kingston Rd At Brock Rd	91
+Kingston Rd At Westney Rd	92
+Kingston Rd At Westney Rd	92
+Dundas St At Thickson Rd	93
+Newmarket- Green Lane Rd At Leslie St	45
+King St At Beaver St	97
+King St At Darlington Blvd	95
+Albert St At Hwy 7 & 12	54
+Albert St At Hwy 7 & 12	54
+Baldwin St At Sleepy Hollow Place	93
+Baldwin St At Broadleaf Ave	93
+Baldwin St At Broadleaf Ave	93
+Baldwin St At Robert Attersley Dr	93
+Baldwin St At Robert Attersley Dr	93
+Baldwin St At Robmar St	93
+Baldwin St At Robmar St	93
+Baldwin St At Roybrook Ave	51
+Baldwin St At Sonley Dr	93
+Baldwin St At Taunton Rd	93
+Baldwin St At Winchester Rd	51
+Bond St At Claymore Cres	94
+Bond St At Gibbons St	94
+Bond St At Mary St	94
+Bond St At Park Rd	94
+Bond St At Patricia Ave	94
+Bond St At Ritson Rd	94
+Brock St At Burns St	93
+Brock St At Burns St	93
+Brock St At Chestnut St	93
+Brock St At Chestnut St	93
+Brock St At Dryden Blvd	93
+Brock St At Gilbert St	93
+Brock St At James Rowe Dr	93
+Brock St At Joy Thompson Ave	93
+Brock St At Kenneth Hobbs Ave	93
+Brock St At Manning Rd	93
+Brock St At McCartney Ave	93
+Brock St At 815 Brock St	93
+Brock St At 814 Brock St	93
+Brock St At Palmerston	93
+Brock St At Rossland Rd	93
+Brock St At Rossland Rd	93
+Brock St At Starr Ave	93
+Brock St At Taunton Rd	93
+Brock St At Timber Mill Ave	93
+Brock St At Trent St	93
+Brock St At Trent St	93
+Brock St At Wallace Dr	93
+Brock St At Whitburn St	93
+Brock St At Woodlands Ave	93
+Cameron St At Country Ln	54
+Cameron St At Prince St	54
+Clarington Blvd At Hwy 2	96
+Hwy 2 At Baldwin St	97
+Hwy 2 At North St	97
+King St At Beaver St	97
+Hwy 2 At Bennett Rd	97
+Hwy 2 At Bennett Rd	97
+Hwy 2 At Boswell Dr	96
+Hwy 2 At Boswell Dr	96
+Hwy 2 At Bragg Rd	97
+Hwy 2 At Centerfield Dr	95
+Hwy 2 At Clarington Blvd	96
+Hwy 2 At Division St	96
+Hwy 2 At Durham Rd 57	96
+Hwy 2 At Galbraith Crt	96
+Hwy 2 At George St	96
+Hwy 2 At Hancock Rd	95
+Hwy 2 At Holt Rd	96
+Hwy 2 At Kurve Inn Rd	97
+Hwy 2 At Broadview Rd	97
+Hwy 2 At Lambs Rd	96
+Hwy 2 At Lambs Rd	96
+Hwy 2 At Maple Grove Rd	96
+Hwy 2 At Maple Grove Rd	96
+Hwy 2 At Massey Dr	97
+Hwy 2 At Massey Dr	97
+Hwy 2 At Mearns Ave	96
+Hwy 2 At Mearns Ave	96
+Hwy 2 At Ontario St	96
+Hwy 2 At Prestonvale Rd	95
+Hwy 2 At Rickard Rd	97
+Hwy 2 At Roenigk Dr	96
+Hwy 2 At Roenigk Dr	96
+Hwy 2 At Rudell Rd	97
+Hwy 2 At Rudell Rd	97
+Hwy 2 At Rundle Rd	96
+Hwy 2 At Scugog St	96
+Hwy 2 At Simpson Ave	96
+Hwy 2 At Solina Rd	95
+Hwy 2 At Temperance St	96
+Hwy 2 At Trulls Rd	95
+Hwy 2 At Varcoe Rd	95
+Hwy 47 At Goodwood Rd	75
+Hwy 47 At Welwood Dr	76
+Hwy 407 At Brock Rd	86
+Hwy 7 At Lake Ridge Rd	51
+Hwy 12 At Couves Ln	53
+Hwy 12 At Front St	51
+Hwy 12 At Hwy 47	53
+Hwy 12 At Hwy 7A	52
+Hwy 12 At Jack St	53
+Hwy 12 At Jacobsen Blvd	53
+Hwy 12 At Jacobsen Blvd	53
+Hwy 12 At Ontario St	51
+Hwy 12 At Hwy 7A	52
+Hwy 12 At Scugog Line 10	53
+Hwy 7A At Brook St	52
+Hwy 7A At Rose St	52
+Hwy 7A At Scugog Line	52
+Hwy 7A At Scugog St	52
+King St At Athabasca St	95
+King St At Centerfield Dr	95
+King St At Central Park Blvd	94
+King St At Centre St	94
+King St At Division St	94
+King St At Eastlawn St	95
+King St At Farewell St	94
+King St At Grandview St	95
+King St At Grenfell St	94
+King St At Hancock Rd	95
+King St At Harmony Rd	94
+King St At Harmony Rd	94
+King St At Holt Rd	96
+King St At Keewatin St	95
+King St At Keewatin St	95
+King St At Kingsway College	95
+King St At Mary St	94
+King St At Park Rd	94
+King St At Prestonvale Rd	95
+King St At Ritson Rd	94
+Hwy 2 At Rundle Rd	96
+King St At Simcoe St	94
+King St At Solina Rd	95
+King St At Townline Rd	95
+King St At Townline Rd	95
+King St At Trulls Rd	95
+King St At Wilson Rd	94
+Kingston Rd At Rougemount Dr	91
+Kingston Rd At Rougemount Dr	91
+Kingston Rd At Walnut Ln	91
+Kingston Rd At Walnut Ln	91
+Kingston Rd At Whites Rd	91
+Kingston Rd At Whites Rd	91
+Prince St At Liberty St	96
+Reach St At Sherrington Dr	52
+Reach St At Sherrington Dr	52
+Reach St At Simcoe St	52
+Reach St At Simcoe St	52
+Regional Rd 12 At 1590 Regional Rd 12	54
+Regional Rd 12 At Cedar Vale Cemetary	54
+Scugog St At Simcoe St	52
+Scugog St At Arrow St	52
+Scugog St At Arrow St	52
+Scugog St At High St	52
+Scugog St At Old Simcoe Rd	52
+Scugog St At Old Simcoe Rd	52
+Simcoe St At Balsam St	52
+Simcoe St At Balsam St	52
+Simcoe St At Beech St	52
+Simcoe St At John St	55
+Simcoe St At John St	55
+Simcoe St At 672 Simcoe St	55
+Simcoe St At 665 Simcoe St	55
+Simcoe St At Queen St	52
+Simcoe St At Queen St	52
+Simcoe St At Union St	55
+Simcoe St At Union St	55
+Stevenson Rd At Laval Dr	94
+Stevenson Rd At Gibb St	94
+Stevenson Rd At Gibb St	94
+Stevenson Rd At King St	94
+Stouffville Rd At Goodwood Rd	75
+Thickson Rd At Baldwin St	51
+Thickson Rd At Baldwin St	51
+Thickson Rd At Blackfriar Ave	51
+Thickson Rd At Blackfriar Ave	51
+Thickson Rd At Carnwith Dr	51
+Thickson Rd At Carnwith Dr	51
+Thickson Rd At Columbus Rd	51
+Thickson Rd At Columbus Rd	51
+Thickson Rd At Winchester Rd	51
+Thickson Rd At Winchester Rd	51
+Toronto St At Albert St	76
+Toronto St At Campbell Dr	76
+Toronto St At Campbell Dr	76
+Toronto St At Elgin Park Dr	76
+Toronto St At Mill St	76
+Toronto St At Peel St	76
+Toronto St At Poplar St	76
+Toronto St At Welwood Dr	76
+Winchester Rd At Ashburn Rd	51
+Winchester Rd At Ashburn Rd	51
+Winchester Rd At Baldwin St	51
+Winchester Rd At Chelmsford Dr	51
+Winchester Rd At Durham St	51
+Winchester Rd At Lake Ridge Rd	51
+Winchester Rd At Simcoe St	51
+Winchester Rd At Simcoe St	51
+Winchester Rd At St Thomas St	51
+Winchester Rd At Queen St	51
+Winchester Rd At Thickson Rd	51
+Winchester Rd At Thickson Rd	51
+Toronto St At Brock St	76
+Hwy 2 At Durham Rd 57	96
+Hwy 2 At Townline Rd	97
+Hwy 2 At Townline Rd	97
+Simcoe St At Kellett St	52
+McCowan Rd At Progress Ave	7
+McCowan Rd At Triton Rd	7
+Liverpool Rd At Pickering Pkwy	91
+Liverpool Rd At Pickering Pkwy	91
+Kingston Rd At Salem Rd	92
+Kingston Rd At Salem Rd	92
+Main St At Frederick St	38
+Alma St At Fall St	38
+Alma St At Fall St	38
+Brant St At Leighland Rd	16
+Derry Rd At Fourth Line	24
+Derry Rd At Fourth Line	24
+Derry Rd At James Snow Pkwy	24
+Derry Rd At James Snow Pkwy	24
+Derry Rd At Miller Way	24
+Derry Rd At Thompson Rd	24
+Derry Rd At Miller Way	24
+Derry Rd At Trafalgar Rd	23
+Derry Rd At Trafalgar Rd	23
+Derry Rd At Trudeau Dr	24
+Derry Rd At Trudeau Dr	24
+Fairview St At Brant St	16
+Fairview St At Brant St	16
+Fairview St At Maple Ave	16
+Fairview St At Maple Ave	16
+Fairview St At Maple Ave	16
+Guelph St At Noble St	34
+Guelph St At Armstrong Ave	35
+Guelph St At Armstrong Ave	35
+Guelph St At Brucewood Rd	35
+Guelph St At Brucewood Rd	35
+Guelph St At Delrex Blvd	35
+Guelph St At Delrex Blvd	35
+Guelph St At Hall Rd	35
+Guelph St At Lakeview	37
+Guelph St At Maple Ave	35
+Guelph St At Maple Ave	35
+Guelph St At McFarlane Dr	35
+Guelph St At Mill St	35
+Guelph St At Mountainview Rd	35
+Guelph St At 46 Guelph St	35
+Guelph St At 324 Guelph St	35
+Guelph St At Noble St	34
+Guelph St. At Windsor Rd	35
+Guelph St At Sinclair Ave	35
+Guelph St At Sinclair Ave	35
+Guelph St At Windsor Rd	35
+Guelph St At 279 Guelph St	35
+Hwy 7 At Lake Avenue	37
+Hwy 25 At Elizabeth Dr	37
+Hwy 7 At Banting Rd	35
+Hwy 7 At Hyland Ave	35
+Hwy 7 At Hyland Ave	35
+Main St At Court St	24
+Main St At Court St	24
+Main St At Dumbar St	38
+Main St At Kennedy St	35
+Main St At Kennedy St	35
+Main St At MacLennan St	38
+Main St At Ontario St	24
+Main St At Ontario St	24
+Main St At Valley Rd	38
+Main St At Valley Rd	38
+Main St At Wilson Dr	24
+Main St At Wilson Dr	24
+Mill St At Eastern Ave	37
+Mill St At Elgin St	37
+Mill St At Elgin St	37
+Mill St At School Ln	37
+Mill St At Fellows St	37
+Millside Dr At Martin St	24
+Plains Rd At Shadeland Ave	17
+Plains Rd At Cedarwood PL	17
+Plains Rd At Clairview Ave	17
+Plains Rd At Downsview Dr	17
+Plains Rd At Downsview Dr	17
+Plains Rd At Falcon Rd	17
+Plains Rd At Francis Rd	17
+Plains Rd At Francis Rd	16
+Plains Rd At Gallagher Rd	17
+Plains Rd At King Rd	17
+Plains Rd At Long Dr	17
+Plains Rd At 484 Plains Rd E	17
+Plains Rd At 169 Plains Rd E	17
+Plains Rd At Lasalle Park Rd	17
+Plains Rd At Waterdown Rd	17
+Plains Rd At Willowbrook Rd	17
+Plains Rd At 480 Plains Rd E	17
+Queen St At Acton Blvd	37
+Queen St At Churchill Rd	37
+Queen St At Churchill Rd	37
+Queen St At Longfield Rd	37
+Thompson Rd At Childs Dr	24
+Thompson Rd At Childs Dr	24
+Thompson Rd At Laurier Ave	24
+Thompson Rd At Laurier Ave	24
+Thompson Rd At McCuaig Dr	24
+Thompson Rd At McCuaig Dr	24
+Trafalgar Rd At Briarhall Gate	13
+Trafalgar Rd At Dundas St	13
+Trafalgar Rd At Dundas St	13
+Trafalgar Rd At Glenashton Dr	13
+Trafalgar Rd At Glenashton Dr	13
+Trafalgar Rd At Iroquois Shore Rd	24
+Trafalgar Rd At Leighland Ave	13
+Trafalgar Rd At Lynwood Dr	13
+Trafalgar Rd At McCraney St	13
+Trafalgar Rd At Postridge Dr	13
+Trafalgar Rd At River Oaks Blvd	13
+Waterdown Rd At Masonry Ct	17
+Waterdown Rd At Masonry Ct	17
+Young St At Peel St	37
+Young St At Peel St	37
+Derry Rd At Holly Ave	24
+Derry Rd At Holly Ave	24
+Hwy 25 At Derry Rd	24
+Hwy 25 At Derry Rd	24
+Plains Rd At 168 Plains Rd E	17
+Plains Rd At Birchwood Ave	17
+Plains Rd At St Matthews Ave	17
+Guelph St At Mountainview	35
+Hwy 7 At Banting Rd	35
+Queen St At Tanners Dr	37
+Queen St At Tanners Dr	37
+Derry Rd At Armstrong Blvd	24
+Drew Centre Dr At Thompson Rd	24
+Drew Centre Dr At Thompson Rd	24
+Bond St At Simcoe St	94
+Stevenson Rd At Laval Dr	94
+Hwy 2 At Temperance St	96
+Sheridan College At Trafalgar Rd	13
+Bovaird Dr At Lake Louise Dr	33
+Humber College Blvd At Humberline Dr	4
+Queen St At Centre St	33
+Martin Rd At Aspen Springs Dr	96
+Martin Rd At Aspen Springs Dr	96
+Martin Rd At Waverly Rd	96
+Martin Rd At Waverly Rd	96
+Brant St At Churchill Ave	16
+Hwy 7A	52
+Hwy 7A	52
+Woodbine@ Glenwoods Ave	46
+Trafalgar Rd At Oak Park Blvd	13
+King St At Caroline St N	18
+King St At Hughson St	18
+King St At Queen St N	18
+King St At Ray St	18
+King St At Strathcona Ave	18
+King St At Summer Ln	18
+Main St At Caroline St	18
+Main St At Dundurn St	18
+Main St At Macklin St	18
+Main St At Paisley Ave	18
+Main St At Pearl St	18
+Main St At Ray St	18
+Main St At Poulette St	18
+Main St At Bay St	18
+Derry Rd At Thompson Rd	24
+Derry Rd At Thompson Rd	24
+Queen St At Kennedy Rd	33
+Queen St At Kennedy Rd	33
+Peter Robertson Blvd At Dixie Rd	32
+Thompson Rt At Derry Rd	24
+Thompson Rd At Derry	24
+Airport Rd At Thamesgate Dr	32
+Dixon Rd At Attwell Dr	4
+Airport Rd At American Dr	31
+Airport Rd At American Dr	31
+Airport Rd At Beverley St	32
+Airport Rd At Bresler Dr	31
+Airport Rd At Churchill Ave	32
+Airport Rd At Driver Rd	32
+Airport Rd At Driver Rd	32
+Dixon Rd At Hwy 427	4
+Airport Rd At Ironstone Crt	32
+Jetliner Rd At Airport Rd	31
+Airport Rd At Morning Star Dr	32
+Airport Rd At Morning Star Dr	32
+Airport Rd At Silver Dart Dr	31
+Airport Rd At Air Canada	31
+Airport Rd At 6445 Airport Rd	31
+Airport Rd At 6661 Airport Rd	31
+Airport Rd At 6856 Airport Rd	31
+Airport Rd At 6952 Airport Rd	31
+Airport Rd At Northwest Dr	31
+Airport Rd At Northwest Dr	31
+Airport Rd At Silver Dart Dr	31
+Airport Rd At Orlando Dr	31
+Airport Rd At Slough St	32
+Airport Rd At Slough St	32
+Airport Rd At Victory Rd	32
+Airport Rd At 6355 Airport Rd	31
+Albion Vaughan Rd At Dovaston Gate	58
+Albion Vaughan Rd At King Vaughan Rd	58
+Aquitaine Ave At Glen Erin Dr	22
+Aquitaine Ave At Glen Erin Dr	22
+Aquitaine Ave At Montevideo Rd	22
+Aquitaine Ave At Montevideo Rd	22
+Aquitaine Ave At Millcreek Dr	22
+Aquitaine Ave At Millcreek Dr	22
+Blind Line At Banting Dr	43
+Blind Line At St.Andrew Dr	43
+Bovaird Dr At Brisdale Dr	33
+Bovaird Dr At Edenborough Dr	33
+Bovaird Dr At Gillingham Dr	33
+Bovaird Dr At Hinchley Wood Grove	33
+Bovaird Dr At Kennedy Rd	33
+Bovaird Dr At Kennedy Rd	33
+Bovaird Dr At McLaughlin Rd	33
+Bovaird Dr At McLaughlin Rd	33
+Bovaird Dr At Pertosa Dr	33
+Bovaird Dr At Worthing Ave	33
+Bovaird Dr At Southlake Blvd	33
+Bovaird Dr At Yellow Brick Rd	33
+Bramalea Rd At Alexandria Gate	32
+Bramalea Rd At Alexandria Gate	32
+Bramalea Rd At Algonquin Blvd	32
+Bramalea Rd At Algonquin Blvd	32
+Bramalea Rd At Avondale Blvd	32
+Bramalea Rd At Balmoral Dr	32
+Bramalea Rd At Balmoral Dr	32
+Bramalea Rd At Clark Blvd	32
+Bramalea Rd At Clark Blvd	32
+Bramalea Rd At Dearbourne Blvd	32
+Bramalea Rd At East Dr	32
+Bramalea Rd At East Dr	32
+Bresler Dr At Airport Rd	32
+Broadway At 4th St	43
+Broadway At Banting Dr	43
+Broadway At Centre St	43
+Broadway At Dawson Rd	43
+Broadway At John St	43
+Broadway At Mill St	43
+Broadway At Townline	43
+Broadway At Wellington St	43
+City Centre Dr At Kariya Gate	20
+City Centre Dr At 201 City Centre Dr	11
+City Centre Dr At Kariya Gate	20
+Clark Blvd At Central Park Dr	32
+Clark Blvd At Kings Cross Rd	32
+Clark Blvd At Kings Cross Rd	32
+Creditview Rd At Eglinton Ave	12
+Creditview Rd At Rathkeale Rd	12
+Derry Rd At 9th Line	22
+Derry Rd At Danton Promenade	22
+Derry Rd At Danton Promenade	22
+Derry Rd At Forest Park Dr	22
+Derry Rd At Lisgar Dr	22
+Derry Rd At Rosehurst Dr	22
+Derry Rd At Tenth Line	22
+Derry Rd At Tenth Line	22
+Derry Rd At Terragar Blvd	22
+Dixie Rd At Bovaird Dr	32
+Dixie Rd At Bovaird Dr	32
+Dixie Rd At Crescent Hill Dr	32
+Dixie Rd At Crescent Hill Dr	32
+Dixie Rd At Hazelwood Dr	32
+Dixie Rd At Hazelwood Dr	32
+Dixie Rd At Hillside Dr	32
+Dixie Rd At Howden Blvd	32
+Dixie Rd At Howden Blvd	32
+Dixie Rd At Lascelles Blvd	32
+Dixie Rd At Lascelles Blvd	32
+Dixie Rd At Mansion St	32
+Dixie Rd At Moregate Cres	32
+Dixie Rd At North Park Dr	32
+Dixie Rd At North Park Dr	32
+Dixie Rd At Northampton St	32
+Dixie Rd At Northcliffe St	32
+Dixie Rd At Williams Pkwy	32
+Dixie Rd At Williams Pkwy	32
+Dixon Rd At Carlingview Dr	4
+Duke of York Blvd At Princess Royal D	20
+Duke of York Blvd At Princess Royal D	20
+Eglinton Ave At Glen Erin Dr	21
+Eglinton Ave At Mississauga Rd	21
+Eglinton Ave At Mississauga Rd	21
+Erin Mills Pkwy At Battleford Rd	22
+Erin Mills Pkwy At Britannia Rd	21
+Erin Mills Pkwy At Credit Valley Rd	21
+Erin Mills Pkwy At Credit Valley Rd	21
+Erin Mills Pkwy At Erin Centre Blvd	21
+Erin Mills At Credit Valley Hospital	21
+Erin Mills Pkwy At Millcreek Dr	22
+Erin Mills Pkwy At Millcreek Dr	22
+Erin Mills Pkwy At Wickham Crt	21
+Erin Mills Pkwy At Windwood Dr	22
+Erin Mills Pkwy At Argentia Rd	22
+Erin Mills Pkwy At Erin Centre Blvd	21
+Finch Ave At Kenview Blvd	32
+Finch Ave At Kenview Blvd	32
+Hansen Blvd At Michael Dr	43
+Hansen Blvd At Scott Dr	43
+Hurontario St At Robert Speck Pkwy	20
+Hurontario St At Bovaird Dr	33
+Hurontario St At Collingwood Ave	41
+Hurontario St At Conservation Dr	33
+Hurontario St At Cresthaven Rd	33
+Hurontario St At Fisherman Dr	33
+Hurontario St At Fisherman Dr	33
+Hurontario St At Highwood Rd	41
+Hurontario St At Perth St	33
+Hurontario St At Petworth Rd	33
+Hurontario St At Petworth Rd	33
+Hurontario St At Roycrest St	33
+Hurontario St At Sandalwood Pkwy	33
+Hurontario St At Tremblay St	33
+Hurontario St At Tremblay St	33
+Hurontario St At Wanless Dr	33
+Hurontario St At Wexford Rd	33
+Hurontario St At Wexford Rd	33
+Hwy 10 At 4th Ave	43
+Hwy 10 At Boston Mills Rd	41
+Hwy 10 At Boston Mills Rd	41
+Hwy 10 At Chester Dr	42
+Hwy 10 At Forks of The Credit Rd	42
+Hwy 10 At Forks of The Credit Rd	42
+Hwy 10 At McCannell Ave	43
+Hwy 10 At Mistywood Dr	42
+Hwy 10 At Travelled Rd	42
+Hwy 10 At Olde Baseline Rd	42
+Hwy 10 At Olde Baseline Rd	42
+Hwy 10 At Terry St	43
+Hwy 10 At Terry St	43
+Hwy 10 At Travelled Rd	42
+Hwy 10 At Travelled Rd	42
+Hwy 10 At Dufferin Rd	43
+King St At Caledon King Town	58
+King Rd At Chapel Rd	58
+King St At Evans Ridge	58
+King St At Albion Vaughan Rd	58
+King St At Elm St	58
+Main St At Archibald St	33
+Main St At Brickyard Way	33
+Main St At Brickyard Way	33
+Main St At Charolais Blvd	33
+Main St At Church St	33
+Main St At Church St	33
+Main St At Clarence St	33
+Main St At Elgin Dr	33
+Main St At Elgin Dr	33
+Main St At English St	33
+Main St At English St	33
+Wellington St At George St	33
+Main St At Gillingham Dr	33
+Main St At Glen Eagle Crt	33
+Main St At Harold St	33
+Main St At Layham Gate	33
+Main St At Nanwood Dr	33
+Main St At Nanwood Dr	33
+Main St At Peel Village Pkwy	33
+Main St At Peel Village Pkwy	33
+Main St At Quarry Edge Dr	33
+Main St At Vodden Crt	33
+Main St At Williams Pkwy	33
+Main St At Woodbrook Dr	33
+Millcreek Dr At Erin Mills Pkwy	22
+Millcreek Dr At Millrace Crt	22
+Millcreek Dr At Millrace Crt	22
+Peter Robertson Blvd At Blue Whale Blvd	32
+Peter Robertson Blvd At Canada Goose Blvd	32
+Peter Robertson Blvd At Dixie Rd	32
+Peter Robertson Blvd At Rainstorm Rd	32
+Peter Robertson Blvd At Riverbank Rd	32
+Peter Robertson Blvd At Riverbank Rd	32
+Queen St At Centre St	33
+Queen St At Downey Dr	58
+Queen St At Hansen Rd	33
+Queen St At Hansen Rd	33
+Queen St At Hwy 410	33
+Queen St At Hwy 410	33
+Queen St At James St	33
+Queen St At Rutherford Rd	33
+Queen St At Rutherford Rd	33
+Queen St At Scott St	33
+Queen St At Shore St	58
+Queen St At Trueman St	33
+Queen St At Trueman St	33
+Queen St At West Dr	33
+Queensgate Blvd At Landsbridge St	58
+Queensgate Blvd At Landsbridge St	58
+Queensgate Blvd At Pembrook St	58
+Queensgate Blvd At Pembrook St	58
+Queensgate Blvd At Sant Farm Dr	58
+Rathburn Rd At Creditview Rd	12
+Rathburn Rd At Elora Dr	20
+Rathburn Rd At Elora Dr	20
+Rathburn Rd At Elora Dr	20
+Rathburn Rd At Elora Dr	20
+Rathburn Rd At Mavis Rd	20
+Rathburn Rd At Mavis Rd	20
+Rathburn Rd At Elora Dr	20
+Robert Speck Pkwy At Hurontario	20
+Robert Speck Pkwy At Hurontario	20
+Steeles Ave At Castleview Dr	32
+Steeles Ave At Castleview Dr	32
+Steeles Ave At Hartford Trail	33
+Steeles Ave At Kennedy Rd	33
+Steeles Ave At Kennedy Rd	33
+Steeles Ave At Melanie Dr	32
+Steeles Ave At Melanie Dr	32
+Steeles Ave At Melanie Dr	32
+Steeles Ave At Melanie Dr	32
+Steeles Ave At Orchard Dr	33
+Steeles Ave At Paget Rd	32
+Steeles Ave At Paget Rd	32
+Steeles Ave At Torbram Rd	32
+Thomas St At Erin Mills Pkwy	21
+Thomas St At Erin Mills Pkwy	21
+Winston Churchill Blvd At Artesian Dr	13
+Winston Churchill Blvd At Credit Valley Rd	13
+Hwy 50 At Steeles Ave	58
+Hwy 50 At Steeles Ave	58
+Hwy 50 At Hwy 7	58
+Hwy 50 At Langstaff Rd	58
+Hwy 50 At Cottrelle Blvd	58
+Hwy 50 At Rutherford Rd	58
+Hwy 50 At Castlemore Rd	58
+Hwy 50 At Countryside Dr	56
+Hwy 50 At George Bolton Pkwy	58
+Hwy 50 At George Bolton Pkwy	58
+Hwy 50 At McEwan Dr	58
+Hwy 50 At McEwan Dr	58
+Hwy 50 At Queensgate Blvd	58
+Hwy 50 At Queensgate Blvd	58
+Hwy 50 At Bolton Heights Dr	58
+Hwy 50 At Cross Country Blvd	58
+Hwy 50 At Mill St	58
+Hwy 50 At Mill St	58
+Bovaird Dr At Fletchers Creek Blvd	33
+Bovaird Dr At Van Kirk Dr	33
+Bovaird Dr At Royal Orchard Dr	33
+Bovaird Dr At Heartlake Rd	33
+Bovaird Dr At Langston Dr	33
+Bovaird Dr At Richvale Dr	33
+Bovaird Dr At Conestoga Dr	33
+Bovaird Dr At Sunforest	33
+Hurontario At Brinkley Dr	33
+Main At Sproule Dr	33
+Main At Vodden St	33
+Main St At Rosedale Ave	33
+City Centre Dr At 201 City Centre Dr	20
+Trafalgar Rd At Burnhamthorpe Rd	13
+Streetsville GO Station Parking lot	21
+Eglinton Ave At Glen Erin Dr	21
+Mississauga Rd At Dupont Meadow Pl	22
+Mississauga Rd At Argentia Rd	22
+Mississauga Rd At Royal Bank Dr	22
+Trafalgar Rd At Burnhamthorpe Rd	13
+Central Park Dr At Clark Blvd	32
+Eglinton Ave At Credit Valley Blvd	21
+Eglinton Ave At Credit Valley Blvd	21
+Erin Mills Pkwy At McFarren Blvd	21
+Erin Mills Pkwy At Banfield Rd	21
+Hwy 50 at Mayfield Rd	56
+Dixon Rd At Carlingview Dr	4
+Airport Rd At Thamesgate Dr	32
+King St At Farmers Ln	58
+Hurontario St At Sandalwood Pkwy	33
+Steeles Ave At Goreway Dr	32
+Main St At Williams Pkwy2	33
+Erin Mills Pkwy At Vista	21
+Steeles Ave At Airport Rd	32
+Airport Rd At Steeles Ave	32
+Steeles Ave At Airport Rd	32
+Steeles Ave At First Gulf Blvd	33
+Steeles Ave At Goreway Dr	32
+Hurontario St At Bovaird Dr	33
+Derry Rd At Winston Churchill Blvd	22
+Winston Churchill Blvd At Derry Rd	22
+Winston Churchill Blvd At Vanderbilt	22
+Queen St At Carnegie Ln	33
+Hurontario St At  Petworth Rd	33
+Hurontario St At Petworth  Rd	33
+Hwy 10 At Travelled Rd	42
+Hwy 10 At Travelled Rd	42
+Barrie St At 8th Line	65
+Barrie St At 8th Line	66
+Barrie St At Britannia	65
+Barrie St At Fletcher S	65
+Burton Ave At Bayview Dr	69
+Holland St At Colborne St	65
+Holland St At Colborne St	65
+Hwy 11 At Meadowland St	67
+Yonge St At Ashford Dr	68
+Yonge St At Innisfil Beach Rd	67
+Yonge St At Big Bay Point Rd	68
+Yonge St At Big Bay Point Rd	68
+Yonge St At Country Ln	68
+Yonge St At Country Ln	68
+Yonge St At Esther Dr	68
+Yonge St At Esther Dr	68
+Yonge St At Gilford St	66
+Yonge St At Gilford St	66
+Yonge St At Innisfil Beach Rd	67
+Yonge St At Little Ave	68
+Yonge St At Little Ave	68
+Yonge St At Lynn St	68
+Yonge St At Lynn St	68
+Yonge St At Madelaine Dr	68
+Yonge St At Meadowland St	67
+Yonge St At Glenn Ave	68
+Wellington St at First Commerce Dr	63
+Wellington St at First Commerce Dr	63
+Steeles Ave At Torbram Rd	32
+Belfield Rd At City View Dr	4
+Belfield Rd At City View Dr	4
+Belfield Rd At Iron St	4
+Belfield Rd At Iron St	4
+Belfield Rd At Kipling Ave	4
+Belfield Rd At Kipling Ave	4
+Belfield Rd At Martin Grove Rd	4
+Belfield Rd At Martin Grove Rd	4
+Belfield Rd At McCulloch Ave	4
+Belfield Rd At McCulloch Ave	4
+Belfield Rd At 62 Belfield Rd	4
+Belfield Rd At 60 Belfield Rd	4
+Belfield Rd At Shaft Rd	4
+Belfield Rd At Shaft Rd	4
+Dixon Rd At Skyway Ave	4
+Dixon Rd At City View Dr	4
+Dixon Rd At Hwy 427	4
+Dixon Rd At Kelfield St	4
+Ellesmere Rd At Morningside Ave	89
+Ellesmere Rd At Morningside Ave	89
+Finch Ave At Humber College Blvd	4
+Finch Ave At Humber College Blvd	4
+Finch Ave At Humberline Dr	4
+Finch Ave At Humberline Dr	4
+Finch Ave At 6759 Finch Ave	4
+Humber College Blvd At Finch Ave	4
+Humber College Blvd At Humberline Dr	4
+Humber College Blvd At Hwy 27	4
+Humber College Blvd At Hwy 27	4
+Hwy 27 At Carrier Dr	4
+Hwy 27 At Carrier Dr	4
+Hwy 27 At Finch Ave	4
+Hwy 27 At Finch Ave	4
+Hwy 27 At Queens Plate Dr	4
+Hwy 27 At Queens Plate Dr	4
+Hwy 27 At Albion Rd	4
+Hwy 27 At Albion Rd	4
+Hwy 27 At Royalcrest Rd	4
+Hwy 27 At Royalcrest Rd	4
+Hwy 27 At Steeles Ave	4
+Keele St At Steeles Ave	19
+Keele St At Steeles Ave	19
+Yonge St At Churchill Ave	5
+Yonge St At Cummer Ave	5
+Yonge St At Drewry Ave	5
+Yonge St At Florence Ave	5
+Yonge St At Glendora Ave	5
+Yonge St At Horsham Ave	5
+Yonge St At Kempford Blvd	5
+Yonge St At Madawaska Ave	5
+Yonge St At Elmwood Ave	5
+Yonge St At Ellerslie Ave	5
+Yonge St At Norton Ave	5
+Yonge St At Poyntz Ave	5
+Yonge St At William Carson Cres	5
+Toronto St At Banff Rd	76
+Toronto St At Banff Rd	76
+Yonge St At Empress Ave	5
+Yonge St At Finch Ave	5
+Yonge St At Greenfield Ave	5
+Elizabeth St At Beaumont Cres	39
+Elizabeth St At Beaumont Cres	39
+Elizabeth St At Stevenson St	39
+Elizabeth St At Stevenson St	39
+Elizabeth St At Victoria Rd	39
+Elizabeth St At Victoria Rd	39
+York Rd At 785 York Rd	39
+Gordon St At Stone Rd	39
+Gordon St At Stone Rd	39
+Gordon St At Kortright Rd	39
+Gordon St At Kortright Rd	39
+Gordon St At Edinburgh Rd	39
+Gordon St At Edinburgh Rd	39
+Gordon St At Arkell Rd	39
+Gordon St At Arkell Rd	39
+Gordon St At Clairfields Dr	39
+Gordon St At Clairfields Dr	39
+Brock Rd At Maple Leaf Ln	39
+Brock Rd At Old Brock Rd	39
+York St At 800 York St	39
+Wellington St At Stronach Blvd	63
+Wellington St At Stronach Blvd	63
+Stouffville- 10th Line At North St	74
+Bayview Ave At Langstaff Rd	61
+Bradford St At Olive St	65
+Bradford St At Yonge St	65
+Bullock Dr At Hwy 7	71
+Bullock Dr At Hwy 7	71
+Davis Dr At Lorne Ave	64
+Davis Dr At Ashton Rd	64
+Davis Dr At George St	64
+Davis Dr At George St	64
+Davis Dr At Huron Heights Dr	64
+Davis Dr At Longford Dr	64
+Davis Dr At Lorne Av	64
+Davis Dr At Lundys Ln	64
+Davis Dr At Main St	64
+Newmarket GO Station At Davis Dr	64
+Davis Dr At Patterson St	64
+Holland Landing Rd At Yonge St	65
+Hwy 27 At Ashbridge Cir	61
+Hwy 27 At Ellis Ave	57
+Hwy 27 At Forest Heights Blvd	56
+Hwy 27 At Forest Heights Blvd	56
+Hwy 27 At Hwy 7	61
+Hwy 27 At Hwy 7	61
+Hwy 27 At Langstaff Rd	61
+Hwy 27 At Langstaff Rd	61
+Hwy 27 At Martin Grove Rd	61
+Hwy 27 At Martin Grove Rd	61
+Hwy 27 At Medallion Blvd	61
+Hwy 27 At Nickel Gate	61
+Hwy 27 At Parkview Ave	57
+Hwy 27 At Royal Gate Blvd	61
+Hwy 27 At Royalpark Way	61
+Hwy 27 At Royalpark Way	61
+Hwy 27 At Rutherford Rd	56
+Hwy 27 At Rutherford Rd	56
+Hwy 27 At Sanremo Crt	61
+Hwy 27 At Sanremo Crt	61
+Hwy 27 At Steeles Ave	61
+Hwy 27 At Royal Gate Blvd	61
+Hwy 27 At Zenway Blvd	61
+Hwy 7 At Swansea Rd	71
+Hwy 7 At Swansea Rd	71
+Hwy 9 At Yonge St	64
+Islington Ave At Bindertwine Blvd	56
+Islington Ave At Major MacKenzie Dr	56
+Islington Ave At Major MacKenzie Dr	56
+Islington Ave At Napa Valley Ave	56
+Islington Ave At Napa Valley Ave	56
+Islington Ave At Rushworth Cres	56
+Islington Ave At Rushworth Cres	56
+Islington Ave At Sevilla Blvd	56
+Islington Ave At Sonoma Blvd	56
+Islington Ave At Sonoma Blvd	56
+Islington Ave At Spring Berry Gate	56
+Islington Ave At Sunset Ridge	56
+Islington Ave At Tuscan Woods Trail	56
+Islington Ave At Tuscan Woods Trail	56
+Keele St At Drummond Dr	61
+Keele St At Drummond Dr	61
+Keele St At Great Gulf Dr	19
+Keele St At Snidercroft Rd	19
+Keele St At Teston Rd	61
+Keele St At Teston Rd	61
+King Rd At Chinook Dr	57
+King St At Henry Gate	57
+King Rd At Nobleview Dr	57
+King St At Henry Gate	57
+King St At Kinsley St	57
+King St At Nobleview Dr	57
+Langstaff Rd At Bayview Ave	61
+Stouffville- Main St At Church St	74
+Stouffville- Main St At Market St	74
+Stouffville- Main St At Stouffer St	74
+Rutherford Rd At Clarence St	56
+Rutherford Rd At Clarence St	56
+Rutherford Rd At Forest Fountain Blvd	61
+Toll Rd At Bradford St	65
+Toll Rd At Bradford St	65
+Toll Rd At Centennial Ave	65
+Toll Rd At Centennial Ave	65
+Toll Rd At Oriole Rd	65
+Toll Rd At Oriole Rd	65
+Yonge St At 16th Ave	61
+Yonge St At 16th Ave	61
+Yonge St At Aspenwood Dr	64
+Yonge St At Aurora Heights Dr	63
+Yonge St At Baif Blvd	61
+Yonge St At Bantry Ave	61
+Yonge St At Bay Thorn Dr	60
+Yonge St At Beresford Dr	61
+Yonge St At Bonshaw Ave	64
+Yonge St At Bristol Rd	64
+Yonge St At Bunker Rd	60
+Yonge St At Bunker Rd	60
+Yonge St At Centre St	60
+Yonge St At Clarissa Dr	61
+Yonge St At Clark Ave W	60
+Yonge St At Clearmeadow Blvd	64
+Yonge St At Dawson Manor Blvd	64
+Yonge St At Doncaster Ave	60
+Yonge St At Edgar Ave	61
+Yonge St At Elgin St	60
+Yonge St At Elmwood Ave	61
+Yonge St At Garden Ave	60
+Yonge St At Garden Ave	60
+Yonge St At Glen Cameron Rd	60
+Yonge St At Glen Cameron Rd	60
+Yonge St At Green Ln	64
+Yonge St At Green Ln	64
+Yonge St At Harding Blvd	61
+Yonge St At Harding Blvd	61
+Yonge St At High Tech Rd	60
+Yonge St At High Tech Rd	61
+Yonge St At Hwy 407	60
+Yonge St At Hopkins St	61
+Yonge St At Hwy 407	60
+Yonge St At Hwy 9	64
+Yonge St At Joe Persechini Dr	64
+Yonge St At Thornridge Dr	60
+Yonge St At John St	60
+Yonge St At Kingston Rd	64
+Yonge St At Major MacKenzie Dr	61
+Yonge St At Mark St	63
+Yonge St At May Ave	61
+Yonge St At May Ave	61
+Yonge St At Meadowview Ave	60
+Yonge St At Millard Ave W	64
+Yonge St At Mulock Dr	64
+Yonge St At Mulock Dr	64
+Yonge St At Upper Canada Mall	64
+Yonge St At North St	65
+Yonge St At North St	65
+Yonge St At Northern Heights Dr	61
+Yonge St At Oak Ave	61
+Yonge St At Observatory Lane	61
+Yonge St At Royal Orchard Blvd	60
+Yonge St At Royal Orchard Blvd	60
+Yonge St At Sawmill Valley Dr	64
+Yonge St At Scott Dr	61
+Yonge St At St Johns Sdrd	64
+Yonge St At St Johns Sdrd	64
+Yonge St At Thornhill Ave	60
+Yonge St At Uplands Ave	60
+Yonge St At Valhalla Crt	63
+Yonge St At Valhalla Crt	63
+Yonge St At Weldrick Rd	61
+Yonge St At Weldrick Rd	61
+Yonge St At William Roe Blvd	64
+Yonge St At Yongehurst Rd	61
+Yonge St At Spruce Ave	61
+Yonge St At 15738 Yonge St	63
+Yonge St At 15800 Yonge St	63
+Yonge St At 18183 Yonge St	64
+Yonge St At Green Lane Centre	64
+Yonge St At Upper Canada Mall	64
+Bullock Dr At McCowan Rd	72
+Bullock Dr At McCowan Rd	72
+Bullock Dr At Laidlaw Blvd	72
+Bullock Dr At Laidlaw Blvd	72
+Markham Rd At 16th Ave	72
+Markham Rd At 16th Ave	73
+Queen St At Market Square Blvd	33
+Hwy 50 At Columbia Way	58
+10th Line At Aintree Dr	74
+Yonge St At Bradford St	65
+Main St At Stouffer St	74
+Yonge St At Clark Ave E	60
+Davis Dr At Main St	64
+Davis Dr At Hill St	64
+Davis Dr At Longford Dr	64
+Eagle At Millard Ave	64
+Eagle At Peevers Cres	64
+Eagle At Yonge St	64
+Yonge St At 17250 Yonge St	64
+Yonge St At Eagle St	64
+Hwy 27 At Milani Blvd	61
+Keele St At Barhill Rd	61
+Rutherford Rd At Forest Fountain Blvd	56
+YMCA Blvd At Kennedy Rd	71
+YMCA Blvd At Kennedy Rd	71
+Yonge St At London Rd	64
+University of Waterloo At R.R 57	27
+University Ave At Hazel St	27
+Ontario St At Charles St	27
+Conestoga Blvd At Pinebush Rd	26
+Regional Rd 25 At Hwy 401	24
+University Ave At Hazel St	27
+King St At Montgomery Rd	27
+King St At Charles St	27
+Maple GO Stn - Eagle Rock Way	61
+Major MacKenzie Dr At Keele St	61
+Keele St At Church St	61
+Bradford GO Station	65
+Weber St At Victoria St	27
+Hwy 2 At Hwy 35/115	97
+Trafalgar Rd At Hwy 407	13
+Stouffville- 10th Line At Sleepy Hollow	74
+Stouffville- 10th Line At Sleepy Hollow	74
+Keele St At Kirby Rd	62
+Keele St At Kirby Rd	62
+Hwy 410 At Williams Pkwy	32
+Keele St At Peak Point Blvd	62
+Keele St At Peak Point Blvd	62
+Stouffville- Main St At 10th Line	74
+Stouffville- Main St At 10th Line	74
+Yonge St At Sheppard Ave	5
+Sportsworld Dr At Sportsworld Crossing	26
+Main St At Haddon Ave	18
+Bridge St At Erie Ave	84
+Great Western St At Permilla St	83
+YMCA Dr At North Service Rd	83
+Stanley Ave At Stamford St	84
+Stanley Ave At Stamford St	84
+Service Rd At Casablanca Blvd	81
+Scarborough Town Centre At Borough Dr	7
+Main St At Ridge Rd	38
+Trent University Lp At Pioneer Rd	30
+Simcoe St At Aylmer St	30
+Crawford Dr At Harper Rd	30
+Syer Ln At RR.10	29
+Old Hwy 35 At Hwy 35	28
+Islington Ave At Turning Leaf Dr	56
+Islington Ave At Turning Leaf Dr	56
+Derry Rd At Ninth Line	22
+Rutherford Rd At Sweetriver Blvd	61
+Rutherford Rd At Sweetriver Blvd	61
+Queen St At West Dr	32
+Blind Line At Hansen Blvd	43
+Blind Line At College Ave	43
+King St At Picton St	84
+MacDonell St At Carden St	39
+Wyndham St At Carden St	39
+Wellington St At John W. Way	63
+Wellington St At Mary St	63
+Union Station Rail	2
+Exhibition Station GO Rail	2
+Exhibition Station GO Rail	2
+Exhibition GO Station-Manitoba Dr	2
+Exhibition GO Station-Atlantic Ave	2
+Bloor GO Station Rail	2
+Bloor GO Station Rail	2
+Bloor GO Station-Bloor St W	2
+Bloor GO Station-Gate from Path	2
+Mimico GO Station Rail	3
+Mimico GO Station Rail	3
+Mimico GO Station-Windsor St	3
+Mimico GO Station-Royal York Rd	3
+Kipling GO Station Rail	3
+Kipling GO Station Rail	3
+Kipling GO Station-Subway Cres	3
+Long Branch GO Station Rail	3
+Long Branch GO Station Rail	3
+Long Branch GO Station-Brow Dr	3
+Long Branch GO Station-Exmoor Dr	3
+Long Branch GO Station-Edgeware Dr	3
+Long Branch GO Station-Brown''s Ln	3
+Weston GO Station Rail	4
+Weston GO Station Rail	4
+Weston GO Station-South Station St	4
+Weston GO Station-Lawrence Ave	4
+Etobicoke North GO Station Rail	4
+Etobicoke North GO Station Rail	4
+Etobicoke North GO Station-Namco Rd	4
+Etobicoke North GO Station-Belfield Rd	4
+Etobicoke North GO Station-Kipling Ave	4
+Oriole GO Station Rail	5
+Oriole GO Station Rail	5
+Oriole GO Station-Leslie St	5
+Oriole GO Station-Woodsworth Rd	5
+Old Cummer GO Station Rail	5
+Old Cummer GO Station Rail	5
+Old Cummer GO Station-Woody Vine Way	5
+Old Cummer GO Station-Finch Ave E	5
+Danforth GO Station Rail	6
+Danforth GO Station Rail	6
+Danforth GO Station-Main	6
+Danforth GO Station-Ted Reeves Dr	6
+Scarborough GO Station Rail	6
+Scarborough GO Station Rail	6
+Scarborough GO Station-Laurel Ave	6
+Scarborough GO Station-St Claire Ave	6
+Scarborough GO Station-Reeve Ave	6
+Scarborough GO Station-Sandownl Ave	6
+Scarborough GO Station-Natal Ave	6
+Scarborough GO Station-Aylesworth Ave	6
+Eglinton GO Station Rail	6
+Eglinton GO Station Rail	6
+Eglinton GO Station-Bellamy Rd S	6
+Eglinton GO Station-Bridlegrove Dr	6
+Agincourt GO Station Rail	7
+Agincourt GO Station Rail	7
+Agincourt GO Station-Sheppard Ave E	7
+Agincourt GO Station-Marilyn Ave	7
+Guildwood GO Station Rail	8
+Guildwood GO Station Rail	8
+Guildwood GO Station-Kingston Rd	8
+Guildwood GO Station-Livingston Rd	8
+Guildwood GO Station-Westlake Rd	8
+Guildwood GO Station-Payzac	8
+Rouge Hill GO Station Rail	9
+Rouge Hill GO Station Rail	9
+Rouge Hill GO Station-Bridgegend St	9
+Rouge Hill GO Station-Port Union Rd	9
+Rouge Hill GO Station-Chesterton Shores	9
+Port Credit GO Station Rail	11
+Port Credit GO Station Rail	11
+Port Credit GO Station-Oriole Ave	11
+Port Credit GO Station-Park St	11
+Port Credit GO Station-Ann St	11
+Port Credit GO Station-Queen St	11
+Port Credit GO Station-Sandham Rd	11
+Dixie GO Station Rail	11
+Dixie GO Station Rail	11
+Dixie GO Station-Dixe Rd	11
+Cooksville GO Station Rail	11
+Cooksville GO Station Rail	11
+Cooksville GO Station-Hillcrest Ave	11
+Cooksville GO Station-Hurontario St N of Track	11
+Cooksville GO Station-Hurontario St S of Track	11
+Clarkson GO Station Rail	12
+Clarkson GO Station Rail	12
+Clarkson GO Station-Southdown Rd	12
+Clarkson GO Station-Bromsgrove Rd	12
+Clarkson GO Station-Royal Windsor Dr	12
+Clarkson GO Station-Bridge over Southdown	12
+Erindale GO Station Rail	12
+Erindale GO Station Rail	12
+Erindale GO Station-Rathburn Rd	12
+Erindale GO Station-Bridge Access	12
+Erindale GO Station-Burnhamthorpe Rd W	12
+Erindale GO Station-Melia Dr	12
+Oakville GO Station Rail	13
+Oakville GO Station Rail	13
+Oakville GO Station-Cross Ave	13
+Oakville GO Station-Lyons Ln	13
+Oakville GO Station-Speers Rd	13
+Oakville GO Station-Trafalgar Rd	13
+Oakville GO Station-Trafalgar & Cross	13
+Bronte GO Station Rail	14
+Bronte GO Station Rail	14
+Bronte GO Station-Wyecroft	14
+Bronte GO Station-South Service Rd	14
+Bronte GO Station-Third Ln	14
+Appleby GO Station Rail	15
+Appleby GO Station Rail	15
+Appleby GO Station-Harvester	15
+Appleby GO Station-Harvester	15
+Burlington GO Station Rail	16
+Burlington GO Station Rail	16
+Burlington GO Station-Fairview	16
+Burlington GO Station-Queensway	16
+Burlington GO Station-Plains Rd	16
+Aldershot GO Station Rail	17
+Aldershot GO Station Rail	17
+Aldershot GO Station-Masonry Crt	17
+Aldershot GO Station-Masonry Crt	17
+Hamilton Go Station Rail	18
+Hamilton Go Station Rail	18
+Hamilton GO Centre-Hughson St	18
+York University Station GO Rail	19
+Streetsville GO Station Rail	21
+Streetsville GO Station Rail	21
+Streetsville GO Station-Old Station Rd	21
+Streetsville GO Station-Thomas St	21
+Streetsville GO Station-Bremen Lane	21
+Meadowvale GO Station Rail	22
+Meadowvale GO Station Rail	22
+Meadowvale GO Station-Aquitaine Ave	22
+Meadowvale GO Station-Millcreek Dr	22
+Lisgar GO Station Rail	23
+Lisgar GO Station Rail	23
+Lisgar GO Station-Argentia	23
+Milton GO Station Rail	24
+Milton GO Station Rail	24
+Milton GO Station-Main St E	24
+Kitchener GO Station Rail	27
+Malton GO Station Rail	31
+Malton GO Station Rail	31
+Malton GO Station-Derry Rd	31
+Malton GO Station-Victory Cres	31
+Bramalea GO Station Rail	32
+Bramalea GO Station Rail	32
+Bramalea GO Station-Steeles Ave	32
+Bramalea GO Station-Bramalea Rd	32
+Brampton GO Station Rail	33
+Brampton GO Station Rail	33
+Brampton GO Station-Main St	33
+Brampton GO Station-Church St	33
+Brampton GO Station-Railroad St	33
+Brampton GO Station-Mill St	33
+Mount Pleasant GO Station Rail	34
+Mount Pleasant GO Station Rail	34
+Mount Pleasant GO Station-Bovaird Dr	34
+Mount Pleasant GO Station-Pleasant Rd	34
+Georgetown GO Station Rail	35
+Georgetown GO Station Rail	35
+Georgetown GO Station-Victoria	35
+Georgetown GO Station-Elgin	35
+Georgetown GO Station-Queen St	35
+Georgetown GO Station-King St	35
+Acton GO Station Rail	37
+Guelph Central GO Station Rail	39
+East Gwillimbury GO Station Rail	44
+East Gwillimbury GO Station Rail	44
+East Gwillimbury GO Station-Green Ln E	44
+Langstaff GO Station Rail	60
+Langstaff GO Station Rail	60
+Langstaff GO Stn-Red Maple Rd	60
+Langstaff GO Stn-Langstaff Rd E	60
+Langstaff GO Stn-Rhcterminal	60
+Richmond Hill GO Station Rail	61
+Richmond Hill GO Station Rail	61
+Richmond Hill GO Station-Major Mackenzie Dr E	61
+Maple GO Station Rail	61
+Maple GO Station Rail	61
+Maple GO Station-Major Mackenzie Dr	61
+Rutherford GO Station Rail	61
+Rutherford GO Station Rail	61
+Rutherford GO Station-Rutherford Rd	61
+Rutherford GO Station-Westburne Dr	61
+Rutherford GO Station-Agoslino Cres	61
+King City GO Station Rail	62
+Aurora GO Station Rail	63
+Aurora GO Station Rail	63
+Aurora GO Station-Ross St	63
+Aurora GO Station-Berczy St	63
+Aurora GO Station-Industrial Pkwy	63
+Aurora GO Station-Wellington St E	63
+Newmarket GO Station Rail	64
+Newmarket GO Station Rail	64
+Newmarket GO Station-Davis Dr	64
+Bradford GO Station Rail	65
+Bradford GO Station Rail	65
+Bradford GO Station-Bridge St	65
+Bradford GO Station-Dissette St	65
+Barrie South GO Station Rail	68
+Barrie South GO Station Rail	68
+Barrie South GO Station-Yonge	68
+Allandale Waterfront GO Rail	69
+Milliken GO Station Rail	70
+Unionville GO Station Rail	71
+Unionville GO Station Rail	71
+Unionville GO Station-YMCA Blvd	71
+Markham GO Station Rail	72
+Markham GO Station Rail	72
+Markham GO Station-St Goran Cres	72
+Markham GO Station-Beach St	72
+Markham GO Station-Station St	72
+Centennial GO Station Rail	72
+Centennial GO Station Rail	72
+Centennial GO Station-Bullock Dr	72
+Centennial GO Station-McCowan Rd	72
+Mount Joy GO Station Rail	73
+Mount Joy GO Station Rail	73
+Mount Joy GO Station-Bur Oak Ave	73
+Stouffville GO Station Rail	74
+Stouffville GO Station Rail	74
+Stouffville GO Station-Freel Ln	74
+Lincolnville GO Station Rail	74
+Kennedy GO Station Rail	77
+Kennedy GO Station Rail	77
+Kennedy GO Station-Thrush Rd	77
+Kennedy GO Station-Thrush Rd	77
+Kennedy GO Station-Thrush Rd	77
+St. Catharines VIA Station Rail	83
+Niagara Falls VIA Station Rail	84
+Pickering Station GO Rail	91
+Pickering Station GO Rail	91
+Pickering GO Station-Bayly St	91
+Pickering GO Station-Sandy Beach Rd	91
+Pickering GO Station-Liverpool Rd	91
+Ajax GO Station Rail	92
+Ajax GO Station Rail	92
+Ajax GO Station-Westney Rd S	92
+Whitby GO Station Rail	93
+Whitby GO Station Rail	93
+Whitby GO Station-Brock St	93
+Whitby GO Station-Henry St	93
+Whitby GO Station-Victorica St	93
+Whitby GO Station-Brock St S	93
+Oshawa GO Station Rail	94
+Oshawa GO Station Rail	94
+Oshawa GO Station-Bloor St	94
+Oshawa GO Station-Thornton Rd	94

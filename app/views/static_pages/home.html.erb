@@ -120,7 +120,15 @@
 			<%= link_to_function 'Use Google Map', 'addfind("destination_address")' %>
       </td>
 	</tr>
-	    <tr> <td> <%= f.label "Purpose" %> </td>
+	<tr>
+	    <td> <%= f.label "Is there an availabe Go Transit between 0 to 10km of your Home" %> </td>
+      <td><%= select_tag(:regDist,  options_for_select([['less than 3km', 3],['less than 10km', 10],['Noner', 0]]) ,:onChange=>"showStation(this)", :class=>"input") %></td>
+	</tr>
+  <tr>
+      <td> <%= f.label "Name of closest GO station" %> </td>
+      <td><%= f.text_field :regName , :class=>"input" %></td>
+  </tr>
+	<tr> <td> <%= f.label "Purpose" %> </td>
       <td><%= select_tag(:purpose,  options_for_select(['Home','Work', 'School','Shopping', 'Recreation', 'Facility Passenger','Other']),:onChange=>"showOther(this)", :class=>"input") %> </td>
 	</tr>
 	<tr id="otherpurpose">

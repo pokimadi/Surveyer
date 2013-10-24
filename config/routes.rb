@@ -1,4 +1,6 @@
 Surveyer::Application.routes.draw do
+  resources :stations
+
   get "static_pages/home"
   get "static_pages/index"
   get "/socio" => "static_pages#socio"
