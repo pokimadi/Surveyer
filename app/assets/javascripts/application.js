@@ -11,11 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require bootstrap
 //= require jquery.geocomplete.js
 //= require geocalc.js
 //= require main
+//= require GoData
 //= require turbolinks
 //= require_tree .

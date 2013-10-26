@@ -174,11 +174,12 @@ function addfind(findFor){
  }; 
 
 function showStation(){
+	console.log(this);
 	if(this.value == 10 || this.value == 3){
-		$("#session_regName").show();
+		$("#regName").show();
 	}
 	else{
-		$("#session_regName").hide();
+		$("#regName").hide();
 	}
 }
      

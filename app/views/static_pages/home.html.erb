@@ -124,7 +124,7 @@
 	    <td> <%= f.label "Is there an availabe Go Transit between 0 to 10km of your Home" %> </td>
       <td><%= select_tag(:regDist,  options_for_select([['less than 3km', 3],['less than 10km', 10],['Noner', 0]]) ,:onChange=>"showStation(this)", :class=>"input") %></td>
 	</tr>
-  <tr>
+  <tr id="regName">
       <td> <%= f.label "Name of closest GO station" %> </td>
       <td><%= f.text_field :regName , :class=>"input" %></td>
   </tr>
