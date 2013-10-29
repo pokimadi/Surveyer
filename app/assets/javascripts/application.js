@@ -19,5 +19,6 @@
 //= require geocalc.js
 //= require main
 //= require GoData
+//= require templateM
 //= require turbolinks
 //= require_tree .
