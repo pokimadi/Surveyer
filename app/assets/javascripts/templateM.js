@@ -1,5 +1,5 @@
 var templateMain =  function(collection){
-	var temp = '<table border=""26"" bordercolor="#330000" style="background-color:#00FFFF" width=""26"00%" cellpadding=""26"" cellspacing="0">'+
+	var temp = '<table border=""26"" bordercolor="#330000" style="background-color:#00FFFF" width=""26"00%" cellpadding=""26"" cellspacing="0" id="resultTable">'+
 			'<tr>'+
 				'<td>Factor</td>'+
 				'<td>Current Mode</td>'+
@@ -61,12 +61,12 @@ var templateMain =  function(collection){
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
-				'<td>'+collection["14"]+'</td>'+
-				'<td>'+collection["14"]+'</td>'+
-				'<td>'+collection["14"]+'</td>'+
-				'<td>'+collection["14"]+'</td>'+
-				'<td>'+collection["14"]+'</td>'+
-				'<td>'+collection["14"]+'</td>'+
+				'<td>'+collection["14RT"]+'</td>'+
+				'<td>'+collection["14RPR"]+'</td>'+
+				'<td>'+collection["14RPR"]+'</td>'+
+				'<td>'+collection["14RPR"]+'</td>'+
+				'<td>'+collection["14RT"]+'</td>'+
+				'<td>'+collection["14RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Parking Cost at Local Transit P&R Station ($)</td>'+
@@ -226,51 +226,51 @@ var templateMain =  function(collection){
 				'<td></td>'+
 				'<td>'+collection["26"]+'</td>'+
 				'<td>'+collection["26"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
-				'<td>'+collection["27"]+'</td>'+
+				'<td>'+collection["27LT"]+'</td>'+
+				'<td>'+collection["27LPR"]+'</td>'+
+				'<td>'+collection["27LPR"]+'</td>'+
+				'<td>'+collection["27LPR"]+'</td>'+
+				'<td>'+collection["27LT"]+'</td>'+
+				'<td>'+collection["27RT"]+'</td>'+
+				'<td>'+collection["27RPR"]+'</td>'+
+				'<td>'+collection["27RPR"]+'</td>'+
+				'<td>'+collection["27RPR"]+'</td>'+
+				'<td>'+collection["27RT"]+'</td>'+
+				'<td>'+collection["27RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Transfer Time(min)</td>'+
 				'<td></td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
-				'<td>'+collection["28"]+'</td>'+
+				'<td>'+collection["28LT"]+'</td>'+
+				'<td>'+collection["28LPR"]+'</td>'+
+				'<td>'+collection["28LPR"]+'</td>'+
+				'<td>'+collection["28LPR"]+'</td>'+
+				'<td>'+collection["28LT"]+'</td>'+
+				'<td>'+collection["28RT"]+'</td>'+
+				'<td>'+collection["28RPR"]+'</td>'+
+				'<td>'+collection["28RPR"]+'</td>'+
+				'<td>'+collection["28RPR"]+'</td>'+
+				'<td>'+collection["28RT"]+'</td>'+
+				'<td>'+collection["28RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td> Egress Time(min)</td>'+
 				'<td></td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
-				'<td>'+collection["29"]+'</td>'+
-				'<td>'+collection["29"]+'</td>'+
-				'<td>'+collection["29"]+'</td>'+
-				'<td>'+collection["29"]+'</td>'+
-				'<td>'+collection["29"]+'</td>'+
-				'<td>'+collection["30"]+'</td>'+
-				'<td>'+collection["30"]+'</td>'+
-				'<td>'+collection["30"]+'</td>'+
-				'<td>'+collection["30"]+'</td>'+
-				'<td>'+collection["30"]+'</td>'+
-				'<td>'+collection["30"]+'</td>'+
+				'<td>'+collection["29LT"]+'</td>'+
+				'<td>'+collection["29LPR"]+'</td>'+
+				'<td>'+collection["29LPR"]+'</td>'+
+				'<td>'+collection["29LPR"]+'</td>'+
+				'<td>'+collection["29LT"]+'</td>'+
+				'<td>'+collection["30RT"]+'</td>'+
+				'<td>'+collection["30RPR"]+'</td>'+
+				'<td>'+collection["30RPR"]+'</td>'+
+				'<td>'+collection["30RPR"]+'</td>'+
+				'<td>'+collection["30RT"]+'</td>'+
+				'<td>'+collection["30RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Total Trip Time(min)</td>'+
