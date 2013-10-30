@@ -382,18 +382,18 @@ var statCalc =  function (){
 			collection["3"] = routePrice(data);
 			collection["7"] = collection["3"];
 			if (data.steps[ 0].travel_mode == "WALKING"){
-				collection["18"] = (data.steps[0].duration.value/60).toFixed(1);
-				collection["20"] = (data.steps[0].distance.value/250).toFixed(1);
+				collection["18"] = parseFloat((data.steps[0].duration.value/60).toFixed(1));
+				collection["20"] = parseFloat((data.steps[0].distance.value/250).toFixed(1));
 
 			}
 
 			
 			if (data.steps[ size -1].travel_mode == "WALKING"){
 				var wDistance = data.steps[ size -1].distance.value;
-				collection["29LT"] = (data.steps[size -1].duration.value/60).toFixed(1);
+				collection["29LT"] = parseFloat((data.steps[size -1].duration.value/60).toFixed(1));
 			}
-			collection["28LT"] = (waitTime(data)).toFixed(1);
-			collection["27LT"] = (timeSkip(data)).toFixed(1);
+			collection["28LT"] = parseFloat((waitTime(data)).toFixed(1));
+			collection["27LT"] = parseFloat((timeSkip(data)).toFixed(1));
 
 		}	
 	};
@@ -431,9 +431,10 @@ var statCalc =  function (){
 			console.log("GO TTC CALC" ,collection[13] );
 			console.log("TIME BEFORE******", collection["24"]);
 			collection["27RL"] = timeSkipGo(data);
-			collection["28RL"] = waitTime(data);
+			collection["28RL"] = parseFloat((waitTime(data)).toFixed(1));
 			collection["25"] = btwTime(data);
-			collection["30RL"] = data.steps[data.steps.length -1].duration.value;
+			collection["30RL"] = parseFloat((data.steps[data.steps.length -1].duration.value/60).toFixed(1));
+			//collection["30RL"] = data.steps[data.steps.length -1].duration.value;
 		}
 	}
 	
@@ -465,7 +466,7 @@ var statCalc =  function (){
 		collection["5"] = ((distance * 14.7)/ 200000.0 + transC ).toFixed(2);
 		collection["6"] = collection["5"];
 		collection["15"] = station.price;
-		collection["19"] = (drive.duration.value/60).toFixed(1);
+		collection["19"] = parseFloat((drive.duration.value/60).toFixed(1));
 		if (parkCost !=""){
 			collection["17"] = parseInt(parkCost);
 		}
@@ -480,9 +481,9 @@ var statCalc =  function (){
 			collection["16"] = station.price/2;
 			collection["17i"] = collection["17"] /2 ;
 		}
-		collection["28LPR"] = (waitTime(trans)).toFixed(1);
-		collection["27LPR"] = (timeSkip(trans)).toFixed(1);
-		collection["29LPR"] = (trans.steps[trans.steps.length -1].duration.value/60).toFixed(1);
+		collection["28LPR"] = parseFloat((waitTime(trans)).toFixed(1));
+		collection["27LPR"] = parseFloat((timeSkip(trans)).toFixed(1));
+		collection["29LPR"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
 
 
 
@@ -494,13 +495,13 @@ var statCalc =  function (){
 
 	function done(){
 		var tableNew = templateMain(collection);
-		collection["31"] = collection["18"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29T"];
+		collection["31"] = collection["18"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
 		collection["32"] = collection["19"] + collection["25"] + collection["27LPR"] + collection["28LPR"] + collection["29LPR"];
 		collection["33"] = collection["20"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
-		collection["34"] = collection["21"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["29RT"];
-		collection["35"] = collection["22"] + collection["25"] + collection["27RPR"] + collection["28RPR"] + collection["29RPR"];
-		collection["36"] = collection["23"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["29RT"];
-		collection["37"] = collection["24"] + collection["25"] + collection["27RL"] + collection["28RL"] + collection["29RL"];
+		collection["34"] = collection["21"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
+		collection["35"] = collection["22"] + collection["25"] + collection["27RPR"] + collection["28RPR"] + collection["30RPR"];
+		collection["36"] = collection["23"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
+		collection["37"] = collection["24"] + collection["25"] + collection["27RL"] + collection["28RL"] + collection["30RL"];
 		console.log(tableNew);
 		$("#formView").hide();
 		$("#resultTable").remove();
@@ -584,10 +585,10 @@ var statCalc =  function (){
 		collection["9"] = ((distance * 14.7)/ 100000.0 + pricePR ).toFixed(2);
 		collection["10"] = ((distance * 14.7)/ 200000.0 + pricePR ).toFixed(2);
 		collection["11"] = collection["10"];
-		collection["22"] = (drive.duration.value/60).toFixed(1);
-		collection["27RPR"] = (timeSkipGo(trans)).toFixed(1);
-		collection["28RPR"] = (waitTime(trans)).toFixed(1);
-		collection["30RPR"] = (trans.steps[trans.steps.length -1].duration.value/60).toFixed(1);
+		collection["22"] = parseFloat((drive.duration.value/60).toFixed(1));
+		collection["27RPR"] = parseFloat((timeSkipGo(trans)).toFixed(1));
+		collection["28RPR"] = parseFloat((waitTime(trans)).toFixed(1));
+		collection["30RPR"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
 
 
 
@@ -610,11 +611,11 @@ var statCalc =  function (){
 		console.log("GOKey is ",Gokey);
 		collection["8"] =  priceMatch[Gokey];
 		collection["12"] = collection["8"];
-		collection["21"] = (walk.duration.value/60).toFixed(1);
+		collection["21"] = parseFloat((walk.duration.value/60).toFixed(1));
 		collection["23"] = walk.distance.value/ 250;
-		collection["27RT"] = (timeSkipGo(trans)).toFixed(1);
-		collection["28RT"] = (waitTime(trans)).toFixed(1);
-		collection["30RT"] = (trans.steps[trans.steps.length -1].duration.value/60).toFixed(1);
+		collection["27RT"] = parseFloat((timeSkipGo(trans)).toFixed(1));
+		collection["28RT"] = parseFloat((waitTime(trans)).toFixed(1));
+		collection["30RT"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
 	};
 	
 	return{
