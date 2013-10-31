@@ -502,6 +502,15 @@ var statCalc =  function (){
 		collection["35"] = collection["22"] + collection["25"] + collection["27RPR"] + collection["28RPR"] + collection["30RPR"];
 		collection["36"] = collection["23"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
 		collection["37"] = collection["24"] + collection["25"] + collection["27RL"] + collection["28RL"] + collection["30RL"];
+
+		collection["31"] = parseFloat((collection["31"] ).toFixed(1));
+		collection["32"] = parseFloat((collection["32"] ).toFixed(1));
+		collection["33"] = parseFloat((collection["33"] ).toFixed(1));
+		collection["34"] = parseFloat((collection["34"] ).toFixed(1));
+		collection["35"] = parseFloat((collection["35"] ).toFixed(1));
+		collection["36"] = parseFloat((collection["36"] ).toFixed(1));
+		collection["37"] = parseFloat((collection["37"] ).toFixed(1));
+		//collection["31"] = parseFloat((collection["31"] ).toFixed(1));
 		console.log(tableNew);
 		$("#formView").hide();
 		$("#resultTable").remove();
