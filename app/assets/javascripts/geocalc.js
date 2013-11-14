@@ -56,10 +56,12 @@ function goTTCStation(data){
 function calcRoute(route) {
 	var start = route.start;
 	var end = route.end;
+	
 	TransCalculator = statCalc();
 	var request = {
 		origin: start,
 		destination: end,
+		//arrival_time: 
 		travelMode: google.maps.TravelMode["TRANSIT"],
 		provideRouteAlternatives:true
 	};
@@ -92,8 +94,9 @@ function calcRoute(route) {
       		TransCalculator.autoCalc(leg);
       
 			//GO STATION
-			var GOstation = nearestStation(leg.start_location.lb,leg.start_location.mb, goAll);
+			var GOstation = nearestStation(leg.start_location.lat(),leg.start_location.lng(), goAll);
 			var GoDrive, GoTrans, GoCount =  2;
+			console.log("BBBBBBBBB", GOstation,"BBBBBBBBB", leg.start_location.lat(),"BBBBBBBBB", leg.start_location.lng(), "mfmgmrkr", leg, "DONE!");
 			requestGo1 = {
 			    origin: start,
 				destination:  GOstation.name,
@@ -144,7 +147,7 @@ function calcRoute(route) {
       
 			//------->
 			//PR GO STATION.
-			var prGOstation = nearestStation(leg.start_location.lb,leg.start_location.mb, stationsPR);
+			var prGOstation = nearestStation(leg.start_location.lat(),leg.start_location.lng(), stationsPR);
 			var prGoDrive, prGoTrans, prGoCount =  2;
 			requestPr1 ={
 			    origin: start,
@@ -201,7 +204,7 @@ function calcRoute(route) {
 			//------>
 
 			//PR NEAREST STATAION.
-	  		var station = nearestStation(leg.start_location.lb,leg.start_location.mb);
+	  		var station = nearestStation(leg.start_location.lat(),leg.start_location.lng());
       		var drive, trans, count =  2;
 			request2 = {
 			    origin: start,
@@ -244,7 +247,6 @@ function calcRoute(route) {
 						var stopT =  new Date();
 						console.log("Fuck ", (stopT-startT)/1000);
 						TransCalculator.combCalc(trans, drive,station);
-						TransCalculator.combCalc(trans, drive, station);
 					}
 				}
 				else if(status == "OVER_QUERY_LIMIT"){
@@ -277,13 +279,14 @@ var statCalc =  function (){
 					else if(first){
 						if (agency == "GO Transit"){
 							var point= step.end_point;
-							var station1 =  nearestStation(point.lb, point.mb, goAll);
+							var station1 =  nearestStation(point.lat(), point.lng(), goAll);
 							point =  step.start_location;
-							var station2 = 	nearestStation(point.lb, point.mb, goAll);
+							var station2 = 	nearestStation(point.lng(), point.lng(), goAll);
 							cost +=  priceMatch[""+ Math.min(station1.zone, station2.zone) +","+ Math.max(station1.zone, station2.zone)];
 						}
 						else{
 							cost += startPrice(agency);
+							console.log("start COST", cost, agency);
 						}
 						before = agency; 
 						added.push(agency);
@@ -312,9 +315,9 @@ var statCalc =  function (){
 					else if(!go){
 						if (agency == "GO Transit"){
 							var point= step.end_point;
-							var station1 =  nearestStation(point.lb, point.mb, goAll);
+							var station1 =  nearestStation(point.lat(), point.lng(), goAll);
 							point =  step.start_location;
-							var station2 = 	nearestStation(point.lb, point.mb, goAll);
+							var station2 = 	nearestStation(point.lat(), point.lng(), goAll);
 							gCost +=  priceMatch[""+ Math.min(station1.zone, station2.zone) +","+ Math.max(station1.zone, station2.zone)];
 							go = true;
 						}
@@ -434,7 +437,6 @@ var statCalc =  function (){
 			collection["28RL"] = parseFloat((waitTime(data)).toFixed(1));
 			collection["25"] = btwTime(data);
 			collection["30RL"] = parseFloat((data.steps[data.steps.length -1].duration.value/60).toFixed(1));
-			//collection["30RL"] = data.steps[data.steps.length -1].duration.value;
 		}
 	}
 	
@@ -456,15 +458,17 @@ var statCalc =  function (){
 	};
 
 	function combCalc(trans, drive, station){ //PR for LT.
+		console.log("START LOCAL TRANSIT PR");
 		console.log("TRANS", trans,"DRIVE", drive, "STATION", station);
 		var distance =  drive.distance.value;
 		var transC = routePrice(trans);
 		var numpool = $("#session_numMain").val();
 		var parkCost =  $("#session_parkCost").val();
-		collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2)  ;
+		console.log('Distance',distance,"Transit cost", transC);
+		collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2);
+		collection["4i"] = parseFloat(((distance * 14.7)/ 100000.0).toFixed(2)); //  Gas 
+		collection["4ii"] = transC; // Bus fare
 		console.log("COST WORKED COLLECTION",collection["4"] , transC); 
-		collection["5"] = ((distance * 14.7)/ 200000.0 + transC ).toFixed(2);
-		collection["6"] = collection["5"];
 		collection["15"] = station.price;
 		collection["19"] = parseFloat((drive.duration.value/60).toFixed(1));
 		if (parkCost !=""){
@@ -476,11 +480,16 @@ var statCalc =  function (){
 		if(numpool !="" && numpool !="0"){
 			collection["16"] = station.price/parseInt(numpool);
 			collection["17i"] = collection["17"]/parseInt(numpool);
+			collection["5"] = ((distance * 14.7)/ (100000.0  * parseInt(numpool)) + transC ).toFixed(2);
+			collection["4iii"] = parseInt(numpool); 
 		}
 		else {
 			collection["16"] = station.price/2;
 			collection["17i"] = collection["17"] /2 ;
+			collection["5"] = ((distance * 14.7)/200000.0 + transC ).toFixed(2);
+			collection["4iii"] = 2 ; 
 		}
+		collection["6"] = collection["5"];
 		collection["28LPR"] = parseFloat((waitTime(trans)).toFixed(1));
 		collection["27LPR"] = parseFloat((timeSkip(trans)).toFixed(1));
 		collection["29LPR"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
@@ -490,11 +499,10 @@ var statCalc =  function (){
 		console.log("COST WORKED COLLECTION",collection["5"] , transC); 
 		console.log("final Collection", collection);
 
-		done();
+		finished();
 	};
 
-	function done(){
-		var tableNew = templateMain(collection);
+	function finished(){
 		collection["31"] = collection["18"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
 		collection["32"] = collection["19"] + collection["25"] + collection["27LPR"] + collection["28LPR"] + collection["29LPR"];
 		collection["33"] = collection["20"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
@@ -510,13 +518,33 @@ var statCalc =  function (){
 		collection["35"] = parseFloat((collection["35"] ).toFixed(1));
 		collection["36"] = parseFloat((collection["36"] ).toFixed(1));
 		collection["37"] = parseFloat((collection["37"] ).toFixed(1));
-		//collection["31"] = parseFloat((collection["31"] ).toFixed(1));
+
 		console.log(tableNew);
 		$("#formView").hide();
-		$("#resultTable").remove();
-		$("#holder").append(tableNew);
+		cCase =  demo["p1"];
+		for(i in cCase){
+			console.log("ID PASSED", i);
+			var tableNew = templateMain(collection, i);
+			$("#holder").append(tableNew);
+			cCase[i].forEach(function(obj){
+				var item = $("#"+obj.id +i)[0];
+				if (obj.type == "M"){
+					item.innerHTML = "" + (parseFloat(obj.value) * parseFloat(item.innerHTML));
+				}
+				else if(obj.type == "R"){
+					item.innerHTML =  obj.value;
+				}
+				else if(obj.type == "S"){
+					var jobj = $(item);
+					var pool =  jobj.data("pool");
+					var car = jobj.data("car");
+					var tran = jobj.data("tran");  
+					item.innerHTML = "" + ((parseFloat(obj.car) * parseFloat(car)/parseFloat(pool)) + (parseFloat(obj.tran) * parseFloat(tran))).toFixed(2);
+				}
+			});
+		}
 
-	}
+	};
 
 	function destGO(data){
 		var found = false;
@@ -528,7 +556,7 @@ var statCalc =  function (){
 				if(agency == "GO Transit" && !found){
 					found = true;
 					var point = step.end_point;
-					station =  nearestStation(point.lb, point.mb, goAll);
+					station =  nearestStation(point.lat(), point.lng(), goAll);
 				}
 				
 			}
@@ -580,6 +608,7 @@ var statCalc =  function (){
 		console.log("GO PR TRANS", trans," GO PR DRIVE", drive, "GO PR STATION", station);
 		var destStation = destGO(trans);
 		var PRkey ;
+		var numpool = $("#session_numMain").val();
 		var distance =  drive.distance.value;
 		var cost = routePriceFill(trans);
 		collection["14RPR"] = cost[2];
@@ -591,16 +620,23 @@ var statCalc =  function (){
 		}
 		
 		pricePR =  priceMatch[PRkey];
-		collection["9"] = ((distance * 14.7)/ 100000.0 + pricePR ).toFixed(2);
-		collection["10"] = ((distance * 14.7)/ 200000.0 + pricePR ).toFixed(2);
+		collection["9"] = parseFloat(((distance * 14.7)/ 100000.0 + pricePR ).toFixed(2));
+		collection["9i"] = parseFloat(((distance * 14.7)/ 100000.0).toFixed(2)); //  Gas 
+		collection["9ii"] = pricePR;// TRANSIT FARE 
+
+		if(numpool !="" && numpool !="0"){
+			collection["10"] = parseFloat(((distance * 14.7)/(100000.0  * parseInt(numpool)) + pricePR ).toFixed(2));
+			collection["9iii"] = parseInt(numpool) ; 
+		}
+		else{
+			collection["10"] = parseFloat(((distance * 14.7)/ 200000.0 + pricePR ).toFixed(2));
+			collection["9iii"] = 2; 
+		}
 		collection["11"] = collection["10"];
 		collection["22"] = parseFloat((drive.duration.value/60).toFixed(1));
 		collection["27RPR"] = parseFloat((timeSkipGo(trans)).toFixed(1));
 		collection["28RPR"] = parseFloat((waitTime(trans)).toFixed(1));
 		collection["30RPR"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
-
-
-
 	};
 
 	function GoCalc(trans, walk, station){
@@ -670,14 +706,6 @@ startPrice = function(name){
 		var transit = {"TTC": 3.00, "York Region Transit": 3.50, "Brampton Transit": 3.25, "MiWay":3.25, "Hamilton Street Railway":2.55};
 		return transit[name];
 	}
-};
-
-goPrice = function(origin, dest, cb){
-	$.get( "/goprice.json", { transit:{ "origin" : origin, "dest": dest }} )
-		.done(function(data) {
-			console.log(data);
-			cb(data);
-		});
 };
 
 var nearestStation =  function (longit, lat, stations){
