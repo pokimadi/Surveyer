@@ -56,12 +56,16 @@ function goTTCStation(data){
 function calcRoute(route) {
 	var start = route.start;
 	var end = route.end;
-	
+	var m  =  new Date();
+	var setTime  =  new Date(m.toDateString() + " " + "9:00 AM");
+	setTime.setDate(setTime.getDate() + dAdjuster(setTime.getDay()) );
 	TransCalculator = statCalc();
 	var request = {
 		origin: start,
 		destination: end,
-		//arrival_time: 
+		transitOptions:{
+			arrivalTime: setTime
+		}, 
 		travelMode: google.maps.TravelMode["TRANSIT"],
 		provideRouteAlternatives:true
 	};
@@ -76,7 +80,7 @@ function calcRoute(route) {
 		  	TransCalculator.transCalc(noGO.legs[0]);
 		  }
 		   if (goTTC){
-		   	console.log("SENDING");
+		   	console.log("SENDING", goTTC);
 		  	TransCalculator.GoTtcCalc(goTTC.legs[0]);
 		  }
 		}
@@ -105,6 +109,9 @@ function calcRoute(route) {
 			requestGo2 = {
 			    origin:  GOstation.name,
 				destination: end,
+				transitOptions:{
+					arrivalTime: setTime
+				},
 			    travelMode: google.maps.TravelMode["TRANSIT"]
 			};
 	  
@@ -157,6 +164,9 @@ function calcRoute(route) {
 			requestPr2 = {
 			    origin:  prGOstation.name +", Ontario ,Canada",
 				destination: "Toronto, Ontario",
+				transitOptions:{
+					arrivalTime: setTime
+				},
 			    travelMode: google.maps.TravelMode["TRANSIT"]
 			};
 	  
@@ -214,6 +224,9 @@ function calcRoute(route) {
 			var request3 = {
 			    origin: station.name,
 				destination: end,
+				transitOptions:{
+					arrivalTime: setTime
+				},
 			    travelMode: google.maps.TravelMode["TRANSIT"]
 			};
 	  		var startT =  new Date();
@@ -281,13 +294,14 @@ var statCalc =  function (){
 							var point= step.end_point;
 							var station1 =  nearestStation(point.lat(), point.lng(), goAll);
 							point =  step.start_location;
-							var station2 = 	nearestStation(point.lng(), point.lng(), goAll);
+							var station2 = 	nearestStation(point.lat(), point.lng(), goAll);
+							var key =  ""+ Math.min(station1.zone, station2.zone) +","+ Math.max(station1.zone, station2.zone)
 							cost +=  priceMatch[""+ Math.min(station1.zone, station2.zone) +","+ Math.max(station1.zone, station2.zone)];
 						}
 						else{
 							cost += startPrice(agency);
-							console.log("start COST", cost, agency);
 						}
+						console.log("start COST", cost, agency, "m", key);
 						before = agency; 
 						added.push(agency);
 						first = false;
@@ -380,6 +394,7 @@ var statCalc =  function (){
 		//IF DATA 
 		if(data){
 			var size = data.steps.length;
+
 			var distance =  data.distance;
 			console.log("STEP", data.steps[size -1].distance.value);
 			collection["3"] = routePrice(data);
@@ -389,6 +404,7 @@ var statCalc =  function (){
 				collection["20"] = parseFloat((data.steps[0].distance.value/250).toFixed(1));
 
 			}
+			collection["25"] = btwTime(data);
 
 			
 			if (data.steps[ size -1].travel_mode == "WALKING"){
@@ -435,7 +451,7 @@ var statCalc =  function (){
 			console.log("TIME BEFORE******", collection["24"]);
 			collection["27RL"] = timeSkipGo(data);
 			collection["28RL"] = parseFloat((waitTime(data)).toFixed(1));
-			collection["25"] = btwTime(data);
+			
 			collection["30RL"] = parseFloat((data.steps[data.steps.length -1].duration.value/60).toFixed(1));
 		}
 	}
@@ -511,6 +527,7 @@ var statCalc =  function (){
 		collection["36"] = collection["23"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
 		collection["37"] = collection["24"] + collection["25"] + collection["27RL"] + collection["28RL"] + collection["30RL"];
 
+		console.log("finished 18:",  collection["18"] ,"25:", collection["25"] ,"27", collection["27LT"] ,"28", collection["28LT"] , "29", collection["29LT"]);
 		collection["31"] = parseFloat((collection["31"] ).toFixed(1));
 		collection["32"] = parseFloat((collection["32"] ).toFixed(1));
 		collection["33"] = parseFloat((collection["33"] ).toFixed(1));
@@ -706,6 +723,19 @@ startPrice = function(name){
 		var transit = {"TTC": 3.00, "York Region Transit": 3.50, "Brampton Transit": 3.25, "MiWay":3.25, "Hamilton Street Railway":2.55};
 		return transit[name];
 	}
+};
+
+//Get Date adjuster for monday.
+dAdjuster =  function(d) {
+	var num  = { 
+		"0" : 1,
+		"1" : 0, 
+		"2" : 6 ,
+		"3" : 5,
+		"4" : 4,
+		"5" : 3, 
+		"6" : 2 };
+	return num[d.toString()];
 };
 
 var nearestStation =  function (longit, lat, stations){
