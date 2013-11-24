@@ -1,5 +1,6 @@
 console.log("we Have Lift off");
-var trips =[{}];  
+var trips =[{}];
+var userChoices = {};  
 var curTrip = 1;
 var error = false;
 showMain = function(){

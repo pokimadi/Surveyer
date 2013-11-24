@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   end
   
   def socio
-    
+    render layout: false
   end
   
   def goprice

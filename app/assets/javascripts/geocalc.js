@@ -273,9 +273,9 @@ function calcRoute(route) {
 	});
 }
 
-
+var collection =  {};
 var statCalc =  function (){
-	var collection =  {};
+	
 	var routePrice = function(data){
 			var first =  true;
 			var before, cost = 0, added = [] ;
@@ -295,7 +295,7 @@ var statCalc =  function (){
 							var station1 =  nearestStation(point.lat(), point.lng(), goAll);
 							point =  step.start_location;
 							var station2 = 	nearestStation(point.lat(), point.lng(), goAll);
-							var key =  ""+ Math.min(station1.zone, station2.zone) +","+ Math.max(station1.zone, station2.zone)
+							var key =  ""+ Math.min(station1.zone, station2.zone) +","+ Math.max(station1.zone, station2.zone);
 							cost +=  priceMatch[""+ Math.min(station1.zone, station2.zone) +","+ Math.max(station1.zone, station2.zone)];
 						}
 						else{
@@ -447,6 +447,7 @@ var statCalc =  function (){
 			collection["14RL"] = cost[2];
 			console.log("TIME GO");
 			collection["24"] = timeGO(data);
+			collection["25RL"] = btwTime(data);
 			console.log("GO TTC CALC" ,collection[13] );
 			console.log("TIME BEFORE******", collection["24"]);
 			collection["27RL"] = timeSkipGo(data);
@@ -469,7 +470,7 @@ var statCalc =  function (){
 		else{
 			collection["2"] = (collection["1"]/2).toFixed(2); 	
 		}
-		collection["26"] = data.duration.value/60;
+		collection["26"] = (data.duration.value/60).toFixed(2);
 		
 	};
 
@@ -536,30 +537,10 @@ var statCalc =  function (){
 		collection["36"] = parseFloat((collection["36"] ).toFixed(1));
 		collection["37"] = parseFloat((collection["37"] ).toFixed(1));
 
-		console.log(tableNew);
-		$("#formView").hide();
-		cCase =  demo["p1"];
-		for(i in cCase){
-			console.log("ID PASSED", i);
-			var tableNew = templateMain(collection, i);
-			$("#holder").append(tableNew);
-			cCase[i].forEach(function(obj){
-				var item = $("#"+obj.id +i)[0];
-				if (obj.type == "M"){
-					item.innerHTML = "" + (parseFloat(obj.value) * parseFloat(item.innerHTML));
-				}
-				else if(obj.type == "R"){
-					item.innerHTML =  obj.value;
-				}
-				else if(obj.type == "S"){
-					var jobj = $(item);
-					var pool =  jobj.data("pool");
-					var car = jobj.data("car");
-					var tran = jobj.data("tran");  
-					item.innerHTML = "" + ((parseFloat(obj.car) * parseFloat(car)/parseFloat(pool)) + (parseFloat(obj.tran) * parseFloat(tran))).toFixed(2);
-				}
-			});
-		}
+		tableDisplay("c1");
+
+		
+		//}
 
 	};
 
@@ -790,4 +771,73 @@ var nearestStation =  function (longit, lat, stations){
 	return ret;
 
 };
+
+tableDisplay =  function(sel){
+	var sanitize =  function(id){
+			var cols = ["01" ,"02","03","04","05","06", "07", "08", "09", "10", "11", "12", "13"];
+			var rem = [];
+			for (j in cols){
+				var col =  cols[j];
+				var found =  false;
+				var n= 1;
+				while( n <=15 && !found ){
+					if(!isNaN(parseInt($("#"+n + col+ id).html()))){
+						found = true;
+					}
+					n++;
+				}
+				if(!found){
+					$('td:nth-child('+ (parseInt(col)+2) + ')').hide();
+					rem.push(parseInt(col));
+				}
+			}
+			return rem;
+		};
+	var nextC = {"c1":"c2", "c2":"c3","c3":"c4","c4":"c5","c5":"c6","c6":"c6"};
+	console.log(tableNew);
+	$("#holder").empty();
+	//$("#formView").hide();
+	cCase =  demo["p1"];
+	//for(i in cCase){
+	var i  = sel;
+	console.log("ID PASSED", i);
+	var tableNew = templateMain(collection, i);
+	$("#holder").append(tableNew);
+	var ex  = sanitize(i);
+	var choice =  choicePicker(i , ex);
+	$("#holder").append(choice);
+	var next  = myNavigator(nextC[sel]);
+	$("#holder").append(next);
+	$("#NextChoice").hide();
+
+	console.log( "CASE:", cCase[i]);
+
+	cCase[i].forEach(function(obj){
+		var item = $("#"+obj.id +i)[0];
+		if (obj.type == "M"){
+			item.innerHTML = "" + (parseFloat(obj.value) * parseFloat(item.innerHTML));
+		}
+		else if(obj.type == "R"){
+			item.innerHTML =  obj.value;
+		}
+		else if(obj.type == "S"){
+			var jobj = $(item);
+			var pool =  jobj.data("pool");
+			var car = jobj.data("car");
+			var tran = jobj.data("tran");  
+			item.innerHTML = "" + ((parseFloat(obj.car) * parseFloat(car)/parseFloat(pool)) + (parseFloat(obj.tran) * parseFloat(tran))).toFixed(2);
+		}
+	});
+
+};
+
+
+
+
+
+
+
+
+
+
 

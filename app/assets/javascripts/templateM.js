@@ -17,13 +17,13 @@ var templateMain =  function(collection, id){
 				'<td>RTW</td>'+
 				'<td>RTAD</td>'+
 				'<td>RTAP</td>'+
-				'<td>RTCB</td>'+
+				'<td>RTCP</td>'+
 				'<td>RTB</td>'+
 				'<td>RTLTW</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>TRAVEL COST/FARE($)</td>'+
-				'<td></td>'+
+				'<td>session_oneCost</td>'+
 				'<td id="101'+ id+ '" >'+collection["1"]+'</td>'+
 				'<td id="102'+ id+ '"  >'+collection["2"]+'</td>'+
 				'<td id="103'+ id+ '" >'+collection["3"]+'</td>'+
@@ -41,16 +41,16 @@ var templateMain =  function(collection, id){
 			'<tr>'+
 				'<td>Reserved Parking at GO Stations</td>'+
 				'<td></td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
+				'<td id="201'+ id+ '">--</td>'+
+				'<td id="102'+ id+ '">--</td>'+
+				'<td id="203'+ id+ '">--</td>'+
+				'<td id="204'+ id+ '">--</td>'+
+				'<td id="205'+ id+ '">--</td>'+
+				'<td id="206'+ id+ '">--</td>'+
+				'<td id="207'+ id+ '">--</td>'+
+				'<td id="208'+ id+ '">--</td>'+
 				'<td id="209'+ id+ '" >--</td>'+
-				'<td>--</td>'+
+				'<td id="210'+ id+ '">--</td>'+
 				'<td id="211'+ id+ '" >--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
@@ -74,7 +74,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>Local Transit-GO Access Fare ($)</td>'+
-				'<td></td>'+
+				'<td>session_accessCost</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
@@ -91,7 +91,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>GO Local Transit  Egress Fare ($)</td>'+
-				'<td></td>'+
+				'<td>session_egressCost</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
@@ -108,7 +108,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>Transfer Time(min)</td>'+
-				'<td></td>'+
+				'<td>session_transWait</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td id="603'+ id+ '" >'+collection["28LT"]+'</td>'+
@@ -125,7 +125,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>Wait Time(min)</td>'+
-				'<td></td>'+
+				'<td>session_waitTime</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td id="703'+ id+ '" >'+collection["25"]+'</td>'+
@@ -138,7 +138,7 @@ var templateMain =  function(collection, id){
 				'<td id="710'+ id+ '" >'+collection["25"]+'</td>'+
 				'<td id="711'+ id+ '" >'+collection["25"]+'</td>'+
 				'<td id="712'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="713'+ id+ '" >'+collection["25"]+'</td>'+
+				'<td id="713'+ id+ '" >'+collection["25RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>next Bus Information(Local Transit)</td>'+
@@ -193,9 +193,9 @@ var templateMain =  function(collection, id){
 			'</tr>'+			
 			'<tr>'+
 				'<td>Parking Cost($) at destination</td>'+
-				'<td></td>'+
-				'<td>'+collection["17"]+'</td>'+
-				'<td>'+collection["17"]+'</td>'+
+				'<td>session_parkCost</td>'+
+				'<td id="1101'+ id+ '">'+collection["17"]+'</td>'+
+				'<td id="1102'+ id+ '">'+collection["17"]+'</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
@@ -210,7 +210,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+	
 			'<tr>'+
 				'<td>Access Time</td>'+
-				'<td></td>'+
+				'<td>session_accessTime</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>'+collection["18"]+'</td>'+
@@ -227,56 +227,133 @@ var templateMain =  function(collection, id){
 			'</tr>'+	
 			'<tr>'+
 				'<td>in-veichle Travel Time(min)</td>'+
-				'<td></td>'+
-				'<td>'+collection["26"]+'</td>'+
-				'<td>'+collection["26"]+'</td>'+
-				'<td>'+collection["27LT"]+'</td>'+
-				'<td>'+collection["27LPR"]+'</td>'+
-				'<td>'+collection["27LPR"]+'</td>'+
-				'<td>'+collection["27LPR"]+'</td>'+
-				'<td>'+collection["27LT"]+'</td>'+
-				'<td>'+collection["27RT"]+'</td>'+
-				'<td>'+collection["27RPR"]+'</td>'+
-				'<td>'+collection["27RPR"]+'</td>'+
-				'<td>'+collection["27RPR"]+'</td>'+
-				'<td>'+collection["27RT"]+'</td>'+
-				'<td>'+collection["27RL"]+'</td>'+
+				'<td>session_travelTime</td>'+
+				'<td id="1301'+ id+ '">'+collection["26"]+'</td>'+
+				'<td id="1302'+ id+ '">'+collection["26"]+'</td>'+
+				'<td id="1303'+ id+ '">'+collection["27LT"]+'</td>'+
+				'<td id="1304'+ id+ '">'+collection["27LPR"]+'</td>'+
+				'<td id="1305'+ id+ '">'+collection["27LPR"]+'</td>'+
+				'<td id="1306'+ id+ '">'+collection["27LPR"]+'</td>'+
+				'<td id="1307'+ id+ '">'+collection["27LT"]+'</td>'+
+				'<td id="1308'+ id+ '">'+collection["27RT"]+'</td>'+
+				'<td id="1309'+ id+ '">'+collection["27RPR"]+'</td>'+
+				'<td id="1310'+ id+ '">'+collection["27RPR"]+'</td>'+
+				'<td id="1311'+ id+ '">'+collection["27RPR"]+'</td>'+
+				'<td id="1312'+ id+ '">'+collection["27RT"]+'</td>'+
+				'<td id="1313'+ id+ '">'+collection["27RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td> Egress Time(min)</td>'+
-				'<td></td>'+
-				'<td>--</td>'+
-				'<td>--</td>'+
-				'<td>'+collection["29LT"]+'</td>'+
-				'<td>'+collection["29LPR"]+'</td>'+
-				'<td>'+collection["29LPR"]+'</td>'+
-				'<td>'+collection["29LPR"]+'</td>'+
-				'<td>'+collection["29LT"]+'</td>'+
-				'<td>'+collection["30RT"]+'</td>'+
-				'<td>'+collection["30RPR"]+'</td>'+
-				'<td>'+collection["30RPR"]+'</td>'+
-				'<td>'+collection["30RPR"]+'</td>'+
-				'<td>'+collection["30RT"]+'</td>'+
-				'<td>'+collection["30RL"]+'</td>'+
+				'<td>session_egressTime</td>'+
+				'<td id="1401'+ id+ '">--</td>'+
+				'<td id="1402'+ id+ '">--</td>'+
+				'<td id="1403'+ id+ '">'+collection["29LT"]+'</td>'+
+				'<td id="1404'+ id+ '">'+collection["29LPR"]+'</td>'+
+				'<td id="1405'+ id+ '">'+collection["29LPR"]+'</td>'+
+				'<td id="1406'+ id+ '">'+collection["29LPR"]+'</td>'+
+				'<td id="1407'+ id+ '">'+collection["29LT"]+'</td>'+
+				'<td id="1408'+ id+ '">'+collection["30RT"]+'</td>'+
+				'<td id="1409'+ id+ '">'+collection["30RPR"]+'</td>'+
+				'<td id="1410'+ id+ '">'+collection["30RPR"]+'</td>'+
+				'<td id="1411'+ id+ '">'+collection["30RPR"]+'</td>'+
+				'<td id="1412'+ id+ '">'+collection["30RT"]+'</td>'+
+				'<td id="1413'+ id+ '">'+collection["30RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Total Trip Time(min)</td>'+
-				'<td></td>'+
-				'<td>'+collection["26"]+'</td>'+
-				'<td>'+collection["26"]+'</td>'+
-				'<td>'+collection["31"]+'</td>'+
-				'<td>'+collection["32"]+'</td>'+
-				'<td>'+collection["32"]+'</td>'+
-				'<td>'+collection["32"]+'</td>'+
-				'<td>'+collection["33"]+'</td>'+
-				'<td>'+collection["34"]+'</td>'+
-				'<td>'+collection["35"]+'</td>'+
-				'<td>'+collection["35"]+'</td>'+
-				'<td>'+collection["35"]+'</td>'+
-				'<td>'+collection["36"]+'</td>'+
-				'<td>'+collection["37"]+'</td>'+
+				'<td>session_oneTime</td>'+
+				'<td id="1501'+ id+ '">'+collection["26"]+'</td>'+
+				'<td id="1502'+ id+ '">'+collection["26"]+'</td>'+
+				'<td id="1503'+ id+ '">'+collection["31"]+'</td>'+
+				'<td id="1504'+ id+ '">'+collection["32"]+'</td>'+
+				'<td id="1505'+ id+ '">'+collection["32"]+'</td>'+
+				'<td id="1506'+ id+ '">'+collection["32"]+'</td>'+
+				'<td id="1507'+ id+ '">'+collection["33"]+'</td>'+
+				'<td id="1508'+ id+ '">'+collection["34"]+'</td>'+
+				'<td id="1509'+ id+ '">'+collection["35"]+'</td>'+
+				'<td id="1510'+ id+ '">'+collection["35"]+'</td>'+
+				'<td id="1511'+ id+ '">'+collection["35"]+'</td>'+
+				'<td id="1512'+ id+ '">'+collection["36"]+'</td>'+
+				'<td id="1513'+ id+ '">'+collection["37"]+'</td>'+
 			'</tr>'+
 		'</table>'+
 		'<hr />';
 	return temp;
 };
+myNavigator = function(choice){
+	var n =  '<ul class="pager"  id="NextChoice"> '+
+		  //'<li><a id="newTrip"> Prvious </a></li>' +
+		  '<li><a id="continue" onClick ="tableDisplay(\''+choice+'\')"> Next </a></li>' +
+		'</ul>'+ "<hr />";
+	return n; 
+};
+
+
+choicePicker = function(id, exclude){
+	var confidence = {1:"Not Confident", 2:"Somewhat Confident", 3:"Neutral", 4:"Confident", 5:"Strongly Confident" };
+	var title = {1:"AD", 2:"AP", 3:"LTW", 4:"LTAD", 5:"LTAP", 6:"LTCP", 7:"LTB", 8:"RTW", 9:"RTAD", 10:"RTAP", 11:"RTCP", 12:"RTB", 13:"RTLT"};
+	for (key in exclude){
+		delete title[exclude[key]];
+	}
+	var tempS, temp = '<p>Which of the choices do you prefer?</p><br />';
+	for (key in title){
+		tempS = '<label class="radio inline">' +
+				'<input onClick="showNext(\''+id+'\',\''+ title[key]+  '\')" type="radio" name="'+"choice" + id +'" id="'+ "box" + id + key+'" value="'+ title[key] +'">'+ title[key] +
+				'</label>';
+		temp += tempS;
+	}
+	temp += "<p> Based on the chosen mode, what is the expected departure time (from home to work)? </p>";
+
+	temp += "<table>" +
+			"<tr><td>"+ 
+			'<label class="inline"> Please print what your departure time will be:'+
+		  '</label> </td><td>' +
+		  '<input id=​"expected" name="time" type="time" onclick="showNext(\''+id +' \', 0 )" >​'+
+		  '</td></tr></table>'+
+		  "<h5>Confidence in Stated Choice</h5>";
+
+	for (key in confidence){
+		tempS = '<label class="radio inline">' +
+				'<input onClick="showNext(\''+id+'\',\''+ confidence[key]+  '\')" type="radio" name="'+"conf" + id +'" id="'+ "box" + confidence[key]+'" value="'+ confidence[key] +'">'+ confidence[key] +
+				'</label>';
+		temp += tempS;
+	}
+
+	//temp += '<hr />';
+	return temp;
+
+};
+
+showNext =  function(id , val){
+	console.log(id, val); //TODO Save Value
+	var conf = $("input[name='conf"+ id +"']:checked").val();
+	var ch = $("input[name='choice"+ id + "']:checked").val();
+	var t = $("input[name='time']").val();
+
+	if (conf && ch && t != ''){
+		userChoices[id] = {"Confidence": conf, "Choice" : ch,  "Expected Time": t };
+		if (id != "c6" ){
+			$("#NextChoice").show();
+		}
+		else{
+			$.get( "/socio", function( data ) {
+				console.log(data);
+				$("#holder").empty();
+				$("#holder").html(data);
+			});
+			//This is where Submission will take Place
+		}
+	}
+};
+
+
+
+
+
+
+
+
+
+
+
+

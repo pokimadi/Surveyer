@@ -250,7 +250,7 @@
       <td><%= f.number_field :parkCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
 	  <tr id="monthcom"> <td> <%= f.label "During which months do you typically walk/bike to transit when commuting to work?" %> </td>
-      <td><%= select_tag :monthCom , options_for_select([ "JANRUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ]), multiple: true, :class=>"input"  %> </td>
+      <td><%= select_tag :monthCom , options_for_select([ "JANRUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ]), multiple: true, :class=>"input span2"  %> </td>
       </tr>
       </tr>
             <tr> <td> <%= f.label "Does your employer pay for your trip expenses?" %> </td>
