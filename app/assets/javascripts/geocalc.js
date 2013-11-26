@@ -5,7 +5,7 @@ var TransCalculator;
 $( document ).ready(function(){
 	directionsService = new google.maps.DirectionsService();
 });
-
+var demo;
 function goRoute(steps){
 	var ret = true;
 	steps.forEach(function(step){
@@ -69,7 +69,7 @@ function calcRoute(route) {
 		travelMode: google.maps.TravelMode["TRANSIT"],
 		provideRouteAlternatives:true
 	};
- 
+ 	collection["49"] = ($("#session_veichleCount").val() == '') ? 0 : parseInt($("#session_veichleCount").val());
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
 		  console.log("RESP",response);
@@ -272,7 +272,7 @@ function calcRoute(route) {
 		}
 	});
 }
-
+var xConditions = {cond1:false, cond2:false, cond3:false, cond4: false, cond5:false, cond6:false, cond7:false};
 var collection =  {};
 var statCalc =  function (){
 	
@@ -388,13 +388,25 @@ var statCalc =  function (){
 		return elapsed/60000;
 	};
 
+	function distBTrans(data){
+		var dist = 0;
+		var legs = data.steps;
+		var pos = 0;
+		while ( pos < legs.length && legs[pos].travel_mode == "WALKING" ){
+			dist += legs[pos].distance.value;
+			pos ++;
+		} 
+
+		return parseFloat((dist/1000).toFixed(2));
+	}
+
 	function transCalc(data){
-		console.log("DATA", data );
+		console.log("Local Transit Data!\n", data );
 		
 		//IF DATA 
 		if(data){
 			var size = data.steps.length;
-
+			collection["50"] = distBTrans(data);
 			var distance =  data.distance;
 			console.log("STEP", data.steps[size -1].distance.value);
 			collection["3"] = routePrice(data);
@@ -520,6 +532,7 @@ var statCalc =  function (){
 	};
 
 	function finished(){
+		setConditions();
 		collection["31"] = collection["18"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
 		collection["32"] = collection["19"] + collection["25"] + collection["27LPR"] + collection["28LPR"] + collection["29LPR"];
 		collection["33"] = collection["20"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
@@ -642,6 +655,7 @@ var statCalc =  function (){
 		var destStation = destGO(trans);
 		var cost = routePriceFill(trans);
 		collection["14RT"] = cost[2];
+		collection["51"] = distBTrans(walk);
 		console.log("DESTSATION",destStation);
 		var Gokey ;
 		var distance =  walk.distance.value;
@@ -717,6 +731,85 @@ dAdjuster =  function(d) {
 		"5" : 3, 
 		"6" : 2 };
 	return num[d.toString()];
+};
+
+setConditions = function(){
+	if(collection["49"] == 0){
+		xConditions[cond1] = true;
+	}
+	if(collection["49"] > 0){
+		xConditions[cond2] = true;
+	}
+
+	if(collection["50"] <= 3){
+		xConditions[cond3] = true;
+	}
+	if(collection["50"] > 3 && collection["50"] <= 10){
+		xConditions[cond4] = true;
+	}
+	if(collection["51"] <= 3){
+		xConditions[cond5] = true;
+	}
+	if(collection["51"] > 3 && collection["51"] <= 10){
+		xConditions[cond6] = true;
+	}
+
+
+	if(xConditions[cond1]&& xConditions[cond3]&& xConditions[cond5]){
+		demo = part6;
+	}
+	else if(xConditions[cond1]&& xConditions[cond3]&& xConditions[cond6]){
+		demo = part7;
+	}
+	else if(xConditions[cond1]&& xConditions[cond4]&& xConditions[cond5]){
+		demo = part8;
+	}
+	else if(xConditions[cond1]&& xConditions[cond4]&& xConditions[cond6]){
+		demo = part9;
+	}
+	else if(xConditions[cond1]&& xConditions[cond3]){
+		demo = part2;
+	}
+	else if(xConditions[cond1]&& xConditions[cond4]){
+		demo = part3;
+	}
+	else if(xConditions[cond1]&& xConditions[cond5]){
+		demo = part4;
+	}
+	else if(xConditions[cond1]&& xConditions[cond6]){
+		demo = part5;
+	}
+	else if(xConditions[cond1]){
+		demo = part1;
+	}
+	else if(xConditions[cond2]&& xConditions[cond3]&& xConditions[cond5]){
+		demo = part15;
+	}
+	else if(xConditions[cond2]&& xConditions[cond3]&& xConditions[cond6]){
+		demo = part16;
+	}
+	else if(xConditions[cond2]&& xConditions[cond4]&& xConditions[cond5]){
+		demo = part17;
+	}
+	else if(xConditions[cond2]&& xConditions[cond4]&& xConditions[cond6]){
+		demo = part18;
+	}
+	else if(xConditions[cond2]&& xConditions[cond3]){
+		demo = part11;
+	}
+	else if(xConditions[cond2]&& xConditions[cond4]){
+		demo = part12;
+	}
+	else if(xConditions[cond2]&& xConditions[cond5]){
+		demo = part13;
+	}
+	else if(xConditions[cond2]&& xConditions[cond6]){
+		demo = part14;
+	}
+	else if(xConditions[cond2] ){
+		demo = part10;
+	}
+
 };
 
 var nearestStation =  function (longit, lat, stations){
