@@ -1,8 +1,8 @@
 part3 = {
 "p1":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -15,9 +15,9 @@ part3 = {
 	],
 	'c2' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -30,10 +30,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c3' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -48,10 +48,10 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -93,7 +93,7 @@ part3 = {
 },
 "p2":{ 	'c1' : [ 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -108,7 +108,7 @@ part3 = {
 	],
 	'c2' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
@@ -124,7 +124,7 @@ part3 = {
 	'c3' : [
 		{ id: '102', type:'M', value:'1.75' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -138,7 +138,7 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -153,8 +153,8 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c5' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -169,10 +169,10 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -184,10 +184,10 @@ part3 = {
 	]
 },
 "p3":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -200,9 +200,9 @@ part3 = {
 	],
 	'c2' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -230,9 +230,9 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -246,9 +246,9 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c5' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -275,7 +275,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	]
 },
-"p4":{ 	'c1' : [ 		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+"p4":{ 	'c1' : [ 		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
@@ -290,7 +290,7 @@ part3 = {
 	],
 	'c2' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -306,7 +306,7 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -318,9 +318,9 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -336,7 +336,7 @@ part3 = {
 	'c5' : [
 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -351,10 +351,10 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -368,7 +368,7 @@ part3 = {
 	]
 },
 "p5":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
@@ -383,7 +383,7 @@ part3 = {
 	'c2' : [
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -397,7 +397,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c3' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
@@ -413,7 +413,7 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -426,10 +426,10 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -442,10 +442,10 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -461,7 +461,7 @@ part3 = {
 },
 "p6":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -476,9 +476,9 @@ part3 = {
 	],
 	'c2' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -491,7 +491,7 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -505,7 +505,7 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -520,7 +520,7 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -536,9 +536,9 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c6' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -551,10 +551,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	]
 },
-"p7":{ 	'c1' : [ 		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+"p7":{ 	'c1' : [ 		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -596,8 +596,8 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -610,9 +610,9 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c5' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -626,10 +626,10 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -644,7 +644,7 @@ part3 = {
 	]
 },
 "p8":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -656,10 +656,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c2' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -672,7 +672,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c3' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -688,9 +688,9 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -707,7 +707,7 @@ part3 = {
 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -721,7 +721,7 @@ part3 = {
 	'c6' : [
 		{ id: '102', type:'M', value:'1.75' },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -763,10 +763,10 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -779,10 +779,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c4' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -796,9 +796,9 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -812,9 +812,9 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -828,10 +828,10 @@ part3 = {
 	]
 },
 "p10":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -843,8 +843,8 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c2' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -858,7 +858,7 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -876,7 +876,7 @@ part3 = {
 	'c4' : [
 		{ id: '102', type:'M', value:'1.75' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -890,7 +890,7 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
@@ -906,7 +906,7 @@ part3 = {
 	'c6' : [
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -922,7 +922,7 @@ part3 = {
 "p11":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.75' },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -937,8 +937,8 @@ part3 = {
 	],
 	'c2' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -953,7 +953,7 @@ part3 = {
 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -965,10 +965,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c4' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -983,7 +983,7 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
@@ -998,7 +998,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c6' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
@@ -1012,10 +1012,10 @@ part3 = {
 	]
 },
 "p12":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -1028,7 +1028,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c2' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
@@ -1044,10 +1044,10 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -1062,7 +1062,7 @@ part3 = {
 	'c4' : [
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -1077,7 +1077,7 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -1089,7 +1089,7 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
@@ -1118,9 +1118,9 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c2' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -1134,9 +1134,9 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -1164,9 +1164,9 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -1181,10 +1181,10 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -1196,10 +1196,10 @@ part3 = {
 	]
 },
 "p14":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -1214,7 +1214,7 @@ part3 = {
 	'c2' : [
 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -1228,9 +1228,9 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -1244,7 +1244,7 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -1257,7 +1257,7 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -1272,7 +1272,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c6' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
@@ -1288,10 +1288,10 @@ part3 = {
 	]
 },
 "p15":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -1305,9 +1305,9 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c2' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -1320,8 +1320,8 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -1364,10 +1364,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c6' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -1381,7 +1381,7 @@ part3 = {
 },
 "p16":{ 	'c1' : [ 		{ id: '102', type:'M', value:'1.75' },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'80' },
@@ -1398,7 +1398,7 @@ part3 = {
 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -1412,9 +1412,9 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -1428,7 +1428,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	],
 	'c4' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -1442,10 +1442,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c5' : [
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'0' },
@@ -1458,7 +1458,7 @@ part3 = {
 	],
 	'c6' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -1471,9 +1471,9 @@ part3 = {
 		{ id: '912', type:'R', value:'	Yes	' }
 	]
 },
-"p17":{ 	'c1' : [ 		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+"p17":{ 	'c1' : [ 		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -1487,7 +1487,7 @@ part3 = {
 	],
 	'c2' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -1503,9 +1503,9 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -1519,7 +1519,7 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
@@ -1535,7 +1535,7 @@ part3 = {
 	],
 	'c5' : [
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -1550,7 +1550,7 @@ part3 = {
 	'c6' : [
 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '107', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },
@@ -1563,7 +1563,7 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	]
 },
-"p18":{ 	'c1' : [ 		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+"p18":{ 	'c1' : [ 		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '108', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
@@ -1579,7 +1579,7 @@ part3 = {
 		{ id: '102', type:'M', value:'1.5' },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'40' },
@@ -1593,7 +1593,7 @@ part3 = {
 	],
 	'c3' : [
 		{ id: '102', type:'M', value:'1.75' },
-		{ 'id': 106, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '107', type:'M', value:'1.3' },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
@@ -1608,8 +1608,8 @@ part3 = {
 	],
 	'c4' : [
 		{ id: '102', type:'M', value:'1.5' },
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'8' },
@@ -1622,10 +1622,10 @@ part3 = {
 		{ id: '912', type:'R', value:'	No	' }
 	],
 	'c5' : [
-		{ 'id': 106, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 106, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.2' },
-		{ 'id': 111, 'type':S, 'car':1.75, 'tran': 1.3 },
+		{ 'id': 111, 'type':'S', 'car':1.75, 'tran': 1.3 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	No	' },
 		{ id: '311', type:'R', value:'4' },
@@ -1642,7 +1642,7 @@ part3 = {
 		{ id: '102', type:'M', value:'1.75' },
 		{ id: '107', type:'M', value:'1.2' },
 		{ id: '108', type:'M', value:'1.3' },
-		{ 'id': 111, 'type':S, 'car':1.5, 'tran': 1.2 },
+		{ 'id': 111, 'type':'S', 'car':1.5, 'tran': 1.2 },
 		{ id: '112', type:'M', value:'1.3' },
 		{ id: '211', type:'R', value:'	Yes	' },
 		{ id: '311', type:'R', value:'120' },

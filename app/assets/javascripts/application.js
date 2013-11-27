@@ -19,10 +19,10 @@
 //= require geocalc.js
 //= require main
 //= require GoData
-//= require case1
-//= require case2
-//= require case3
-//= require case4
+//= require case.js
+//= require case2.js
+//= require case3.js
+//= require case4.js
 //= require templateM
 //= require turbolinks
 //= require_tree .
