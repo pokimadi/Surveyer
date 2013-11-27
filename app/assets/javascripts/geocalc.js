@@ -272,7 +272,7 @@ function calcRoute(route) {
 		}
 	});
 }
-var xConditions = {cond1:false, cond2:false, cond3:false, cond4: false, cond5:false, cond6:false, cond7:false};
+var xConditions = {cond1 :false, cond2 :false, cond3 :false, cond4 : false, cond5 :false, cond6 :false, cond7 :false};
 var collection =  {};
 var statCalc =  function (){
 	
@@ -735,78 +735,78 @@ dAdjuster =  function(d) {
 
 setConditions = function(){
 	if(collection["49"] == 0){
-		xConditions[cond1] = true;
+		xConditions["cond1"] = true;
 	}
 	if(collection["49"] > 0){
-		xConditions[cond2] = true;
+		xConditions["cond2"] = true;
 	}
 
 	if(collection["50"] <= 3){
-		xConditions[cond3] = true;
+		xConditions["cond3"] = true;
 	}
 	if(collection["50"] > 3 && collection["50"] <= 10){
-		xConditions[cond4] = true;
+		xConditions["cond4"] = true;
 	}
 	if(collection["51"] <= 3){
-		xConditions[cond5] = true;
+		xConditions["cond5"] = true;
 	}
 	if(collection["51"] > 3 && collection["51"] <= 10){
-		xConditions[cond6] = true;
+		xConditions["cond6"] = true;
 	}
 
 
-	if(xConditions[cond1]&& xConditions[cond3]&& xConditions[cond5]){
+	if(xConditions["cond1"]&& xConditions["cond3"]&& xConditions["cond5"]){
 		demo = part6;
 	}
-	else if(xConditions[cond1]&& xConditions[cond3]&& xConditions[cond6]){
+	else if(xConditions["cond1"]&& xConditions["cond3"]&& xConditions["cond6"]){
 		demo = part7;
 	}
-	else if(xConditions[cond1]&& xConditions[cond4]&& xConditions[cond5]){
+	else if(xConditions["cond1"]&& xConditions["cond4"]&& xConditions["cond5"]){
 		demo = part8;
 	}
-	else if(xConditions[cond1]&& xConditions[cond4]&& xConditions[cond6]){
+	else if(xConditions["cond1"]&& xConditions["cond4"]&& xConditions["cond6"]){
 		demo = part9;
 	}
-	else if(xConditions[cond1]&& xConditions[cond3]){
+	else if(xConditions["cond1"]&& xConditions["cond3"]){
 		demo = part2;
 	}
-	else if(xConditions[cond1]&& xConditions[cond4]){
+	else if(xConditions["cond1"]&& xConditions["cond4"]){
 		demo = part3;
 	}
-	else if(xConditions[cond1]&& xConditions[cond5]){
+	else if(xConditions["cond1"]&& xConditions["cond5"]){
 		demo = part4;
 	}
-	else if(xConditions[cond1]&& xConditions[cond6]){
+	else if(xConditions["cond1"]&& xConditions["cond6"]){
 		demo = part5;
 	}
-	else if(xConditions[cond1]){
+	else if(xConditions["cond1"]){
 		demo = part1;
 	}
-	else if(xConditions[cond2]&& xConditions[cond3]&& xConditions[cond5]){
+	else if(xConditions["cond2"]&& xConditions["cond3"]&& xConditions["cond5"]){
 		demo = part15;
 	}
-	else if(xConditions[cond2]&& xConditions[cond3]&& xConditions[cond6]){
+	else if(xConditions["cond2"]&& xConditions["cond3"]&& xConditions["cond6"]){
 		demo = part16;
 	}
-	else if(xConditions[cond2]&& xConditions[cond4]&& xConditions[cond5]){
+	else if(xConditions["cond2"]&& xConditions["cond4"]&& xConditions["cond5"]){
 		demo = part17;
 	}
-	else if(xConditions[cond2]&& xConditions[cond4]&& xConditions[cond6]){
+	else if(xConditions["cond2"]&& xConditions["cond4"]&& xConditions["cond6"]){
 		demo = part18;
 	}
-	else if(xConditions[cond2]&& xConditions[cond3]){
+	else if(xConditions["cond2"]&& xConditions["cond3"]){
 		demo = part11;
 	}
-	else if(xConditions[cond2]&& xConditions[cond4]){
+	else if(xConditions["cond2"]&& xConditions["cond4"]){
 		demo = part12;
 	}
-	else if(xConditions[cond2]&& xConditions[cond5]){
+	else if(xConditions["cond2"]&& xConditions["cond5"]){
 		demo = part13;
 	}
-	else if(xConditions[cond2]&& xConditions[cond6]){
+	else if(xConditions["cond2"]&& xConditions["cond6"]){
 		demo = part14;
 	}
-	else if(xConditions[cond2] ){
+	else if(xConditions["cond2"] ){
 		demo = part10;
 	}
 
