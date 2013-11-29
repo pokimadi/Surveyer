@@ -908,7 +908,7 @@ tableDisplay =  function(sel){
 	cCase[i].forEach(function(obj){
 		var item = $("#"+obj.id +i)[0];
 		if (obj.type == "M"){
-			item.innerHTML = "" + (parseFloat(obj.value) * parseFloat(item.innerHTML));
+			item.innerHTML = "" + (parseFloat(obj.value) * parseFloat(item.innerHTML)).toFixed(1);
 		}
 		else if(obj.type == "R"){
 			item.innerHTML =  obj.value;
