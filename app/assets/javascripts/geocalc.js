@@ -1,6 +1,7 @@
 console.log("geocalc");
 var directionsService ;
 var TransCalculator;
+var chosenTrip;
 //var AutoCalculator;
 $( document ).ready(function(){
 	directionsService = new google.maps.DirectionsService();
@@ -56,8 +57,9 @@ function goTTCStation(data){
 function calcRoute(route) {
 	var start = route.start;
 	var end = route.end;
+	chosenTrip  = getWorkHome(true); 
 	var m  =  new Date();
-	var setTime  =  new Date(m.toDateString() + " " + "9:00 AM");
+	var setTime  =  (chosenTrip.session_lateTime) ?  new Date(m.toDateString() + " " + chosenTrip.session_lateTime): new Date(m.toDateString() + " " + "9:00 AM");
 	setTime.setDate(setTime.getDate() + dAdjuster(setTime.getDay()) );
 	TransCalculator = statCalc();
 	var request = {
@@ -156,14 +158,15 @@ function calcRoute(route) {
 			//PR GO STATION.
 			var prGOstation = nearestStation(leg.start_location.lat(),leg.start_location.lng(), stationsPR);
 			var prGoDrive, prGoTrans, prGoCount =  2;
+			var sName =  prGOstation.name.slice(0 ,  prGOstation.name.indexOf("("));
 			requestPr1 ={
 			    origin: start,
-				destination: "GO " + prGOstation.name +", Ontario ,Canada",
+				destination: sName,
 			    travelMode: google.maps.TravelMode["DRIVING"]
 			};  
 			requestPr2 = {
-			    origin:  prGOstation.name +", Ontario ,Canada",
-				destination: "Toronto, Ontario",
+			    origin:  sName,
+				destination: end,
 				transitOptions:{
 					arrivalTime: setTime
 				},
@@ -732,7 +735,7 @@ dAdjuster =  function(d) {
 		"6" : 2 };
 	return num[d.toString()];
 };
-
+var questionChoice = "";
 setConditions = function(){
 	if(collection["49"] == 0){
 		xConditions["cond1"] = true;
@@ -757,57 +760,75 @@ setConditions = function(){
 
 	if(xConditions["cond1"]&& xConditions["cond3"]&& xConditions["cond5"]){
 		demo = part6;
+		questionChoice = "part6";
 	}
 	else if(xConditions["cond1"]&& xConditions["cond3"]&& xConditions["cond6"]){
 		demo = part7;
+		questionChoice = "part7";
 	}
 	else if(xConditions["cond1"]&& xConditions["cond4"]&& xConditions["cond5"]){
 		demo = part8;
+		questionChoice = "part8";
 	}
 	else if(xConditions["cond1"]&& xConditions["cond4"]&& xConditions["cond6"]){
 		demo = part9;
+		questionChoice = "part9";
 	}
 	else if(xConditions["cond1"]&& xConditions["cond3"]){
 		demo = part2;
+		questionChoice = "part2";
 	}
 	else if(xConditions["cond1"]&& xConditions["cond4"]){
 		demo = part3;
+		questionChoice = "part3";
 	}
 	else if(xConditions["cond1"]&& xConditions["cond5"]){
 		demo = part4;
+		questionChoice = "part4";
 	}
 	else if(xConditions["cond1"]&& xConditions["cond6"]){
 		demo = part5;
+		questionChoice = "part5";
 	}
 	else if(xConditions["cond1"]){
 		demo = part1;
+		questionChoice = "part1";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond3"]&& xConditions["cond5"]){
 		demo = part15;
+		questionChoice = "part15";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond3"]&& xConditions["cond6"]){
 		demo = part16;
+		questionChoice = "part61";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond4"]&& xConditions["cond5"]){
 		demo = part17;
+		questionChoice = "part17";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond4"]&& xConditions["cond6"]){
 		demo = part18;
+		questionChoice = "part18";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond3"]){
 		demo = part11;
+		questionChoice = "part11";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond4"]){
 		demo = part12;
+		questionChoice = "part12";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond5"]){
 		demo = part13;
+		questionChoice = "part13";
 	}
 	else if(xConditions["cond2"]&& xConditions["cond6"]){
 		demo = part14;
+		questionChoice = "part14";
 	}
 	else if(xConditions["cond2"] ){
 		demo = part10;
+		questionChoice = "part10";
 	}
 
 };
@@ -872,14 +893,18 @@ tableDisplay =  function(sel){
 			for (j in cols){
 				var col =  cols[j];
 				var found =  false;
+				var illegal =  false;
 				var n= 1;
-				while( n <=15 && !found ){
+				while( n <=15 ){
 					if(!isNaN(parseInt($("#"+n + col+ id).html()))){
 						found = true;
+						if(parseInt($("#"+n + col+ id).html()) > 150){
+							illegal = true;
+						} 
 					}
 					n++;
 				}
-				if(!found){
+				if(!found || illegal){
 					$('td:nth-child('+ (parseInt(col)+2) + ')').hide();
 					rem.push(parseInt(col));
 				}

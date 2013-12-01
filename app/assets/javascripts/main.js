@@ -57,8 +57,9 @@ carInfo = function(that){
 	}
 };
 
-function getWorkHome(){
+function getWorkHome(tr){
 	var ret;
+	var ctrip;
 	trips.forEach(function(trip){
 		console.log(trip.origin);
 		console.log(trip.destination);
@@ -67,9 +68,15 @@ function getWorkHome(){
 				start: trip.origin_address,
 				end: trip.destination_address
 			};
+			ctrip =  trip;
 		}	
 	});
-	return ret;
+	if (tr){
+		return ctrip;
+	}
+	else{
+		return ret;
+	}
 }
 showOther =  function(that){
 	console.log("show Other");
@@ -284,7 +291,7 @@ $( document ).ready(function(){
 		console.log("Continue");
 		var valid = storeForm(curTrip-1);
 		if(valid.length == 0){
-			var route = getWorkHome();
+			var route = getWorkHome(false);
 			//console.log("ROUTE:" ,route);
 			if (route){
 				calcRoute(route);

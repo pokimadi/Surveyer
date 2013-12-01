@@ -23,7 +23,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>TRAVEL COST/FARE($)</td>'+
-				'<td>session_oneCost</td>'+
+				'<td>'+ ((chosenTrip.session_oneCost) ? chosenTrip.session_oneCost : '') + '</td>'+
 				'<td id="101'+ id+ '" >'+collection["1"]+'</td>'+
 				'<td id="102'+ id+ '"  >'+collection["2"]+'</td>'+
 				'<td id="103'+ id+ '" >'+collection["3"]+'</td>'+
@@ -74,7 +74,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>Local Transit-GO Access Fare ($)</td>'+
-				'<td>session_accessCost</td>'+
+				'<td>'+ ((chosenTrip.session_accessCost) ? chosenTrip.session_accessCost  : '') + '</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
@@ -91,7 +91,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>GO Local Transit  Egress Fare ($)</td>'+
-				'<td>session_egressCost</td>'+
+				'<td>' + ((chosenTrip.session_egressCost) ? chosenTrip.session_egressCost : '') + '</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
@@ -108,7 +108,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>Transfer Time(min)</td>'+
-				'<td>session_transWait</td>'+
+				'<td>' + ((chosenTrip.session_transWait) ? chosenTrip.session_transWait : '') + '</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td id="603'+ id+ '" >'+collection["28LT"]+'</td>'+
@@ -125,7 +125,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>Wait Time(min)</td>'+
-				'<td>session_waitTime</td>'+
+				'<td>'+ ((chosenTrip.session_waitTime )? chosenTrip.session_waitTime : '') + '</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td id="703'+ id+ '" >'+collection["25"]+'</td>'+
@@ -193,7 +193,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+			
 			'<tr>'+
 				'<td>Parking Cost($) at destination</td>'+
-				'<td>session_parkCost</td>'+
+				'<td>' + ((chosenTrip.session_parkCost) ? chosenTrip.session_parkCost :'')  + '</td>'+
 				'<td id="1101'+ id+ '">'+collection["17"]+'</td>'+
 				'<td id="1102'+ id+ '">'+collection["17"]+'</td>'+
 				'<td>--</td>'+
@@ -210,7 +210,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+	
 			'<tr>'+
 				'<td>Access Time</td>'+
-				'<td>session_accessTime</td>'+
+				'<td>' + ((chosenTrip.session_accessTime)? chosenTrip.session_accessTime: "") + '</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>'+collection["18"]+'</td>'+
@@ -227,7 +227,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+	
 			'<tr>'+
 				'<td>in-veichle Travel Time(min)</td>'+
-				'<td>session_travelTime</td>'+
+				'<td>' + ((chosenTrip.session_travelTime) ? chosenTrip.session_travelTime :'') + '</td>'+
 				'<td id="1301'+ id+ '">'+collection["26"]+'</td>'+
 				'<td id="1302'+ id+ '">'+collection["26"]+'</td>'+
 				'<td id="1303'+ id+ '">'+collection["27LT"]+'</td>'+
@@ -244,7 +244,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td> Egress Time(min)</td>'+
-				'<td>session_egressTime</td>'+
+				'<td>' + ((chosenTrip.session_egressTime) ? chosenTrip.session_egressTime: '') + '</td>'+
 				'<td id="1401'+ id+ '">--</td>'+
 				'<td id="1402'+ id+ '">--</td>'+
 				'<td id="1403'+ id+ '">'+collection["29LT"]+'</td>'+
@@ -261,7 +261,7 @@ var templateMain =  function(collection, id){
 			'</tr>'+
 			'<tr>'+
 				'<td>Total Trip Time(min)</td>'+
-				'<td>session_oneTime</td>'+
+				'<td>' + ((chosenTrip.session_oneTime) ?(chosenTrip.session_oneTime): " ") + '</td>'+
 				'<td id="1501'+ id+ '">'+collection["26"]+'</td>'+
 				'<td id="1502'+ id+ '">'+collection["26"]+'</td>'+
 				'<td id="1503'+ id+ '">'+collection["31"]+'</td>'+
