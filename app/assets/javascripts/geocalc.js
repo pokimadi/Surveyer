@@ -745,16 +745,16 @@ setConditions = function(){
 		xConditions["cond2"] = true;
 	}
 
-	if(collection["50"] <= 3){
+	if(collection["50"] > 3){
 		xConditions["cond3"] = true;
 	}
-	if(collection["50"] > 3 && collection["50"] <= 10){
+	if(collection["50"] > 10){
 		xConditions["cond4"] = true;
 	}
-	if(collection["51"] <= 3){
+	if( collection["51"] > 3){
 		xConditions["cond5"] = true;
 	}
-	if(collection["51"] > 3 && collection["51"] <= 10){
+	if(collection["51"] > 10){
 		xConditions["cond6"] = true;
 	}
 
@@ -888,7 +888,7 @@ var nearestStation =  function (longit, lat, stations){
 };
 
 tableDisplay =  function(sel){
-	var sanitize =  function(id){
+	var sanitize =  function(id, hash){
 			var cols = ["01" ,"02","03","04","05","06", "07", "08", "09", "10", "11", "12", "13"];
 			var rem = [];
 			for (j in cols){
@@ -902,6 +902,9 @@ tableDisplay =  function(sel){
 						if(parseInt($("#"+n + col+ id).html()) > 150){
 							illegal = true;
 						} 
+					}
+					if (hash && $("#"+n + col+ id).html() == "#"){
+							illegal = true; 
 					}
 					n++;
 				}
@@ -922,13 +925,6 @@ tableDisplay =  function(sel){
 	console.log("ID PASSED", i);
 	var tableNew = templateMain(collection, i);
 	$("#holder").append(tableNew);
-	var ex  = sanitize(i);
-	var choice =  choicePicker(i , ex);
-	$("#holder").append(choice);
-	var next  = myNavigator(nextC[sel]);
-	$("#holder").append(next);
-	$("#NextChoice").hide();
-
 	console.log( "CASE:", cCase[i]);
 
 	cCase[i].forEach(function(obj){
@@ -947,7 +943,12 @@ tableDisplay =  function(sel){
 			item.innerHTML = "" + ((parseFloat(obj.car) * parseFloat(car)/parseFloat(pool)) + (parseFloat(obj.tran) * parseFloat(tran))).toFixed(2);
 		}
 	});
-
+	var ex  = sanitize(i, true);
+	var choice =  choicePicker(i , ex);
+	$("#holder").append(choice);
+	var next  = myNavigator(nextC[sel]);
+	$("#holder").append(next);
+	$("#NextChoice").hide();
 };
 
 
