@@ -194,8 +194,8 @@ var templateMain =  function(collection, id){
 			'<tr>'+
 				'<td>Parking Cost($) at destination</td>'+
 				'<td>' + ((chosenTrip.session_parkCost) ? chosenTrip.session_parkCost :'')  + '</td>'+
-				'<td id="1101'+ id+ '">'+collection["17"]+'</td>'+
-				'<td id="1102'+ id+ '">'+collection["17"]+'</td>'+
+				'<td id="1101'+ id+ '">'+((chosenTrip.session_parkCost) ? chosenTrip.session_parkCost :'') +'</td>'+
+				'<td id="1102'+ id+ '">'+((chosenTrip.session_parkCost) ? chosenTrip.session_parkCost :'') +'</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
