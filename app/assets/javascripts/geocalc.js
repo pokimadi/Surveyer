@@ -420,7 +420,7 @@ var statCalc =  function (){
 				collection["20"] = parseFloat((data.steps[0].distance.value/250).toFixed(1));
 
 			}
-			collection["25"] = btwTime(data);
+			collection["25"] = (btwTime(data))? btwTime(data) : 0;
 
 			
 			if (data.steps[ size -1].travel_mode == "WALKING"){
@@ -903,7 +903,7 @@ tableDisplay =  function(sel){
 							illegal = true;
 						} 
 					}
-					if (hash && $("#"+n + col+ id).html() == "#"){
+					if (hash && ($("#"+n + col+ id).html() == "#" || $("#"+n + col+ id).html() == "undefined" ) ){
 							illegal = true; 
 					}
 					n++;

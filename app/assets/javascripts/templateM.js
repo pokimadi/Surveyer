@@ -291,7 +291,7 @@ myNavigator = function(choice){
 
 choicePicker = function(id, exclude){
 	var confidence = {1:"Not Confident", 2:"Somewhat Confident", 3:"Neutral", 4:"Confident", 5:"Strongly Confident" };
-	var title = {1:"AD", 2:"AP", 3:"LTW", 4:"LTAD", 5:"LTAP", 6:"LTCP", 7:"LTB", 8:"RTW", 9:"RTAD", 10:"RTAP", 11:"RTCP", 12:"RTB", 13:"RTLT"};
+	var title = {1:"AD", 2:"AP", 3:"LTW", 4:"LTAD", 5:"LTAP", 6:"LTCP", 7:"LTB", 8:"RTW", 9:"RTAD", 10:"RTAP", 11:"RTCP", 12:"RTB", 13:"RTLTW"};
 	for (key in exclude){
 		delete title[exclude[key]];
 	}
