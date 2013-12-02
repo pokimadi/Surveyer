@@ -158,7 +158,7 @@ function calcRoute(route) {
 			//PR GO STATION.
 			var prGOstation = nearestStation(leg.start_location.lat(),leg.start_location.lng(), stationsPR);
 			var prGoDrive, prGoTrans, prGoCount =  2;
-			var pName =   prGOstation.name + " ";
+			var pName =   prGOstation.name.replace("STATION", "GO STATION") + " ";
 			var sName =  pName.slice(0 ,  pName.indexOf("("));
 			requestPr1 ={
 			    origin: start,
