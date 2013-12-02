@@ -368,7 +368,7 @@ var statCalc =  function (){
 				}
 			});
 			console.log("BTW*******ELAPSED--", elapsed/60);
-			return (elapsed/60.0).toFixed(1);
+			return parseFloat((elapsed/60.0).toFixed(1));
 	};
 
 	//all Time Elapsed
@@ -540,13 +540,13 @@ var statCalc =  function (){
 
 	function finished(){
 		setConditions();
-		collection["31"] = collection["18"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
-		collection["32"] = collection["19"] + collection["25"] + collection["27LPR"] + collection["28LPR"] + collection["29LPR"];
-		collection["33"] = collection["20"] + collection["25"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
-		collection["34"] = collection["21"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
-		collection["35"] = collection["22"] + collection["25"] + collection["27RPR"] + collection["28RPR"] + collection["30RPR"];
-		collection["36"] = collection["23"] + collection["25"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
-		collection["37"] = collection["24"] + collection["25"] + collection["27RL"] + collection["28RL"] + collection["30RL"];
+		collection["31"] = collection["18"] + collection["25LT"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
+		collection["32"] = collection["19"] + collection["25LPR"] + collection["27LPR"] + collection["28LPR"] + collection["29LPR"];
+		collection["33"] = collection["20"] + collection["25LT"] + collection["27LT"] + collection["28LT"] + collection["29LT"];
+		collection["34"] = collection["21"] + collection["25RT"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
+		collection["35"] = collection["22"] + collection["25RPR"] + collection["27RPR"] + collection["28RPR"] + collection["30RPR"];
+		collection["36"] = collection["23"] + collection["25RT"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
+		collection["37"] = collection["24"] + collection["25RL"] + collection["27RL"] + collection["28RL"] + collection["30RL"];
 
 		console.log("finished 18:",  collection["18"] ,"25:", collection["25"] ,"27", collection["27LT"] ,"28", collection["28LT"] , "29", collection["29LT"]);
 		collection["31"] = parseFloat((collection["31"] ).toFixed(1));
