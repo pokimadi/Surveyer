@@ -368,7 +368,7 @@ var statCalc =  function (){
 				}
 			});
 			console.log("BTW*******ELAPSED--", elapsed/60);
-			return elapsed/60;
+			return (elapsed/60.0).toFixed(1);
 	};
 
 	//all Time Elapsed
@@ -420,7 +420,7 @@ var statCalc =  function (){
 				collection["20"] = parseFloat((data.steps[0].distance.value/250).toFixed(1));
 
 			}
-			collection["25"] = (btwTime(data))? btwTime(data) : 0;
+			collection["25LT"] = (btwTime(data))? btwTime(data) : 0;
 
 			
 			if (data.steps[ size -1].travel_mode == "WALKING"){
@@ -463,7 +463,8 @@ var statCalc =  function (){
 			collection["14RL"] = cost[2];
 			console.log("TIME GO");
 			collection["24"] = timeGO(data);
-			collection["25RL"] = btwTime(data);
+			//collection["25RL"] = btwTime(data);
+			collection["25RL"] = (btwTime(data))? btwTime(data) : 0;
 			console.log("GO TTC CALC" ,collection[13] );
 			console.log("TIME BEFORE******", collection["24"]);
 			collection["27RL"] = timeSkipGo(data);
@@ -501,7 +502,8 @@ var statCalc =  function (){
 		collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2);
 		collection["4i"] = parseFloat(((distance * 14.7)/ 100000.0).toFixed(2)); //  Gas 
 		collection["4ii"] = transC; // Bus fare
-		console.log("COST WORKED COLLECTION",collection["4"] , transC); 
+		console.log("COST WORKED COLLECTION",collection["4"] , transC);
+
 		collection["15"] = station.price;
 		collection["19"] = parseFloat((drive.duration.value/60).toFixed(1));
 		if (parkCost !=""){
@@ -522,6 +524,7 @@ var statCalc =  function (){
 			collection["5"] = ((distance * 14.7)/200000.0 + transC ).toFixed(2);
 			collection["4iii"] = 2 ; 
 		}
+		collection["25LPR"] = (btwTime(trans))? btwTime(trans) : 0;
 		collection["6"] = collection["5"];
 		collection["28LPR"] = parseFloat((waitTime(trans)).toFixed(1));
 		collection["27LPR"] = parseFloat((timeSkip(trans)).toFixed(1));
@@ -649,6 +652,7 @@ var statCalc =  function (){
 		}
 		collection["11"] = collection["10"];
 		collection["22"] = parseFloat((drive.duration.value/60).toFixed(1));
+		collection["25RPR"] = (btwTime(trans))? btwTime(trans) : 0;
 		collection["27RPR"] = parseFloat((timeSkipGo(trans)).toFixed(1));
 		collection["28RPR"] = parseFloat((waitTime(trans)).toFixed(1));
 		collection["30RPR"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
@@ -674,6 +678,8 @@ var statCalc =  function (){
 		collection["12"] = collection["8"];
 		collection["21"] = parseFloat((walk.duration.value/60).toFixed(1));
 		collection["23"] = walk.distance.value/ 250;
+		walk.steps.concat(trans.steps);
+		collection["25RT"] = (btwTime(walk))? btwTime(walk) : 0;
 		collection["27RT"] = parseFloat((timeSkipGo(trans)).toFixed(1));
 		collection["28RT"] = parseFloat((waitTime(trans)).toFixed(1));
 		collection["30RT"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));

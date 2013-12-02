@@ -128,16 +128,16 @@ var templateMain =  function(collection, id){
 				'<td>'+ ((chosenTrip.session_waitTime )? chosenTrip.session_waitTime : '') + '</td>'+
 				'<td>--</td>'+
 				'<td>--</td>'+
-				'<td id="703'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="704'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="705'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="706'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="707'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="708'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="709'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="710'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="711'+ id+ '" >'+collection["25"]+'</td>'+
-				'<td id="712'+ id+ '" >'+collection["25"]+'</td>'+
+				'<td id="703'+ id+ '" >'+collection["25LT"]+'</td>'+
+				'<td id="704'+ id+ '" >'+collection["25LPR"]+'</td>'+
+				'<td id="705'+ id+ '" >'+collection["25LPR"]+'</td>'+
+				'<td id="706'+ id+ '" >'+collection["25LPR"]+'</td>'+
+				'<td id="707'+ id+ '" >'+collection["25LT"]+'</td>'+
+				'<td id="708'+ id+ '" >'+collection["25RT"]+'</td>'+
+				'<td id="709'+ id+ '" >'+collection["25RPR"]+'</td>'+
+				'<td id="710'+ id+ '" >'+collection["25RPR"]+'</td>'+
+				'<td id="711'+ id+ '" >'+collection["25RPR"]+'</td>'+
+				'<td id="712'+ id+ '" >'+collection["25RT"]+'</td>'+
 				'<td id="713'+ id+ '" >'+collection["25RL"]+'</td>'+
 			'</tr>'+
 			'<tr>'+
