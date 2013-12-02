@@ -218,15 +218,15 @@ function calcRoute(route) {
 			//------>
 
 			//PR NEAREST STATAION.
-	  		var station = nearestStation(leg.start_location.lat(),leg.start_location.lng());
-      		var drive, trans, count =  2;
+	  		var stationLPR = nearestStation(leg.start_location.lat(),leg.start_location.lng());
+      		var driveLPR, transLPR, count =  2;
 			request2 = {
 			    origin: start,
-				destination: station.name,
+				destination: stationLPR.name,
 			    travelMode: google.maps.TravelMode["DRIVING"]
 			};
 			var request3 = {
-			    origin: station.name,
+			    origin: stationLPR.name,
 				destination: end,
 				transitOptions:{
 					arrivalTime: setTime
@@ -242,12 +242,12 @@ function calcRoute(route) {
 					if(count == 0){
 						var stopT =  new Date();
 						console.log("Fuck ", (stopT-startT)/1000);
-						TransCalculator.combCalc(trans, drive,station);
+						TransCalculator.combCalc(transLPR, driveLPR,stationLPR);
 					}
 				}
 				else if(status == "OVER_QUERY_LIMIT"){
 					setTimeout(function() {
-						directionsService.route(requestPr2, funcTTC1 );
+						directionsService.route(request2, funcTTC1 );
 					}, 1000);
 				}
 
@@ -263,12 +263,12 @@ function calcRoute(route) {
 					if(count == 0){
 						var stopT =  new Date();
 						console.log("Fuck ", (stopT-startT)/1000);
-						TransCalculator.combCalc(trans, drive,station);
+						TransCalculator.combCalc(transLPR, drive,LPRstationLPR);
 					}
 				}
 				else if(status == "OVER_QUERY_LIMIT"){
 					setTimeout(function() {
-						directionsService.route(requestPr2, funcTTC2 );
+						directionsService.route(request3, funcTTC2 );
 					}, 1000);
 				}
 			};
