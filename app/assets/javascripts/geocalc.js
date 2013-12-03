@@ -678,8 +678,8 @@ var statCalc =  function (){
 		collection["12"] = collection["8"];
 		collection["21"] = parseFloat((walk.duration.value/60).toFixed(1));
 		collection["23"] = walk.distance.value/ 250;
-		walk.steps.concat(trans.steps);
-		collection["25RT"] = (btwTime(walk))? btwTime(walk) : 0;
+		var temp = { steps: walk.steps.concat(trans.steps)}
+		collection["25RT"] = (btwTime(temp))? btwTime(temp) : 0;
 		collection["27RT"] = parseFloat((timeSkipGo(trans)).toFixed(1));
 		collection["28RT"] = parseFloat((waitTime(trans)).toFixed(1));
 		collection["30RT"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
