@@ -368,7 +368,7 @@ showNext =  function(id , val){
 
 			$.get( "/socio", function( data ) {
 				console.log(data);
-				$("#introductionB").hide()
+				$("#introductionB").hide();
 				$("#holder").empty();
 				$("#holder").html(data);
 			});

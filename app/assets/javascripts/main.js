@@ -232,7 +232,7 @@ $( document ).ready(function(){
 	console.log("Ready");
 	$(".previous").hide();
 	$(".next").hide();
-	$("#introductionB").hide()
+	$("#introductionB").hide();
 	setTripTitle();
 	hideOption();
 	hideOther();
@@ -295,7 +295,7 @@ $( document ).ready(function(){
 		if(valid.length == 0){
 			var route = getWorkHome(false);
 			$("#introduction").hide();
-			$("#introductionB").show()
+			$("#introductionB").show();
 			//console.log("ROUTE:" ,route);
 			if (route){
 				calcRoute(route);
