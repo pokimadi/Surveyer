@@ -263,7 +263,7 @@ function calcRoute(route) {
 					if(count == 0){
 						var stopT =  new Date();
 						console.log("Fuck ", (stopT-startT)/1000);
-						TransCalculator.combCalc(transLPR, drive,LPRstationLPR);
+						TransCalculator.combCalc(transLPR, drive,stationLPR);
 					}
 				}
 				else if(status == "OVER_QUERY_LIMIT"){
