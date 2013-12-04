@@ -196,7 +196,8 @@ function loadForm(num){
 		$("#"+key).val(trips[num-1][key]);
 	}
 	setTripTitle();
-	$("html, body").animate({ scrollTop: 0 }, "slow");	
+	var holder =  $("#holder")
+	$('html,body').animate({scrollTop: holder.offset().top},'slow');
 };
 function storeForm(num){
  	var val = {} ,err = [];
@@ -292,6 +293,7 @@ $( document ).ready(function(){
 		var valid = storeForm(curTrip-1);
 		if(valid.length == 0){
 			var route = getWorkHome(false);
+			$("#introduction").hide();
 			//console.log("ROUTE:" ,route);
 			if (route){
 				calcRoute(route);

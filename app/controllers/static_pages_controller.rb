@@ -20,7 +20,6 @@ class StaticPagesController < ApplicationController
   end
 
   def store
-    puts "*store"
     puts params
     params[:trips].each do |t|
       Trip.create(t)
