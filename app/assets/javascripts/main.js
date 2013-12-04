@@ -301,7 +301,7 @@ $( document ).ready(function(){
 				calcRoute(route);
 			}
 			else{
-				
+				alert("Need Home to Work");
 			}
 		}
 		else {

@@ -237,7 +237,7 @@ function calcRoute(route) {
 			var funcTTC1 = function(response, status) {
 				if (status == google.maps.DirectionsStatus.OK) {
 					console.log("distance to nearest Station");
-					drive = response.routes[0].legs[0];
+					driveLPR = response.routes[0].legs[0];
 					count--;
 					if(count == 0){
 						var stopT =  new Date();
@@ -258,12 +258,12 @@ function calcRoute(route) {
 			var funcTTC2 =  function(response, status) {
 				if (status == google.maps.DirectionsStatus.OK) {
 					console.log("distance to nearest Station");
-					trans =response.routes[0].legs[0];
+					transLPR =response.routes[0].legs[0];
 					count--;
 					if(count == 0){
 						var stopT =  new Date();
 						console.log("Fuck ", (stopT-startT)/1000);
-						TransCalculator.combCalc(transLPR, drive,stationLPR);
+						TransCalculator.combCalc(transLPR, driveLPR,stationLPR);
 					}
 				}
 				else if(status == "OVER_QUERY_LIMIT"){
