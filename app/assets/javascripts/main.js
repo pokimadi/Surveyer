@@ -196,7 +196,7 @@ function loadForm(num){
 		$("#"+key).val(trips[num-1][key]);
 	}
 	setTripTitle();
-	var holder =  $("#holder")
+	var holder =  $("#holder");
 	$('html,body').animate({scrollTop: holder.offset().top},'slow');
 };
 function storeForm(num){
@@ -232,6 +232,7 @@ $( document ).ready(function(){
 	console.log("Ready");
 	$(".previous").hide();
 	$(".next").hide();
+	$("#introductionB").hide()
 	setTripTitle();
 	hideOption();
 	hideOther();
@@ -294,6 +295,7 @@ $( document ).ready(function(){
 		if(valid.length == 0){
 			var route = getWorkHome(false);
 			$("#introduction").hide();
+			$("#introductionB").show()
 			//console.log("ROUTE:" ,route);
 			if (route){
 				calcRoute(route);

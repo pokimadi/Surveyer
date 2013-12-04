@@ -67,6 +67,176 @@ Refer to definitions below for clarification of some modes of travel.<br /> </p>
 <b>Total Trip Time:</b> Total trip time from trip origin to trip destination (door to door).<br /> </p>
 <%= image_tag("tranIntro.png") %>
 </div>
+<div id="introductionB" class="hero-unit"> 
+	<h4>SECTION B. Stated Preference Survey</h4>
+	<p>In this section, you are provided with 6 hypothetical scenarios. In each scenario, you are making your usual trip from home to work and are asked to choose which mode of travel you would use given different situations and transit service attributes. Please take your time and consider each situation carefully. If the current choice is no longer available, please consider the following alternative choices and select the one that you would use to make your current work trip based on mode features presented in the table below. </p>
+<table class="table table-striped">
+
+ <tr>
+ 	<td><b>Acronym</b></td>
+ 	<td><b>Mode Descriptions</b></td>
+ </tr>
+
+
+	<tr>
+		<td>AD</td>
+		<td>Auto Driver all way</td>
+	</tr>
+	<tr>
+		<td>AC/CP</td>
+		<td>Auto Passenger/ Carpool all way</td>
+	</tr>
+	<tr>
+		<td>LTW</td>
+		<td>Local Transit with Walk access<br />
+			<p class="text-info"><i>Example: Walk access to a MiWay Bus stop, a MiWay Bus trip to a TTC Subway station, and then a TTC Subway trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>LTAD</td>
+		<td>Local Transit with Auto Driver access (Park and Ride)<br />
+		<p class="text-info"><i>Example: Auto Drive access (only one person per vehicle) to a TTC Subway Park and Ride station, and then a TTC Subway trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>LTAP</td>
+		<td>Local Transit with Auto Passenger access (Kiss and Ride)<br />
+		<p class="text-info"><i>Example: Auto Passenger access (a person is being dropped off) to a TTC Subway Park and Ride station, and then a TTC Subway trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>LTCP</td>
+		<td>Local Transit with CarPool access (Carpool and Ride)<br />
+		<p class="text-info"><i>Example: Carpool access (more than one person per vehicle) to a TTC Subway Park and Ride station, and then a TTC Subway trip to the final destination</i></p></td>
+	</tr>
+	<tr>
+		<td>LTB</td>
+		<td>Local Transit with Bike access<br />
+		<p class="text-info"><i>Example: Bike access to a MiWay Bus stop, a MiWay Bus trip to a TTC Subway station, and then a TTC Subway trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>RTW</td>
+		<td>Regional Transit with Walk access<br />
+		<p class="text-info"><i>Example: Walk access to a GO Train/Bus station, and then a GO Train/Bus trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>RTAD</td>
+		<td>Regional Transit with Auto Driver access (Park and Ride)<br />
+		<p class="text-info"><i>Example: Auto Drive access (only one person per vehicle) to a GO Train/Bus Park and Ride station, and then a GO Train/Bus trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>RTAP</td>
+		<td>Regional Transit with Auto Passenger access (Kiss and Ride) <br />
+		<p class="text-info"><i>Example: Auto Passenger access (a person is being dropped off) to a GO Train/Bus Park and Ride station, and then a GO Train/Bus trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>RTCP</td>
+		<td>Regional Transit with CarPool access (Carpool and Ride)<br />
+		<p class="text-info"><i>Example: Carpool access (more than one person per vehicle) to a GO Train/Bus Park and Ride station, and then a GO Train/Bus trip to the final destination</i></p></td>
+	</tr>
+	<tr>
+		<td>RTB</td>
+		<td>Regional Transit with Bike access<br />
+		<p class="text-info"><i>Example: Bike access to a GO Train/Bus station, and then a GO Train/Bus trip to the final destination.</i></p></td>
+	</tr>
+	<tr>
+		<td>RTLTW</td>
+		<td>Regional Transit with Local Transit Walk access<br />
+		<p class="text-info"><i>Regional Transit with Local Transit Walk access
+		Example: Walk access a TTC Subway station, a TTC Subway trip to a GO Train/Bus station, 
+		and then a GO Train/Bus trip to the final destination.
+		</i></p></td>
+	</tr>
+
+</table>
+
+<h5>Attribute Definitions:</h5>
+<table class="table table-striped">
+
+ <tr>
+ 	<td><b>Attribute</b></td>
+ 	<td><b>Attribute Description</b></td>
+ </tr>
+
+
+	<tr>
+		<td>Travel Cost/Fare ($)</td>
+		<td>Travel Cost <br />
+			<p class="text-info"><i>Includes fuel cost and/or transit fare(s).DOES NOT include any parking costs
+			</i></p></td>
+	</tr>
+	<tr>
+		<td>Local Transit-GO Transit Access CO-Fare ($)</td>
+		<td>Local Transit to GO Transit CO-Fare<br />
+			<p class="text-info"><i>Example: A MiWay Bus access trip to GO Transit costs ($0.60) instead of a full MiWay fare ($3.25)
+			</i></p></td>
+	</tr>
+	<tr>
+		<td>GO Transit to Local Transit CO-Fare</td>
+		<td>Local Transit with Walk access<br />
+			<p class="text-info"><i>Example: A MiWay Bus egress trip from GO Transit
+			costs ($0.60) instead of a full MiWay fare ($3.25)
+			</i></p></td>
+	</tr>
+	<tr>
+		<td>Parking Cost at Local Transit P&ampR Station ($)</td>
+		<td>Parking Cost at Park and Ride TTC Subway Stations.<br />
+		<p class="text-info"><i>Average daily parking cost.</i></p></td>
+	</tr>
+	<tr>
+		<td>Reserved Parking at P&ampR GO Stations</td>
+		<td>The availability of a reserved parking option at Park and Ride GO Transit Station.<br />
+		<p class="text-info"><i>Takes the values of “Yes” for available and “NO” for not available.</i></p></td>
+	</tr>
+	<tr>
+		<td>Daily Parking Cost at P&ampR GO Stations ($)</td>
+		<td>Daily parking cost at Park and Ride GO Transit Stations.<br />
+		<p class="text-info"><i>Daily parking rates are only provided if reserved parking option is not available. </i></p></td>
+	</tr>
+	<tr>
+		<td>Monthly Parking Cost at GO Stations ($)</td>
+		<td>Monthly parking cost at Park and Ride GO Transit Stations.<br />
+		<p class="text-info"><i>Monthly parking rates are only provided if reserved parking option is available.</i></p></td>
+	</tr>
+	<tr>
+		<td>Daily Parking Cost at Work Location ($)</td>
+		<td>Daily Parking cost at work location.</td>
+	</tr>
+	<tr>
+		<td>Next Bus Information</td>
+		<td>The availability of information provision of the next bus.<br />
+		<p class="text-info"><i>Only for local transit buses. Takes the values of “Yes” for available and “NO” for not available.</i></p></td>
+	</tr>
+	<tr>
+		<td>Wifi on GO Trains/Buses</td>
+		<td>The availability of Wifi services on GO Train/Buses.<br />
+		<p class="text-info"><i>Only for GO Transit. Takes the values of “Yes” for available and “NO” for not available.</i></p></td>
+	</tr>
+	<tr>
+		<td>Access Time (min)</td>
+		<td>Time taken to travel from the trip origin location to the access (first) transit stop/station of the primary mode.</td>
+	</tr>
+	<tr>
+		<td>Wait Time (min)</td>
+		<td>Time taken to wait for the transit unit at the access (first) transit stop/station of the primary mode.</td>
+	</tr>
+	<tr>
+		<td>On-line (In-vehicle) Travel Time (min)</td>
+		<td>Time taken to travel from the origin transit stop/station to the destination transit stop/station on a transit vehicle(s) of the primary mode.</td>
+	</tr>
+	<tr>
+		<td>Transfer Time (min)</td>
+		<td>Time taken to transfer between different transit units.</td>
+	</tr>
+	<tr>
+		<td>Egress Time (min)</td>
+		<td>ime taken to travel from the egress (last) transit stop/station of the primary mode to the final trip destination.</td>
+	</tr>
+	<tr>
+		<td>Total Trip Time (min)</td>
+		<td>Total trip time from trip origin to trip destination (door to door).</td>
+	</tr>
+
+</table>
+
+</div>
 <div class="container" id="holder">
 	<%= yield %>
 </div>

@@ -348,6 +348,8 @@ showNext =  function(id , val){
 		userChoices[id] = {"confidence": conf, "choice" : ch,  "expected_time": t };
 		if (id != "c6" ){
 			$("#NextChoice").show();
+			var holder =  $("#holder");
+			$('html,body').animate({scrollTop: holder.offset().top},'slow');
 		}
 		else{
 			$.ajax({
@@ -366,6 +368,7 @@ showNext =  function(id , val){
 
 			$.get( "/socio", function( data ) {
 				console.log(data);
+				$("#introductionB").hide()
 				$("#holder").empty();
 				$("#holder").html(data);
 			});
