@@ -1,0 +1,46 @@
+class AddFieldToTrips < ActiveRecord::Migration
+  def change
+    add_column :trips, :session_timeTrip, :string
+    add_column :trips, :session_earlyTime, :string
+    add_column :trips, :session_lateTime, :string
+    add_column :trips, :origin, :string
+    add_column :trips, :session_otherOrigin, :string
+    add_column :trips, :origin_address, :string
+    add_column :trips, :destination, :string
+    add_column :trips, :session_otherDestin, :string
+    add_column :trips, :destination_address, :string
+    add_column :trips, :regDist, :string
+    add_column :trips, :session_regName, :string
+    add_column :trips, :purpose, :string
+    add_column :trips, :session_otherPurpose, :string
+    add_column :trips, :main, :string
+    add_column :trips, :session_mainOther, :string
+    add_column :trips, :session_numMain, :string
+    add_column :trips, :otherMain, :string
+    add_column :trips, :mainTransit, :string
+    add_column :trips, :session_accessStation, :string
+    add_column :trips, :accessMode, :string
+    add_column :trips, :session_otherAccess, :string
+    add_column :trips, :accessRegion, :string
+    add_column :trips, :accessTransit, :string
+    add_column :trips, :session_parkCost, :string
+    add_column :trips, :session_accessTime, :string
+    add_column :trips, :session_accessCost, :string
+    add_column :trips, :session_waitTime, :string
+    add_column :trips, :session_numTrans, :string
+    add_column :trips, :session_transWait, :string
+    add_column :trips, :session_travelTime, :string
+    add_column :trips, :session_travelCost, :string
+    add_column :trips, :session_egressStop, :string
+    add_column :trips, :egressMode, :string
+    add_column :trips, :session_otherEgress, :string
+    add_column :trips, :egressTransit, :string
+    add_column :trips, :session_egressTime, :string
+    add_column :trips, :session_egressCost, :string
+    add_column :trips, :session_oneTime, :string
+    add_column :trips, :session_oneCost, :string
+    add_column :trips, :transitPay, :string
+    add_column :trips, :monthCom, :string
+    add_column :trips, :bossPay, :string
+  end
+end

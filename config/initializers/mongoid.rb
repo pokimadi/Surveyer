@@ -1,1 +1,1 @@
-Mongoid.load!(Rails.root.to_s+"/config/mongoid.yml")
+# Mongoid.load!(Rails.root.to_s+"/config/mongoid.yml")

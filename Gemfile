@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
 # group :development do
-  # gem 'mysql2'
+gem 'mysql2'
 # end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -31,8 +31,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
-gem 'bson_ext'
+#gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
+#gem 'bson_ext'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

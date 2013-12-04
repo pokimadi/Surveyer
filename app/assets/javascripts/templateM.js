@@ -324,6 +324,20 @@ choicePicker = function(id, exclude){
 
 };
 
+pd = function(){
+	$.ajax({
+			type: "POST",
+			url: "/store",
+			data: {
+				trips:[{"c1": 2},{"c2":3}]
+			},
+			success: function(data){
+				console.log(data);
+			},
+			dataType: "json"
+		});
+};
+
 showNext =  function(id , val){
 	console.log(id, val); //TODO Save Value
 	var conf = $("input[name='conf"+ id +"']:checked").val();
@@ -331,16 +345,32 @@ showNext =  function(id , val){
 	var t = $("input[name='time']").val();
 
 	if (conf && ch && t != ''){
-		userChoices[id] = {"Confidence": conf, "Choice" : ch,  "Expected Time": t };
+		userChoices[id] = {"confidence": conf, "choice" : ch,  "expected_time": t };
 		if (id != "c6" ){
 			$("#NextChoice").show();
 		}
 		else{
+			$.ajax({
+				type: "POST",
+				url: "/store",
+				data: {
+					trips:trips,
+					choices: userChoices,
+					quest: [questionChoice, "p1"]
+				},
+				success: function(data){
+					console.log(data);
+				},
+				dataType: json
+			});
+
 			$.get( "/socio", function( data ) {
 				console.log(data);
 				$("#holder").empty();
 				$("#holder").html(data);
 			});
+
+
 			//This is where Submission will take Place
 		}
 	}

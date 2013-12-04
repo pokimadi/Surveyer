@@ -11,10 +11,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: Surveyer_development
+  database: surveyer_development
   pool: 5
   username: root
-  password:
+  #password:
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +23,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: Surveyer_test
+  database: surveyer_test
   pool: 5
   username: root
   password:
@@ -32,7 +32,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: Surveyer_production
+  database: surveyer_production
   pool: 5
   username: root
   password:

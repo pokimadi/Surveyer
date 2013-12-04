@@ -5,6 +5,8 @@ Surveyer::Application.routes.draw do
   get "static_pages/index"
   get "/socio" => "static_pages#socio"
   get "/goprice" => "static_pages#goprice"
+  get "/store" => "static_pages#store"
+  post "/store" => "static_pages#store"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
