@@ -298,6 +298,7 @@ $( document ).ready(function(){
 			$("#introductionB").show();
 			//console.log("ROUTE:" ,route);
 			if (route){
+				$("html, body").animate({ scrollTop: 0 }, "fast");
 				calcRoute(route);
 			}
 			else{
