@@ -10,9 +10,8 @@
 <body>
 
 <div id="introduction" class="hero-unit">
-<h1>Survey</h1>
-<h5>Cross-Regional Commuters' Mode Choice Travel Survey</h5>
-
+<%= image_tag("ULogo.jpg", :class => "pull-right") %>
+<h3>Cross-Regional Commuters' Mode Choice Travel Survey</h3>
 <h5>This Survey Is Intended To Measure Cross-Regional Commuters' Mode Choice Preferences</h5>
 
 <h4>Joint Revealed Preference (RP) and Stated Preference (SP) Survey</h4>
@@ -37,11 +36,15 @@ Should you have any questions about the study, please feel free to e-mail us at 
 <p>
 By pressing the "Login" button, you will indicate to us that you agree, of your own freewill, to voluntarily participate in this study after carefully reading and fully understanding the information presented in the introductory section of the survey.<br /> 
 </p>
+<a class="btn btn-primary btn-large" onclick="Login()">
+    Login
+    </a>
+</div>
 
 
 
-
-
+<div id="introductionA" class="hero-unit silence">
+<%= image_tag("ULogo.jpg", :class => "pull-right") %>
 <h4> SECTION A. TRAVEL DIARY </h4>
 
 <p> In this section, the survey will gather information about all trips that you made the previous working day including trip origin and destination, means of commuting, travel attributes and the reasons why you choose your mode.<br /> <br /> 
@@ -67,7 +70,8 @@ Refer to definitions below for clarification of some modes of travel.<br /> </p>
 <b>Total Trip Time:</b> Total trip time from trip origin to trip destination (door to door).<br /> </p>
 <%= image_tag("tranIntro.png") %>
 </div>
-<div id="introductionB" class="hero-unit"> 
+<div id="introductionB" class="hero-unit silence"> 
+	<%= image_tag("ULogo.jpg", :class => "pull-right") %>
 	<h4>SECTION B. Stated Preference Survey</h4>
 	<p>In this section, you are provided with 6 hypothetical scenarios. In each scenario, you are making your usual trip from home to work and are asked to choose which mode of travel you would use given different situations and transit service attributes. Please take your time and consider each situation carefully. If the current choice is no longer available, please consider the following alternative choices and select the one that you would use to make your current work trip based on mode features presented in the table below. </p>
 <table class="table table-striped">
@@ -237,8 +241,15 @@ Refer to definitions below for clarification of some modes of travel.<br /> </p>
 </table>
 
 </div>
-<div class="container" id="holder">
+<div class="container silence" id="holder">
 	<%= yield %>
 </div>
+<footer>
+	<%= image_tag("footer_logo.gif", :class => "pull-right") %>
+  <p>Posted by: Enter Name</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a>.</p>
+</footer>
+
 </body>
 </html>

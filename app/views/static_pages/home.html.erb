@@ -80,32 +80,38 @@
 	</ul>
     <%= form_for(:session, url: "/analyze") do |f| %>
 <table>
+  <col width="70%">
+  <col width="30%">
 	<tr><p class="lead" style="text-align:center" id="tripId" >Trip ID 1</p>
 		</tr>
-     <tr> <td> <%= f.label "Time of The Trip" %> </td>
+     <tr> <td> <%= f.label "Time of The Trip" %><p class="text-info">Print start time of the trip (Hour : Minute)</p> </td>
       <td><%= f.time_field :timeTrip, :class=>"input"%> </td>
 	</tr>
-	    <tr> <td> <%= f.label "Earliest Time of Departure from Home" %> </td>
+	    <tr> <td> <%= f.label "Earliest Time of Departure from Home" %><p class="text-info">Print earliest departure time of the trip from home (Hour : Minute)</p> </td>
       <td><%= f.time_field :earlyTime, :class=>"input" %> </td>
 	</tr>
-	    <tr> <td> <%= f.label "Latest Time of Arrival at Work" %> </td>
+	    <tr> <td> <%= f.label "Latest Time of Arrival at Work" %><p class="text-info">Print latest arrival time at work (Hour : Minute)</p>  </td>
       <td><%= f.time_field :lateTime, :class=>"input" %> </td>
 	</tr>
 	<tr>
-	    <td> <%= f.label "Origin" %> </td>
+	    <td> <%= f.label "Origin" %><p class="text-info">Please choose your trip start location (origin).<br />
+Please print the postal code of your trip origin or click on “Use Google Maps” to navigate to the origin location.
+</p>  </td>
       <td><%= select_tag(:origin,  options_for_select(['Home','Work','Other']) ,:onChange=>"showOther(this)", :class=>"input") %></td>
 	</tr>
 	<tr id="otherorigin">
 	   <td> <%= f.label "Place Name" %> </td>
       <td><%= f.text_field :otherOrigin , :class=>"input"%></td>
 	</tr>
-	<tr> <td> <%= f.label "Origin Address/postals" %> </td>
+	<tr> <td> <%= f.label "Origin Address/postal" %> </td>
       <td><%= text_area :origin, :address, cols: 30, rows: 4, :class=>"input" %> <br />
       		<%= link_to_function 'Use Google Map', 'addfind("origin_address")' %>
       </td>
 	</tr>
 	<tr>
-		 <td> <%= f.label "Destination" %> </td>
+		 <td> <%= f.label "Destination" %><p class="text-info">Please choose your trip end location (destination).<br />
+Please print the postal code of your trip destination or click on “Use Google Maps” to navigate to the destination location.
+</p>  </td>
         <td><%= select_tag(:destination,  options_for_select(['Work','Home','Other']),:onChange=>"showOther(this)", :class=>"input")%></td>
 	</tr>
 	<tr id="otherdestination">
@@ -120,7 +126,7 @@
       </td>
 	</tr>
   <tr>
-        <td> <%= f.label "Number of Veichles in your Household" %> </td>
+        <td> <%= f.label "Number of Veichles in your Household" %><p class="text-info">Please print the number of vehicles per household.</p> </td>
         <td><%= f.number_field :veichleCount %> </td>
   </tr>
 	<tr>
@@ -131,14 +137,23 @@
       <td> <%= f.label "Name of closest GO station" %> </td>
       <td><%= f.text_field :regName , :class=>"input" %></td>
   </tr>
-	<tr> <td> <%= f.label "Purpose" %> </td>
+	<tr> <td> <%= f.label "Purpose" %> <p class="text-info">Please choose your trip purpose.<br />
+Example1: A trip that starts from home to work is a “Work” trip.<br />
+Example 2: A trip that starts from work to a shopping mall is a “Shopping” trip.<br />
+Example 3: A trip that starts from home with the sole purpose of dropping a household member at a transit station or work or school, is a “Facilitate Passenger” trip.
+</p> </td>
       <td><%= select_tag(:purpose,  options_for_select(['Home','Work', 'School','Shopping', 'Recreation', 'Facility Passenger','Other']),:onChange=>"showOther(this)", :class=>"input") %> </td>
 	</tr>
 	<tr id="otherpurpose">
 	   <td> <%= f.label "Purpose?" %> </td>
       <td><%= f.text_field :otherPurpose, :class=>"input" %></td>
 	</tr>
-	<tr> <td> <%= f.label "Main (Primary) Mode" %> </td>
+	<tr> <td> <%= f.label "Main (Primary) Mode" %><p class="text-info">Please choose the primary trip mode.<br />
+If you are using transit as a part of your trip, please choose transit as the main mode.<br />
+If you are using GO Transit or TTC Subway jointly with other transit services or private cars, please choose one of them to be the main mode.<br />
+If you are using both GO Transit and TTC Subway jointly with other transit services or private cars, please choose GO Transit to be the main mode.<br />
+If you are combining more than one transit route/line, choose the mode you use to travel the longest distance.
+</p>  </td>
       <td><%= select_tag(:main, options_for_select(['Auto Driver','Auto Passenger/Carpool','Local Transit','Regional Transit', 'Other']), :onChange=>"showOther(this);showMain()", :class=>"input") %> </td>
 	</tr>
 	<tr id="mainOther">
@@ -146,7 +161,7 @@
       <td><%= f.text_field :mainOther,:class=>"input" %></td>
 	</tr>
 	<tr id="nummain">
-	   <td> <%= f.label "How Many Passengers are using veichle" %> </td>
+	   <td> <%= f.label "How Many Passengers are using veichle" %>  </td>
       <td><%= f.number_field :numMain, :class=>"input positive" %></td>
 	</tr>
 	<tr id="othermain">
@@ -160,11 +175,15 @@
       'Durham Region Street']), :class=>"input") %> </td>
 	</tr>
 	<tr class="primaryOpt"> 
-		<td> <%= f.label "Access Station/Stop" %> </td>
+		<td> <%= f.label "Access Station/Stop" %><p class="text-info">Please print the name of the access (first) transit stop/station of the PRIMARY MODE.<br />
+Example 1: if you are using Mississauga Transit (Miway Bus) to access Toronto Transit (TTC Subway) from Kippling Subway station. Then your primary mode is TTC Subway and your access station is Kippling Subway Station. Your access mode is Miway bus.<br />
+Example 2: if you use TTC Subway from Queen’s Park Station to access GO Train at Union station. Then your primary mode is GO Train and your access station is Union Station. Your access mode is TTC Subway.<br />
+Example 3: if you are using Mississauga Transit (Miway Bus) to access Brampton Transit (Brampton Bus) and you defined that the your primary mode is Brampton Bus based on the ride time on each bus. Then the access stop is the one you take the Brampton Bus from (print road intersection). Your access mode is Miway bus.
+h</p> </td>
       <td><%= f.datetime_field :accessStation, :class=>"input" %> </td>
 	</tr>
 	<tr class="primaryOpt"> 
-		<td> <%= f.label "Access Mode" %> </td>
+		<td> <%= f.label "Access Mode" %> <p class="text-info">Please choose the mode used to travel from the trip origin location to the access (first) transit stop/station of the primary mode.</p></td>
       <td><%= select_tag(:accessMode,  options_for_select(['Walk','Auto Driver(P&R)', 'Auto Passenger(K&R)','Auto Passenger(Car Pool)','Bike', 'local Transit','Regional Transit', 'Other']),
        :onChange=>"showOption()", :class=>"input") %></td>
 	</tr>
@@ -184,30 +203,32 @@
       'Durham Region Street']), :class=>"input")  %> </td>
 	</tr>
 
-	<tr id="parkcost"> <td> <%= f.label "Parking Cost at Local Transit P&R Station ($)/day" %> </td>
+	<tr id="parkcost"> <td> <%= f.label "Parking Cost at Local Transit P&R Station ($)/day" %><p class="text-info">Please print the parking cost at the park &amp; ride location per day per person.</p>  </td>
       <td><%= f.number_field :parkCost, :class=>"positive input" %></td>
 	</tr>
 	<tr class="primaryOpt"> 
-		 <td> <%= f.label "Access Time " %> </td>
+		 <td> <%= f.label "Access Time " %><p class="text-info">Please print access time (time taken to travel from the trip origin location to the access (first) transit stop/station of the primary mode). <br />Please exclude any stops you make (e.g., to pick up a coffee)</p> </td>
       <td><%= f.number_field :accessTime, :class=>"positive input" %> </td>
 	</tr>
-	<tr id="accesscost"> <td> <%= f.label "Access Cost ($CAD)" %> </td>
+	<tr id="accesscost"> <td> <%= f.label "Access Cost ($CAD)" %><p class="text-info">Please print access cost (cost to travel from the trip origin location to the access (first) transit stop/station of the primary mode).</p></td>
       <td><%= f.number_field :accessCost ,:pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input"%></td>
 	</tr>
 	<tr class="primaryOpt"> 
-		 <td> <%= f.label "Waiting Time at the first transit stop/station (Minutes)" %> </td>
+		 <td> <%= f.label "Waiting Time at the first transit stop/station (Minutes)" %><p class="text-info">Please print waiting time at the access (first) transit stop/station of the primary mode).</p>  </td>
       <td><%= f.number_field :waitTime, :class=>"positive input" %></td>
       </tr>
     <tr class="primaryOpt"> 
-    	 <td> <%= f.label "Number of Transfers" %> </td>
+    	 <td> <%= f.label "Number of Transfers" %><p class="text-info">Please print the number of transfers between transit unit required to complete the trip.</p> </td>
       <td><%= f.number_field :numTrans, :class=>"positive input" %> </td>
       </tr>
      <tr class="primaryOpt"> 
-     	 <td> <%= f.label "Transfer Time between modes (Minutes)" %> </td>
+     	 <td> <%= f.label "Transfer Time between modes (Minutes)" %><p class="text-info">Please print transfer time at any stop/station required to switch transit vehicles.</p>  </td>
       <td><%= f.number_field :transWait, :class=>"positive input" %> </td>
       </tr>
      <tr class="primaryOpt"> 
-     	 <td> <%= f.label "Main Mode In-vehicle Travel Time (Minutes)" %> </td>
+     	 <td> <%= f.label "Main Mode In-vehicle Travel Time (Minutes)" %><p class="text-info">Please print time taken to travel from the origin transit stop/station to the destination transit stop/station on a transit vehicle(s) of the primary mode.<br />
+Example: If you take a MiWay Bus to access TTC Subway (Primary Mode) to Union Station then walk to your work location on King St, the in-vehicle travel time is the time you spent on the subway excluding the access trip, transfer times, and egress trip.
+</p>  </td>
       	<td><%= f.number_field :travelTime, :class=>"positive input" %> </td>
       </tr>
      <tr class="primaryOpt"> 
@@ -215,11 +236,15 @@
       	<td><%= f.number_field :travelCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
       <tr class="primaryOpt"> 
-      	 <td> <%= f.label "Egress Station/Stop " %> </td>
+      	 <td> <%= f.label "Egress Station/Stop " %><p class="text-info">Please print the name of the egress (last) transit stop/station of the PRIMARY MODE. <br />
+Example: If you take a MiWay Bus to access TTC Subway (Primary Mode) to Union Station then walk to your work location on King St, the egress station is Union Station.
+</p>  </td>
       	<td><%= f.datetime_field :egressStop, :class=>"input" %> </td>
       </tr>
       <tr class="primaryOpt"> 
-      	 <td> <%= f.label "Egress Mode" %> </td>
+      	 <td> <%= f.label "Egress Mode" %><p class="text-info">Example1: If you take a MiWay Bus to access TTC Subway (Primary Mode) to Union Station then walk to your work location on King St, the egress mode is walk.<br />
+Example1: If you take a MiWay Bus to access GO Train (Primary Mode) to Union Station then take TTC Subway to your work location on Bloor St, the egress mode is TTC Subway.
+</p>  </td>
       	<td><%= select_tag( :egressMode, options_for_select(['Walk','Bike','Local Transit','Other' ]),:onChange=>"showOption()", :class=>"input") %> </td>
       </tr>
      <tr id="otheregress">
@@ -233,26 +258,26 @@
       'Durham Region Street','Go Transit Bus', 'Go Transit Train']), :class=>"input")  %> </td>
 	</tr>
       <tr class="primaryOpt"> 
-      	 <td> <%= f.label "Egress Time (Minutes)" %> </td>
+      	 <td> <%= f.label "Egress Time (Minutes)" %> <p class="text-info">Please print egress time (time taken to travel from the egress (last) transit stop/station of the primary mode to the final trip destination).<br /> Please exclude any stops you make (e.g., to pick up a coffee)</p> </td>
       <td><%= f.number_field :egressTime, :class=>"positive input" %> </td>
       </tr>
-      <tr id="egresscost"> <td> <%= f.label "Egress Cost ($CAD)" %> </td>
+      <tr id="egresscost"> <td> <%= f.label "Egress Cost ($CAD)" %><p class="text-info">Please print egress cost (cost to travel from the egress (last) transit stop/station of the primary mode to the final trip destination).</p>  </td>
       <td><%= f.number_field :egressCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
-      <tr> <td> <%= f.label "Estimated One-way Travel Time (Minutes)" %> </td>
+      <tr> <td> <%= f.label "Estimated One-way Travel Time (Minutes)" %><p class="text-info">Please print the estimated total trip time from trip origin to trip destination (door to door).</p>  </td>
       <td><%= f.number_field :oneTime, :class=>"positive input" %> </td>
       </tr>
-      <tr> <td> <%= f.label "Estimated One-way Travel Cost ($CAD)" %>  </td>
+      <tr> <td> <%= f.label "Estimated One-way Travel Cost ($CAD)" %><p class="text-info">Please print the estimated total trip cost from trip origin to trip destination (door to door). <br /> Please include your transit fare(s), estimated fuel cost or share, parking cost, and highway tolls if any.</p>   </td>
       <td><%= f.number_field :oneCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
       <tr class="primaryOpt"> 
-      	 <td> <%= f.label "How do you typically pay your Public Transit fare?" %> </td>
+      	 <td> <%= f.label "How do you typically pay your Public Transit fare?" %><p class="text-info">Please choose the best option that describes the method you use to pay for your transit fares.</p>  </td>
       <td><%= select_tag(:transitPay,  options_for_select(['Cash','Ticket or Tokens','Transit Pass','PRESTO card']), :class=>"input") %></td>
       </tr>
-            <tr> <td> <%= f.label "Parking Cost At Work ($CAD)" %> </td>
+            <tr> <td> <%= f.label "Parking Cost At Work ($CAD)" %><p class="text-info">Please print the parking cost per day per person at your work location.</p>  </td>
       <td><%= f.number_field :parkCost, :pattern=>"/\d+(\.\d{1,2})?/", :step=>"0.05", :class=>"positive input" %> </td>
       </tr>
-	  <tr id="monthcom"> <td> <%= f.label "During which months do you typically walk/bike to transit when commuting to work?" %> </td>
+	  <tr id="monthcom"> <td> <%= f.label "During which months do you typically walk/bike to transit when commuting to work?" %><p class="text-info">Please select all that apply.</p>  </td>
       <td><%= select_tag :monthCom , options_for_select([ "JANRUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER" ]), multiple: true, :class=>"input span2"  %> </td>
       </tr>
       </tr>

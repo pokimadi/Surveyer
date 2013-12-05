@@ -90,6 +90,12 @@ showOther =  function(that){
 	}
 };
 
+Login = function(){
+	$("#introduction").hide();
+	$("#introductionA").show();
+	$("#holder").show();
+	$("html, body").animate({ scrollTop: 0 }, "fast");
+}
 
 hideOther = function(){
 	console.log("hide Other");
@@ -232,7 +238,7 @@ $( document ).ready(function(){
 	console.log("Ready");
 	$(".previous").hide();
 	$(".next").hide();
-	$("#introductionB").hide();
+	$(".silence").hide();
 	setTripTitle();
 	hideOption();
 	hideOther();
@@ -294,7 +300,7 @@ $( document ).ready(function(){
 		var valid = storeForm(curTrip-1);
 		if(valid.length == 0){
 			var route = getWorkHome(false);
-			$("#introduction").hide();
+			$("#introductionA").hide();
 			$("#introductionB").show();
 			//console.log("ROUTE:" ,route);
 			if (route){
