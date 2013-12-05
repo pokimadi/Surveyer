@@ -20,14 +20,17 @@ class StaticPagesController < ApplicationController
   end
 
   def store
-    puts params
-    params[:trips].each do |t|
-      Trip.create(t)
+    params[:trips].each do |k, v|
+      puts "input #{k}"
+      puts v
+      Trip.create(v)
     end
-    params.choices.each do |choice|
-      chosen = Choice.new(choice)
-      chosen.condition = params.quest[0]
-      chosen.person = params.quest[1]
+    params[:choices].each do |k, v|
+      puts v
+      chosen = Choice.new(v)
+      chosen.scenario  = k
+      chosen.condition = params[:quest][0]
+      chosen.person = params[:quest][1]
       chosen.save
     end
     

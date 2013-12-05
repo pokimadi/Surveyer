@@ -667,7 +667,7 @@ var statCalc =  function (){
 		console.log("DESTSATION",destStation);
 		var Gokey ;
 		var distance =  walk.distance.value;
-		if(station.zone >destStation.zone ){
+		if(station.zone > destStation.zone ){
 			Gokey  = ""+ destStation.zone +","+ station.zone;
 		}
 		else{

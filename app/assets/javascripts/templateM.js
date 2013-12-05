@@ -329,7 +329,7 @@ pd = function(){
 			type: "POST",
 			url: "/store",
 			data: {
-				trips:[{"c1": 2},{"c2":3}]
+				trips:[{"session_timeTrip":"13:00","session_earlyTime":"01:59","session_lateTime":"01:59","origin":"Home","origin_address":"3122 Hurontario street.","destination":"Work","destination_address":"80 peter street","regDist":"3","session_regName":"cooksville","purpose":"Home","main":"Auto Driver","session_oneTime":"10","session_oneCost":"15","session_parkCost":"12","bossPay":"no"}]
 			},
 			success: function(data){
 				console.log(data);
@@ -363,7 +363,7 @@ showNext =  function(id , val){
 				success: function(data){
 					console.log(data);
 				},
-				dataType: json
+				dataType:'json'
 			});
 
 			$.get( "/socio", function( data ) {
