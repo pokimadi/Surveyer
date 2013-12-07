@@ -17,6 +17,16 @@ development:
   #password:
   socket: /tmp/mysql.sock
 
+# development:
+#   adapter: mysql2
+#   encoding: utf8
+#   database: mohamed_database
+#   pool: 5
+#   username: mohamed_1
+#   password: database
+#   host: 192.185.32.157
+  #socket: /tmp/mysql.sock
+
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.

@@ -324,20 +324,33 @@ choicePicker = function(id, exclude){
 
 };
 
-pd = function(){
+pd = function(nTo, nFrom){
+	// $.ajax({
+	// 		type: "POST",
+	// 		url: "/store",
+	// 		data: {
+	// 			trips:[{"session_timeTrip":"13:00","session_earlyTime":"01:59","session_lateTime":"01:59","origin":"Home","origin_address":"3122 Hurontario street.","destination":"Work","destination_address":"80 peter street","regDist":"3","session_regName":"cooksville","purpose":"Home","main":"Auto Driver","session_oneTime":"10","session_oneCost":"15","session_parkCost":"12","bossPay":"no"}]
+	// 		},
+	// 		success: function(data){
+	// 			console.log(data);
+	// 		},
+	// 		dataType: "json"
+	// 	});
+
+
 	$.ajax({
-			type: "POST",
-			url: "/store",
+			type: "GET",
+			url: "/time",
 			data: {
-				trips:[{"session_timeTrip":"13:00","session_earlyTime":"01:59","session_lateTime":"01:59","origin":"Home","origin_address":"3122 Hurontario street.","destination":"Work","destination_address":"80 peter street","regDist":"3","session_regName":"cooksville","purpose":"Home","main":"Auto Driver","session_oneTime":"10","session_oneCost":"15","session_parkCost":"12","bossPay":"no"}]
+				to : nTo,
+				from : nFrom
 			},
 			success: function(data){
 				console.log(data);
 			},
 			dataType: "json"
-		});
+	});
 };
-
 showNext =  function(id , val){
 	console.log(id, val); //TODO Save Value
 	var conf = $("input[name='conf"+ id +"']:checked").val();

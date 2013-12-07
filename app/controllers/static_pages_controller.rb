@@ -8,6 +8,24 @@ class StaticPagesController < ApplicationController
   def socio
     render layout: false
   end
+
+  def ride
+    puts params
+    from = params[:from] 
+    to = params[:to]
+    if(to && from)
+      querry = "SELECT travel_time FROM ampeak_auto_tt_06zones t1  WHERE t1.From = (SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{from}')"+
+      " AND t1.To = (SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{to}')"
+      result = ActiveRecord::Base.connection.execute(querry);
+      if result.any?
+        render :json =>{ :success=> true, :distance => result.first[0] }
+      else
+        render :json =>{ :success=> true, :distance => result.first }
+      end
+    else
+      render :json =>{ :success=> true, :distance => nil }
+    end     
+  end
   
   def goprice
     puts params[:transit][:origin]

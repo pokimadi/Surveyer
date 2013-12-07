@@ -2,6 +2,8 @@ console.log("we Have Lift off");
 var trips =[{}];
 var userChoices = {};  
 var curTrip = 1;
+var nTo, nFrom;
+var tPostals = [];
 var error = false;
 showMain = function(){
 	console.log("show Main");
@@ -33,6 +35,41 @@ showMain = function(){
 		hideOption();
 	}
 	console.log("showing Main", mainVal);
+};
+
+
+postal  = function(to , from, cb){
+	var gcode = 2;
+	var getPostal =  function(comp){
+		var found = null;
+		comp.forEach(function(bl){
+			if(bl.types[0] == "postal_code" || bl.types[0] == "postal_code_prefix"){
+				found =  bl.long_name.replace(" ",'');
+			}
+		});
+		return found;
+	};
+	var done = function(){		
+		cb();
+	};
+	var geocoder = new google.maps.Geocoder();
+	geocoder.geocode({'address': to}, function(results, status) {
+		
+		console.log(results);
+		nTo = getPostal(results[0].address_components);
+		gcode--;
+		if (gcode == 0){
+			done();
+		}
+	});
+	geocoder.geocode({'address': from}, function(results, status) {
+		console.log(results);
+		nFrom = getPostal(results[0].address_components);
+		gcode--;
+		if (gcode == 0){
+			done();
+		}
+	});
 };
 
 hideOption = function(){
@@ -95,7 +132,7 @@ Login = function(){
 	$("#introductionA").show();
 	$("#holder").show();
 	$("html, body").animate({ scrollTop: 0 }, "fast");
-}
+};
 
 hideOther = function(){
 	console.log("hide Other");
@@ -304,8 +341,10 @@ $( document ).ready(function(){
 			$("#introductionB").show();
 			//console.log("ROUTE:" ,route);
 			if (route){
-				$("html, body").animate({ scrollTop: 0 }, "fast");
-				calcRoute(route);
+				postal( route.end, route.start  ,function(){
+					$("html, body").animate({ scrollTop: 0 }, "fast");
+					calcRoute(route);
+				});
 			}
 			else{
 				alert("Need Home to Work");

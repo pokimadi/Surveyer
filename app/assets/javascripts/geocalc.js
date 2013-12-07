@@ -475,20 +475,36 @@ var statCalc =  function (){
 	}
 	
 	function autoCalc(data){
-		console.log("DATA", data );
-		var distance =  data.distance.value;
-		collection["1"] = ((distance * 14.7)/ 100000.0).toFixed(2);
-		console.log(collection["1"]);  
-		var numpool = $("#session_numMain").val();
-		if(numpool !="" && numpool !="0"){
-			numpool = parseInt(numpool);
-			collection["2"] = (collection["1"]/numpool).toFixed(2); 
+		if( data && nTo && nFrom){
+			console.log("DATA", data );
+			var distance =  data.distance.value;
+			collection["1"] = ((distance * 14.7)/ 100000.0).toFixed(2);
+			console.log(collection["1"]);  
+			var numpool = $("#session_numMain").val();
+			if(numpool !="" && numpool !="0"){
+				numpool = parseInt(numpool);
+				collection["2"] = (collection["1"]/numpool).toFixed(2); 
+			}
+			else{
+				collection["2"] = (collection["1"]/2).toFixed(2); 	
+			}
+			$.ajax({
+				type: "GET",
+				url: "/time",
+				data: {
+					to : nTo,
+					from : nFrom
+				},
+				success: function(data){
+					collection["26"] = (data.distance).toFixed(2);
+				},
+				dataType: "json"
+			});
+			 
 		}
 		else{
-			collection["2"] = (collection["1"]/2).toFixed(2); 	
+
 		}
-		collection["26"] = (data.duration.value/60).toFixed(2);
-		
 	};
 
 	function combCalc(trans, drive, station){ //PR for LT.

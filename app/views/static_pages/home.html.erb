@@ -49,7 +49,7 @@
   </div>
   <script>
   	     $("#find").click(function(){
-            geocoder = new google.maps.Geocoder();
+            var geocoder = new google.maps.Geocoder();
             console.log("LAT LNG", NewlatLng.lat,NewlatLng.lng);
             var latlng = new google.maps.LatLng(NewlatLng.lat, NewlatLng.lng);
             geocoder.geocode({'latLng': latlng}, function(results, status) {
