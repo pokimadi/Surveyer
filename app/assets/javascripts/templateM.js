@@ -384,6 +384,7 @@ showNext =  function(id , val){
 				$("#introductionB").hide();
 				$("#holder").empty();
 				$("#holder").html(data);
+				hideSocio();
 			});
 
 

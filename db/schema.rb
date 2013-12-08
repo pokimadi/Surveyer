@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205013808) do
+ActiveRecord::Schema.define(version: 20131208192345) do
+
+  create_table "car_specs", force: true do |t|
+    t.string   "carType"
+    t.string   "session_carMake"
+    t.string   "session_carModel"
+    t.string   "session_carYear"
+    t.string   "carFuel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "choices", force: true do |t|
     t.string   "person"
@@ -22,6 +32,25 @@ ActiveRecord::Schema.define(version: 20131205013808) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "scenario"
+  end
+
+  create_table "socials", force: true do |t|
+    t.string   "gender"
+    t.string   "session_age"
+    t.string   "status"
+    t.string   "employStat"
+    t.string   "occupation"
+    t.string   "session_otherOccupation"
+    t.string   "session_personCount"
+    t.string   "lisence"
+    t.string   "transitPass"
+    t.string   "session_otherTpass"
+    t.string   "houseType"
+    t.string   "session_otherHtype"
+    t.string   "session_veichleCount"
+    t.string   "yearIncome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "trips", force: true do |t|

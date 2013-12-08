@@ -133,10 +133,6 @@ Please print the postal code of your trip destination or click on “Use Google 
 	    <td> <%= f.label "Is there an availabe Go Transit between 0 to 10km of your Home" %> </td>
       <td><%= select_tag(:regDist,  options_for_select([['less than 3km', 3],['less than 10km', 10],['Noner', 0]]) ,:onChange=>"showStation(this)", :class=>"input") %></td>
 	</tr>
-  <tr id="regName">
-      <td> <%= f.label "Name of closest GO station" %> </td>
-      <td><%= f.text_field :regName , :class=>"input" %></td>
-  </tr>
 	<tr> <td> <%= f.label "Purpose" %> <p class="text-info">Please choose your trip purpose.<br />
 Example1: A trip that starts from home to work is a “Work” trip.<br />
 Example 2: A trip that starts from work to a shopping mall is a “Shopping” trip.<br />

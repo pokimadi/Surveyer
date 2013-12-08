@@ -6,64 +6,108 @@
 		<table>
 			<tr>
 				<td> <%= f.label "Gender" %> </td>
-      			<td><%= select_tag(:gender,  options_for_select(['Male','Female']))  %> </td>
+      			<td><%= select_tag(:gender,  options_for_select(['Male','Female']), :class=>"input")  %> </td>
 			</tr>
 			<tr>
 				<td> <%= f.label "Age" %> </td>
-      			<td><%= f.number_field :age %> </td>
+      			<td><%= f.number_field :age, :class=>"input positive" %> </td>
 			</tr>
 			<tr>
 				<td> <%= f.label "Matial Status" %> </td>
-      			<td><%= select_tag(:status,  options_for_select(['Single','Married','Divorced', 'Widowed']))  %> </td>
+      			<td><%= select_tag(:status,  options_for_select(['Single','Married','Divorced', 'Widowed']), :class=>"input")  %> </td>
+			</tr>
+			<tr>
+				<td> <%= f.label "Employment Status" %> </td>
+      			<td><%= select_tag(:employStat,  options_for_select(["Full time",
+																	"Work at home full time",
+																	"Work at home part time",
+																	"Not employed",
+																	"Part time"
+																	]), :class=>"input")  %> </td>
 			</tr>
 			<tr>
 				<td> <%= f.label "Occupation" %> </td>
-      			<td><%= f.text_field :occupation %> </td>
+      			<td><%= select_tag(:occupation,  options_for_select(["General Office / Clerical",
+											"Manufacturing / Construction / Trades",
+											"Professional / Management / Technical",
+											"Retail Sales and Service",
+											"Not Employed",
+											"Other"
+											]), :onChange=>"occupInfo(this, 'Occup')", :class=>"input")  %> </td>
 			</tr>
+			<tr id= "otherOccup">
+				<td> <%= f.label "Please Specify Occupation" %> </td>
+      			<td><%= f.text_field :otherOccupation, :class=>"input" %>  </td>			
+			</tr>
+
 			<tr>
 				<td> <%= f.label "Number of Persons per Household" %> </td>
-      			<td><%= f.number_field :personCount %> </td>
+      			<td><%= f.number_field :personCount, :class=>"input positive" %> </td>
 			</tr>
 			<tr>
 				<td> <%= f.label "Driving Lisense" %> </td>
-      			<td><%=select_tag(:Lisence,  options_for_select(['Yes','No']))  %> </td>
+      			<td><%=select_tag(:lisence,  options_for_select(['Yes','No']), :class=>"input")  %> </td>
+			</tr>
+			<tr>
+				<td> <%= f.label "Transit Pass" %> </td>
+      			<td><%= select_tag(:transitPass,  options_for_select(["Combination or Dual Pass",
+																		"Presto Card",
+																		"TTC Pass",
+																		"None",
+																		"Other Agency Pass"
+											]), :onChange=>"occupInfo(this, 'TransPass')", :class=>"input")  %> </td>
+			</tr>
+			<tr id= "otherTransPass">
+				<td> <%= f.label "Please Specify Other Transit Pass" %> </td>
+      			<td><%= f.text_field :otherTpass, :class=>"input" %>  </td>			
+			</tr>
+			<tr>
+				<td> <%= f.label "House Type" %> </td>
+      			<td><%= select_tag(:houseType,  options_for_select([ "House", 
+      																"Townhouse", 
+																	"Apartment",
+																	"Other"
+											]), :onChange=>"occupInfo(this, 'House')", :class=>"input")  %> </td>
+			</tr>
+			<tr id= "otherHouse">
+				<td> <%= f.label "Please Specify Other House Type" %> </td>
+      			<td><%= f.text_field :otherHtype, :class=>"input" %>  </td>			
 			</tr>
 			<tr>
 				<td> <%= f.label "Number of Veichles per Household" %> </td>
-      			<td><%= f.number_field :veichleCount, :onChange=>"carInfo(this)" %> </td>
-			</tr>
-			<tr class="carInfo">
-				<td> <%= f.label "Car ID" %> </td>
-      			<td><%= f.text_field :cardId %> </td>
+      			<td><%= f.number_field :veichleCount, :onChange=>"carInfo(this)", :class=>"input positive" %> </td>
 			</tr>
 			<tr class="carInfo">
 				<td> <%= f.label "Car Type" %> </td>
-      			<td><%= select_tag(:carType,  options_for_select(['Sedan','SUV','Coupe','Van','Truck']))  %> </td>
+      			<td><%= select_tag(:carType,  options_for_select(['Sedan','SUV','Coupe','Van','Truck']), :class=>"input")  %> </td>
 			</tr>
 			<tr class="carInfo">
 				<td> <%= f.label "Car Make" %> </td>
-      			<td><%= f.text_field :carMake %> </td>
+      			<td><%= f.text_field :carMake, :class=>"input" %> </td>
 			</tr>
 			<tr class="carInfo">
 				<td> <%= f.label "Car Model" %> </td>
-      			<td><%= f.text_field :carModel %> </td>
+      			<td><%= f.text_field :carModel, :class=>"input" %> </td>
 			</tr>
 			<tr class="carInfo">
 				<td> <%= f.label "Car Year" %> </td>
-      			<td><%= f.text_field :carYear %> </td>
+      			<td><%= f.text_field :carYear, :class=>"input" %> </td>
 			</tr>
 			<tr class="carInfo">
 				<td> <%= f.label "Car Fuel Type" %> </td>
-      			<td><%= select_tag(:carFuel,  options_for_select(['Conventional','Hybrid','Electric']))  %> </td>
+      			<td><%= select_tag(:carFuel,  options_for_select(['Conventional','Hybrid','Electric']), :class=>"input")  %> </td>
 			</tr>
 			<tr>
 				<td> <%= f.label "Total House Hold Income Level per Year" %> </td>
       			<td><%= select_tag(:yearIncome,  options_for_select(['Less than $10,000','$10,000 to $19,999','$20,000 to $29,999',
       					'$30,000 to $39,999','$40,000 to $49,999','$50,000 to $59,999','$60,000 to $69,999',
-      					'$70,000 to $79,999','$80,000 to $89,999','$90,000 to $99,999','$100,000 and over'])) %> </td>
+      					'$70,000 to $79,999','$80,000 to $89,999','$90,000 to $99,999','$100,000 and over']), :class=>"input") %> </td>
 			</tr>
 		</table>
 	<% end %>
+	<ul class="pager">
+		  <li><a id="complete" href="/socio">Done</a></li>
+	</ul>
  </div>
 
 </div>

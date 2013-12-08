@@ -36,5 +36,32 @@
 # rescue => err
 # puts "Exception: #{err}"
 # end
+  add_column :socials, :position, :string
 
 
+add_column :socials, :gender, :string 
+add_column :socials, :session_age, :string  
+add_column :socials, :status, :string  
+add_column :socials, :employStat, :string  
+add_column :socials, :occupation, :string  
+add_column :socials, :session_otherOccupation, :string  
+add_column :socials, :session_personCount, :string  
+add_column :socials, :lisence, :string  
+add_column :socials, :transitPass, :string  
+add_column :socials, :session_otherTpass, :string  
+add_column :socials, :houseType, :string  
+add_column :socials, :session_otherHtype, :string  
+add_column :socials, :session_veichleCount, :string  
+add_column :socials, :yearIncome, :string  
+
+
+
+
+ rails generate model social gender:string 
+
+
+add_column :carSpecs, :carType 
+add_column :carSpecs, :session_carMake 
+add_column :carSpecs, :session_carModel 
+add_column :carSpecs, :session_carYear 
+add_column :carSpecs, :carFuel 

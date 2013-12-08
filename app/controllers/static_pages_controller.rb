@@ -6,7 +6,12 @@ class StaticPagesController < ApplicationController
   end
   
   def socio
-    render layout: false
+    render #layout: false
+  end
+
+  def complete
+    Social.create(params[:social])
+    render :json =>{ :success=> true}
   end
 
   def ride
@@ -14,16 +19,26 @@ class StaticPagesController < ApplicationController
     from = params[:from] 
     to = params[:to]
     if(to && from)
-      querry = "SELECT travel_time FROM ampeak_auto_tt_06zones t1  WHERE t1.From = (SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{from}')"+
-      " AND t1.To = (SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{to}')"
-      result = ActiveRecord::Base.connection.execute(querry);
+      if(to.length != 6 )
+        queryTo = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{to}'"
+      else 
+        queryTo = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{to}'"
+      end
+      if(to.length != 6 )
+        queryFrom = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{from}'"
+      else 
+        queryFrom = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{to}'"
+      end
+      query = "SELECT travel_time FROM ampeak_auto_tt_06zones t1  WHERE t1.From = ('#{queryFrom}')"+
+      " AND t1.To = (#{queryTo})"
+      result = ActiveRecord::Base.connection.execute(query);
       if result.any?
-        render :json =>{ :success=> true, :distance => result.first[0] }
+        render :json =>{ :success=> true, :duration => result.first[0] }
       else
-        render :json =>{ :success=> true, :distance => result.first }
+        render :json =>{ :success=> true, :duration => result.first }
       end
     else
-      render :json =>{ :success=> true, :distance => nil }
+      render :json =>{ :success=> true, :duration => nil }
     end     
   end
   

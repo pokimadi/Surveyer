@@ -94,6 +94,16 @@ carInfo = function(that){
 	}
 };
 
+occupInfo = function(that, suffix){
+	if(that.value == "other"){
+		$("#other"+suffix).show();
+	}
+	else{
+		$("#other"+suffix).hide();
+	}
+
+};
+
 function getWorkHome(tr){
 	var ret;
 	var ctrip;
@@ -125,6 +135,51 @@ showOther =  function(that){
 	else{
 		$(id).hide();
 	}
+};
+
+hideSocio =  function(){
+	$("#otherOccup").hide();
+	$("#otherTransPass").hide();
+	$("#otherHouse").hide();
+	$(".carInfo").hide();
+	$(".positive").change(function(){
+		if(this.value < 0){
+			this.value = 0;
+		}
+	});
+	$("#complete").click(function(){
+		var val = {} ,err = [];
+		$(".input")
+		.filter(function(){
+			return $(this).is(':visible');
+		})
+		.each(function(){
+			if (this.value != ""){
+				val[this.id] = $(this).val();
+			}
+			else{
+				err.push(this.id); 
+			}
+		});
+
+		if(err.length == 0){
+			$.ajax({
+				type: "POST",
+				url: "/complete",
+				data: {
+					social:val
+				},
+				success: function(data){
+					alert("Complete Thank you.")
+				},
+				dataType:'json'
+			});
+		}
+		else{
+			$("#"+err[0]).focus();
+		};
+
+	});
 };
 
 Login = function(){
