@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
       else 
         queryFrom = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE LIKE '#{from}%' LIMIT 1"
       end
-      query = "SELECT travel_time FROM ampeak_auto_tt_06zones t1  WHERE t1.From = ('#{queryFrom}')"+
+      query = "SELECT travel_time FROM ampeak_auto_tt_06zones t1  WHERE t1.From = (#{queryFrom})"+
       " AND t1.To = (#{queryTo})"
       result = ActiveRecord::Base.connection.execute(query);
       if result.any?
