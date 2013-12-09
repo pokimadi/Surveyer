@@ -527,7 +527,7 @@ var statCalc =  function (){
 		console.log("TRANS", trans,"DRIVE", drive, "STATION", station);
 		var distance =  drive.distance.value;
 		var transC = routePrice(trans);
-		var numpool = var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2 ;
+		var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2 ;
 		var parkCost =  $("#session_parkCost").val();
 		console.log('Distance',distance,"Transit cost", transC);
 		collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2);
