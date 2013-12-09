@@ -495,14 +495,8 @@ var statCalc =  function (){
 			var distance =  data.distance.value;
 			collection["1"] = ((distance * 14.7)/ 100000.0).toFixed(2);
 			console.log(collection["1"]);  
-			var numpool = $("#session_numMain").val();
-			if(numpool !="" && numpool !="0"){
-				numpool = parseInt(numpool);
-				collection["2"] = (collection["1"]/numpool).toFixed(2); 
-			}
-			else{
-				collection["2"] = (collection["1"]/2).toFixed(2); 	
-			}
+			var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2 ;
+			collection["2"] = (collection["1"]/numpool).toFixed(2); 
 			$.ajax({
 				type: "GET",
 				url: "/time",
@@ -533,7 +527,7 @@ var statCalc =  function (){
 		console.log("TRANS", trans,"DRIVE", drive, "STATION", station);
 		var distance =  drive.distance.value;
 		var transC = routePrice(trans);
-		var numpool = $("#session_numMain").val();
+		var numpool = var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2 ;
 		var parkCost =  $("#session_parkCost").val();
 		console.log('Distance',distance,"Transit cost", transC);
 		collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2);
@@ -549,18 +543,12 @@ var statCalc =  function (){
 		else{
 			collection["17"] = 0;
 		}
-		if(numpool !="" && numpool !="0"){
-			collection["16"] = station.price/parseInt(numpool);
-			collection["17i"] = collection["17"]/parseInt(numpool);
-			collection["5"] = ((distance * 14.7)/ (100000.0  * parseInt(numpool)) + transC ).toFixed(2);
-			collection["4iii"] = parseInt(numpool); 
-		}
-		else {
-			collection["16"] = station.price/2;
-			collection["17i"] = collection["17"] /2 ;
-			collection["5"] = ((distance * 14.7)/200000.0 + transC ).toFixed(2);
-			collection["4iii"] = 2 ; 
-		}
+
+		collection["16"] = station.price/numpool;
+		collection["17i"] = collection["17"]/numpool;
+		collection["5"] = (((distance * 14.7)/ (100000.0  * numpool)) + transC ).toFixed(2);
+		collection["4iii"] = numpool; 
+		
 		collection["25LPR"] = (btwTime(trans))? btwTime(trans) : 0;
 		collection["6"] = collection["5"];
 		collection["28LPR"] = parseFloat((waitTime(trans)).toFixed(1));
@@ -662,7 +650,7 @@ var statCalc =  function (){
 		if(trans && station){
 			var destStation = destGO(trans);
 			var PRkey ;
-			var numpool = $("#session_numMain").val();
+			var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2;
 			var distance =  drive.distance.value;
 			var cost = routePriceFill(trans);
 			collection["14RPR"] = cost[2];
@@ -678,14 +666,10 @@ var statCalc =  function (){
 			collection["9i"] = parseFloat(((distance * 14.7)/ 100000.0).toFixed(2)); //  Gas 
 			collection["9ii"] = pricePR;// TRANSIT FARE 
 
-			if(numpool !="" && numpool !="0"){
-				collection["10"] = parseFloat(((distance * 14.7)/(100000.0  * parseInt(numpool)) + pricePR ).toFixed(2));
-				collection["9iii"] = parseInt(numpool) ; 
-			}
-			else{
-				collection["10"] = parseFloat(((distance * 14.7)/ 200000.0 + pricePR ).toFixed(2));
-				collection["9iii"] = 2; 
-			}
+
+			collection["10"] = parseFloat(((distance * 14.7)/(100000.0  * numpool) + pricePR ).toFixed(2));
+			collection["9iii"] = numpool ; 
+			
 			collection["11"] = collection["10"];
 			collection["22"] = parseFloat((drive.duration.value/60).toFixed(1));
 			collection["25RPR"] = (btwTime(trans))? btwTime(trans) : 0;
