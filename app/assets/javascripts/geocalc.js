@@ -71,7 +71,7 @@ function calcRoute(route) {
 		travelMode: google.maps.TravelMode["TRANSIT"],
 		provideRouteAlternatives:true
 	};
- 	collection["49"] = ($("#session_veichleCount").val() == '') ? 0 : parseInt($("#session_veichleCount").val());
+ 	collection["49"] = (chosenTrip["session_veichleCount"]) ? parseInt(chosenTrip["session_veichleCount"]) : 0;
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
 		  console.log("RESP",response);
@@ -528,7 +528,7 @@ var statCalc =  function (){
 		var distance =  drive.distance.value;
 		var transC = routePrice(trans);
 		var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2 ;
-		var parkCost =  $("#session_parkCost").val();
+		var parkCost =  (chosenTrip["session_parkCost"]) ? parseInt(chosenTrip["session_parkCost"]) : 0 ;
 		console.log('Distance',distance,"Transit cost", transC);
 		collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2);
 		collection["4i"] = parseFloat(((distance * 14.7)/ 100000.0).toFixed(2)); //  Gas 
