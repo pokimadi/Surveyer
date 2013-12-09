@@ -398,6 +398,7 @@ $( document ).ready(function(){
 			if (route){
 				postal( route.end, route.start  ,function(){
 					$("html, body").animate({ scrollTop: 0 }, "fast");
+					$("#holder").empty();
 					calcRoute(route);
 				});
 			}
