@@ -473,12 +473,12 @@ var statCalc =  function (){
 			collection["14"] = cost[0];
 			collection["14RL"] = cost[2];
 			console.log("TIME GO");
-			collection["24"] = timeGO(data);
+			collection["24"] = (timeGO(data)).toFixed(1);
 			//collection["25RL"] = btwTime(data);
 			collection["25RL"] = (btwTime(data))? btwTime(data) : 0;
 			console.log("GO TTC CALC" ,collection[13] );
 			console.log("TIME BEFORE******", collection["24"]);
-			collection["27RL"] = timeSkipGo(data);
+			collection["27RL"] = (timeSkipGo(data)).toFixed(1);
 			collection["28RL"] = parseFloat((waitTime(data)).toFixed(1));
 			
 			collection["30RL"] = parseFloat((data.steps[data.steps.length -1].duration.value/60).toFixed(1));
