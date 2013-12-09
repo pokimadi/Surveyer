@@ -19,12 +19,12 @@ class StaticPagesController < ApplicationController
     from = params[:from] 
     to = params[:to]
     if(to && from)
-      if(to.length != 6 )
+      if(to.length == 6 )
         queryTo = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{to}' LIMIT 1"
       else 
         queryTo = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE LIKE '#{to}%' LIMIT 1"
       end
-      if(to.length != 6 )
+      if(to.length == 6 )
         queryFrom = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE= '#{from}' LIMIT 1"
       else 
         queryFrom = "SELECT GTA06 FROM postalcode_to_zone WHERE POSTALCODE LIKE '#{from}%' LIMIT 1"
