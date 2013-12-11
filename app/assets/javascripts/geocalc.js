@@ -283,6 +283,7 @@ var statCalc =  function (){
 	done = function(){
 		totalDone--;
 		if(totalDone == 0){
+			console.log("final Collection", collection);
 			finished();
 		};
 	};
@@ -525,42 +526,45 @@ var statCalc =  function (){
 	function combCalc(trans, drive, station){ //PR for LT.
 		console.log("START LOCAL TRANSIT PR");
 		console.log("TRANS", trans,"DRIVE", drive, "STATION", station);
-		var distance =  drive.distance.value;
-		var transC = routePrice(trans);
-		var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2 ;
-		var parkCost =  (chosenTrip["session_parkCost"]) ? parseInt(chosenTrip["session_parkCost"]) : 0 ;
-		console.log('Distance',distance,"Transit cost", transC);
-		collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2);
-		collection["4i"] = parseFloat(((distance * 14.7)/ 100000.0).toFixed(2)); //  Gas 
-		collection["4ii"] = transC; // Bus fare
-		console.log("COST WORKED COLLECTION",collection["4"] , transC);
+		if(trans){
+			var distance =  drive.distance.value;
+			var transC = routePrice(trans);
+			var numpool = (chosenTrip["session_numMain"]) ? parseInt(chosenTrip["session_numMain"]) : 2 ;
+			var parkCost =  (chosenTrip["session_parkCost"]) ? parseInt(chosenTrip["session_parkCost"]) : 0 ;
+			console.log('Distance',distance,"Transit cost", transC);
+			collection["4"] = ((distance * 14.7)/ 100000.0 + transC ).toFixed(2);
+			collection["4i"] = parseFloat(((distance * 14.7)/ 100000.0).toFixed(2)); //  Gas 
+			collection["4ii"] = transC; // Bus fare
+			console.log("COST WORKED COLLECTION",collection["4"] , transC);
 
-		collection["15"] = station.price;
-		collection["19"] = parseFloat((drive.duration.value/60).toFixed(1));
-		if (parkCost !=""){
-			collection["17"] = parseInt(parkCost);
+			collection["15"] = station.price;
+			collection["19"] = parseFloat((drive.duration.value/60).toFixed(1));
+			if (parkCost !=""){
+				collection["17"] = parseInt(parkCost);
+			}
+			else{
+				collection["17"] = 0;
+			}
+
+			collection["16"] = station.price/numpool;
+			collection["17i"] = collection["17"]/numpool;
+			collection["5"] = (((distance * 14.7)/ (100000.0  * numpool)) + transC ).toFixed(2);
+			collection["4iii"] = numpool; 
+			
+			collection["25LPR"] = (btwTime(trans))? btwTime(trans) : 0;
+			collection["6"] = collection["5"];
+			collection["28LPR"] = parseFloat((waitTime(trans)).toFixed(1));
+			collection["27LPR"] = parseFloat((timeSkip(trans)).toFixed(1));
+			collection["29LPR"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
+			done();
 		}
 		else{
-			collection["17"] = 0;
+			done();
 		}
 
-		collection["16"] = station.price/numpool;
-		collection["17i"] = collection["17"]/numpool;
-		collection["5"] = (((distance * 14.7)/ (100000.0  * numpool)) + transC ).toFixed(2);
-		collection["4iii"] = numpool; 
-		
-		collection["25LPR"] = (btwTime(trans))? btwTime(trans) : 0;
-		collection["6"] = collection["5"];
-		collection["28LPR"] = parseFloat((waitTime(trans)).toFixed(1));
-		collection["27LPR"] = parseFloat((timeSkip(trans)).toFixed(1));
-		collection["29LPR"] = parseFloat((trans.steps[trans.steps.length -1].duration.value/60).toFixed(1));
 
-
-
-		console.log("COST WORKED COLLECTION",collection["5"] , transC); 
-		console.log("final Collection", collection);
-
-		finished();
+		// console.log("COST WORKED COLLECTION",collection["5"] , transC); 
+		// finished();
 	};
 
 
@@ -573,9 +577,10 @@ var statCalc =  function (){
 		collection["34"] = collection["21"] + collection["25RT"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
 		collection["35"] = collection["22"] + collection["25RPR"] + collection["27RPR"] + collection["28RPR"] + collection["30RPR"];
 		collection["36"] = collection["23"] + collection["25RT"] + collection["27RT"] + collection["28RT"] + collection["30RT"];
-		collection["37"] = collection["24"] + collection["25RL"] + collection["27RL"] + collection["28RL"] + collection["30RL"];
+		collection["37"] = parseFloat(collection["24"]) + parseFloat(collection["25RL"]) + parseFloat(collection["27RL"])
+				 + parseFloat(collection["28RL"]) + parseFloat(collection["30RL"]);
 
-		console.log("finished 18:",  collection["18"] ,"25:", collection["25"] ,"27", collection["27LT"] ,"28", collection["28LT"] , "29", collection["29LT"]);
+		console.log("finished 18:",  collection["18"] ,"27", collection["27LT"] ,"28", collection["28LT"] , "29", collection["29LT"]);
 		collection["31"] = parseFloat((collection["31"] ).toFixed(1));
 		collection["32"] = parseFloat((collection["32"] ).toFixed(1));
 		collection["33"] = parseFloat((collection["33"] ).toFixed(1));
