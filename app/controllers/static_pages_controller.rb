@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   end
   
   def socio
-    render #layout: false
+    render layout: false
   end
 
   def complete

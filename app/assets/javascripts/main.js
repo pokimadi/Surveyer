@@ -170,7 +170,7 @@ hideSocio =  function(){
 					social:val
 				},
 				success: function(data){
-					alert("Complete Thank you.")
+					alert("Complete Thank you.");
 				},
 				dataType:'json'
 			});
