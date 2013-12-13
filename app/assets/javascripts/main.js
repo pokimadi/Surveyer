@@ -245,6 +245,8 @@ showOption = function(){
 	}
 	else{
 		$("#accesscost").hide();
+		$("#accesstransit").hide();
+		$("#otheraccess").hide();
 	}
 	if (val1 == 'Bike' || val1 == 'Local Transit' || val1 == 'Other'){ //19 b, c ,d
 		$("#egresscost").show();
@@ -263,6 +265,8 @@ showOption = function(){
 	}
 	else{
 		$("#egresscost").hide();
+		$("#egresstransit").hide();
+		$("#otheregress").hide();
 	}
 	if (val == 'Walk' || val1 == 'Walk' || val1 == 'Bike' || val == 'Bike'){ //19 a b or 10 a e
 		console.log("show Month", val, val1);

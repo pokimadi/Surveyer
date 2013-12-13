@@ -81,9 +81,14 @@ function calcRoute(route) {
 		  if(noGO){
 		  	TransCalculator.transCalc(noGO.legs[0]);
 		  }
-		   if (goTTC){
-		   	console.log("SENDING", goTTC);
+		  else{
+		  	TransCalculator.transCalc(null);
+		  }
+		  if (goTTC){
 		  	TransCalculator.GoTtcCalc(goTTC.legs[0]);
+		  }
+		  else{
+		  	TransCalculator.GoTtcCalc(null);
 		  }
 		}
 	});
@@ -241,7 +246,6 @@ function calcRoute(route) {
 					count--;
 					if(count == 0){
 						var stopT =  new Date();
-						console.log("Fuck ", (stopT-startT)/1000);
 						TransCalculator.combCalc(transLPR, driveLPR,stationLPR);
 					}
 				}
@@ -262,7 +266,6 @@ function calcRoute(route) {
 					count--;
 					if(count == 0){
 						var stopT =  new Date();
-						console.log("Fuck ", (stopT-startT)/1000);
 						TransCalculator.combCalc(transLPR, driveLPR,stationLPR);
 					}
 				}
@@ -931,9 +934,33 @@ var nearestStation =  function (longit, lat, stations){
 };
 
 tableDisplay =  function(sel){
+	var except = {
+				"part1":["01","04","05","09","10"],
+				"part2":["01","03","04","05","09","10","13"],
+				"part3":["01","03","04","05","07","09","10","13"],
+				"part4":["01","04","05","08","09","10"],
+				"part5":["01","04","05","08","09","10","12"],
+				"part6":["01","03","04","05","08","09","10","13"],
+				"part7":["01","03","04","05","08","09","10","12","13"],
+				"part8":["01","03","04","05","07","08","09","10","13"],
+				"part9":["01","03","04","05","07","08","09","10","12","13"],
+				"part10":[],
+				"part11":["03","13"],
+				"part12":["03","07","13"],
+				"part13":["08"],
+				"part14":["08","12"],
+				"part15":["03","08","13"],
+				"part16":["03","08","12","13"],
+				"part17":["03","07","08","13"],
+				"part18":["03","07","08","12","13"]
+			};
 	var sanitize =  function(id, hash){
 			var cols = ["01" ,"02","03","04","05","06", "07", "08", "09", "10", "11", "12", "13"];
 			var rem = [];
+			except.forEach(function(remo){
+				$('td:nth-child('+ (parseInt(remo)+2) + ')').hide();
+				rem.push(parseInt(remo));
+			});
 			for (j in cols){
 				var col =  cols[j];
 				var found =  false;
@@ -953,7 +980,9 @@ tableDisplay =  function(sel){
 				}
 				if(!found || illegal){
 					$('td:nth-child('+ (parseInt(col)+2) + ')').hide();
-					rem.push(parseInt(col));
+					if(rem.indexOf(col) == -1){
+						rem.push(parseInt(col));
+					}
 				}
 			}
 			return rem;
