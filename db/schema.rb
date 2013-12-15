@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131208192345) do
+ActiveRecord::Schema.define(version: 20131215202859) do
 
   create_table "car_specs", force: true do |t|
     t.string   "carType"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20131208192345) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "scenario"
+    t.integer  "person_id"
+  end
+
+  add_index "choices", ["person_id"], name: "index_choices_on_person_id", using: :btree
+
+  create_table "people", force: true do |t|
+    t.string   "remember_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "socials", force: true do |t|
@@ -51,7 +60,10 @@ ActiveRecord::Schema.define(version: 20131208192345) do
     t.string   "yearIncome"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "person_id"
   end
+
+  add_index "socials", ["person_id"], name: "index_socials_on_person_id", using: :btree
 
   create_table "trips", force: true do |t|
     t.boolean  "complete"
@@ -99,6 +111,9 @@ ActiveRecord::Schema.define(version: 20131208192345) do
     t.string   "transitPay"
     t.string   "monthCom"
     t.string   "bossPay"
+    t.integer  "person_id"
   end
+
+  add_index "trips", ["person_id"], name: "index_trips_on_person_id", using: :btree
 
 end

@@ -1,5 +1,14 @@
 class StaticPagesController < ApplicationController
+  # before_action :signed_in_user, only: [:home, :complete, :store]
   def home
+    if signed_in?
+      current_user
+      puts "FOUND"
+    else
+      user = Person.create({})
+      puts "CREATED"
+      sign_in(user)
+    end
   end
 
   def index
@@ -10,7 +19,9 @@ class StaticPagesController < ApplicationController
   end
 
   def complete
-    Social.create(params[:social])
+    social = Social.new(params[:social])
+    social.person_id = current_user.id
+    social.save
     render :json =>{ :success=> true}
   end
 
@@ -56,7 +67,9 @@ class StaticPagesController < ApplicationController
     params[:trips].each do |k, v|
       puts "input #{k}"
       puts v
-      Trip.create(v)
+      trip = Trip.new(v)
+      trip.person_id = current_user.id
+      trip.save
     end
     params[:choices].each do |k, v|
       puts v
@@ -64,6 +77,7 @@ class StaticPagesController < ApplicationController
       chosen.scenario  = k
       chosen.condition = params[:quest][0]
       chosen.person = params[:quest][1]
+      chosen.person_id =  current_user.id
       chosen.save
     end
     
@@ -81,4 +95,9 @@ class StaticPagesController < ApplicationController
         :session_egressStop, :egressMode, :session_otherEgress, :egressTransit, :session_egressTime, 
         :session_egressCost, :session_oneTime, :session_oneCost, :transitPay, :session_parkCost, :monthCom, :bossPay)
   end
+  
+  private
+    # def signed_in_user
+    #   redirect_to signin_url, notice: "Please sign in." unless signed_in?
+    # end
 end
