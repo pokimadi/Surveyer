@@ -957,7 +957,7 @@ tableDisplay =  function(sel){
 	var sanitize =  function(id, hash){
 			var cols = ["01" ,"02","03","04","05","06", "07", "08", "09", "10", "11", "12", "13"];
 			var rem = [];
-			except[demo].forEach(function(remo){
+			except[questionChoice].forEach(function(remo){
 				$('td:nth-child('+ (parseInt(remo)+2) + ')').hide();
 				rem.push(parseInt(remo));
 			});
