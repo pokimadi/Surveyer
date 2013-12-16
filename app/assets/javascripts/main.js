@@ -95,7 +95,8 @@ carInfo = function(that){
 };
 
 occupInfo = function(that, suffix){
-	if(that.value == "other"){
+	console.log(that.value);
+	if(that.value == "Other"){
 		$("#other"+suffix).show();
 	}
 	else{
