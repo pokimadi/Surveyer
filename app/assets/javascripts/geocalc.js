@@ -764,12 +764,12 @@ transPrice = function(trans1 , trans2){
 	[3.00, 0.00, 0.00, 0.00, 0.00, 2.55],
 	[3.00, 0.50, 0.65, 0.70, 2.55, 0.00]
 	];
-	var ret
+	var ret;
 	if(i > -1 && j > -1 ){
 		ret = price[i][j];
 	}
 	if (typeof(ret)== 'undefined'){
-		return 0;
+		return 2.00;
 	}
 	else {
 		return ret;
