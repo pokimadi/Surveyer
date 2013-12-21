@@ -9,6 +9,7 @@ Surveyer::Application.routes.draw do
   post "/store" => "static_pages#store"
   post "/complete" => "static_pages#complete"
   get "/time" => "static_pages#ride"
+  get "/thanks" => "static_pages#thanks"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

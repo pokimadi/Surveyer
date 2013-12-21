@@ -13,6 +13,10 @@ class StaticPagesController < ApplicationController
 
   def index
   end
+
+  def thanks
+    render layout: false
+  end
   
   def socio
     render layout: false

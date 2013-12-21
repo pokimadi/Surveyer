@@ -175,6 +175,13 @@ hideSocio =  function(){
 				},
 				dataType:'json'
 			});
+			$.get( "/thanks", function( data ) {
+				$("#introductionB").hide();
+				var holder =  $("#holder");
+				holder.empty();
+				holder.html(data);
+				$('html,body').animate({scrollTop: holder.offset().top},'slow');
+			});
 		}
 		else{
 			$("#"+err[0]).focus();

@@ -288,6 +288,12 @@ myNavigator = function(choice){
 	return n; 
 };
 
+beforeDisplay = function(choice){
+	var holder =  $("#holder");
+	$('html,body').animate({scrollTop: holder.offset().top},'slow');
+	tableDisplay(choice);
+};
+
 
 choicePicker = function(id, exclude){
 	var confidence = {1:"Not Confident", 2:"Somewhat Confident", 3:"Neutral", 4:"Confident", 5:"Strongly Confident" };
@@ -297,8 +303,8 @@ choicePicker = function(id, exclude){
 	}
 	var tempS, temp = '<p>Which of the choices do you prefer?</p><br />';
 	for (key in title){
-		tempS = '<label class="radio inline">' +
-				'<input onClick="showNext(\''+id+'\',\''+ title[key]+  '\')" type="radio" name="'+"choice" + id +'" id="'+ "box" + id + key+'" value="'+ title[key] +'">'+ title[key] +
+		tempS = '<label class="checkbox inline">' +
+				'<input onClick="showNext(\''+id+'\',\''+ title[key]+  '\')" type="checkbox" name="'+"choice" + id +'" id="'+ "box" + id + key+'" value="'+ title[key] +'">'+ title[key] +
 				'</label>';
 		temp += tempS;
 	}
@@ -313,8 +319,8 @@ choicePicker = function(id, exclude){
 		  "<h5>Confidence in Stated Choice</h5>";
 
 	for (key in confidence){
-		tempS = '<label class="radio inline">' +
-				'<input onClick="showNext(\''+id+'\',\''+ confidence[key]+  '\')" type="radio" name="'+"conf" + id +'" id="'+ "box" + confidence[key]+'" value="'+ confidence[key] +'">'+ confidence[key] +
+		tempS = '<label class="checkbox inline">' +
+				'<input onClick="showNext(\''+id+'\',\''+ confidence[key]+  '\')" type="checkbox" name="'+"conf" + id +'" id="'+ "box" + confidence[key]+'" value="'+ confidence[key] +'">'+ confidence[key] +
 				'</label>';
 		temp += tempS;
 	}
@@ -361,8 +367,6 @@ showNext =  function(id , val){
 		userChoices[id] = {"confidence": conf, "choice" : ch,  "expected_time": t };
 		if (id != "c6" ){
 			$("#NextChoice").show();
-			var holder =  $("#holder");
-			$('html,body').animate({scrollTop: holder.offset().top},'slow');
 		}
 		else{
 			$.ajax({
@@ -385,6 +389,8 @@ showNext =  function(id , val){
 				$("#holder").empty();
 				$("#holder").html(data);
 				hideSocio();
+				var holder =  $("#holder");
+				$('html,body').animate({scrollTop: holder.offset().top},'slow');
 			});
 
 
