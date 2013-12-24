@@ -283,7 +283,7 @@ var templateMain =  function(collection, id){
 myNavigator = function(choice){
 	var n =  '<ul class="pager"  id="NextChoice"> '+
 		  //'<li><a id="newTrip"> Prvious </a></li>' +
-		  '<li><a id="continue" onClick ="tableDisplay(\''+choice+'\')"> Next </a></li>' +
+		  '<li><a id="continue" onClick ="beforeDisplay(\''+choice+'\')"> Next </a></li>' +
 		'</ul>'+ "<hr />";
 	return n; 
 };
@@ -304,7 +304,7 @@ choicePicker = function(id, exclude){
 	var tempS, temp = '<p>Which of the choices do you prefer?</p><br />';
 	for (key in title){
 		tempS = '<label class="checkbox inline">' +
-				'<input onClick="showNext(\''+id+'\',\''+ title[key]+  '\')" type="checkbox" name="'+"choice" + id +'" id="'+ "box" + id + key+'" value="'+ title[key] +'">'+ title[key] +
+				'<input onClick="showNext(\''+id+'\',\''+ title[key]+  '\', this)" type="checkbox" class="choiceBox" name="'+"choice" + id +'" id="'+ "box" + id + key+'" value="'+ title[key] +'">'+ title[key] +
 				'</label>';
 		temp += tempS;
 	}
@@ -320,7 +320,7 @@ choicePicker = function(id, exclude){
 
 	for (key in confidence){
 		tempS = '<label class="checkbox inline">' +
-				'<input onClick="showNext(\''+id+'\',\''+ confidence[key]+  '\')" type="checkbox" name="'+"conf" + id +'" id="'+ "box" + confidence[key]+'" value="'+ confidence[key] +'">'+ confidence[key] +
+				'<input onClick="showNext(\''+id+'\',\''+ confidence[key]+  '\', this)" type="checkbox" class="confBox" name="'+"conf" + id +'" id="'+ "box" + confidence[key]+'" value="'+ confidence[key] +'">'+ confidence[key] +
 				'</label>';
 		temp += tempS;
 	}
@@ -357,11 +357,23 @@ pd = function(nTo, nFrom){
 			dataType: "json"
 	});
 };
-showNext =  function(id , val){
-	console.log(id, val); //TODO Save Value
+showNext =  function(id , val, that){
+	if (that){
+		if($(that).attr("class") == "confBox"){
+			$('.confBox').prop('checked', false);
+			$(that).prop('checked', true);
+		}
+		if($(that).attr("class") == "choiceBox"){
+			$('.choiceBox').prop('checked', false);
+			$(that).prop('checked', true);
+		}
+	}
 	var conf = $("input[name='conf"+ id +"']:checked").val();
 	var ch = $("input[name='choice"+ id + "']:checked").val();
 	var t = $("input[name='time']").val();
+
+
+
 
 	if (conf && ch && t != ''){
 		userChoices[id] = {"confidence": conf, "choice" : ch,  "expected_time": t };

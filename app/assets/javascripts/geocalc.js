@@ -517,9 +517,9 @@ var statCalc =  function (){
 					}
 					done();
 				},
+
 				dataType: "json"
 			});
-			 
 		}
 		else{
 			done();

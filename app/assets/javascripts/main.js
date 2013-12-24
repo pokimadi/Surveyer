@@ -176,12 +176,15 @@ hideSocio =  function(){
 				dataType:'json'
 			});
 			$.get( "/thanks", function( data ) {
+				console.log(data);
 				$("#introductionB").hide();
+				$("#holder").empty();
+				$("#holder").html(data);
+				hideSocio();
 				var holder =  $("#holder");
-				holder.empty();
-				holder.html(data);
 				$('html,body').animate({scrollTop: holder.offset().top},'slow');
 			});
+
 		}
 		else{
 			$("#"+err[0]).focus();
